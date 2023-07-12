@@ -3,14 +3,14 @@ h1 {
   font-size: 2.25rem;
 }
 
-/* Header */
+/* Header  */
 .header {
   display: flex;
   justify-content: space-between;
   height: 60px;
   align-items: center;
   padding: 0px 140px;
-  background-color: #ccfbf1;
+  background-color: #f8f8f8;
   position: sticky;
   top: 0;
 }
@@ -19,18 +19,64 @@ h1 {
   display: flex;
   gap: 25px;
   align-items: center;
+  height: 100%;
   text-transform: uppercase;
   font-weight: 500;
   color: rgb(56, 56, 56);
 }
 
-.header_links a:hover {
-  color: #ff928b;
+/* Links  */
+.header_link {
+  width: 130px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-/* Main */
+.arrow_container {
+  position: absolute;
+  top: -1px;
+  z-index: -1;
+  width: 100%;
+}
+
+.arrow {
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
+  background-color: #f7dfe9;
+  rotate: 45deg;
+  border-radius: 1px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.link_card {
+  position: absolute;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  top: 60px;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color: #f7dfe9;
+  width: 100%;
+}
+
+.sub_link {
+  text-align: center;
+  font-size: 15px;
+  padding: 8px;
+}
+.sub_link:hover {
+  background-color: #f8f8f8;
+}
+
+/* Main (index.html) */
 .main {
-  background-image: linear-gradient(to bottom, #ccfbf1, white);
+  background-image: linear-gradient(to bottom, #f8f8f8, #f2f3f5);
+  /* background-color: #f3f4f6; */
   min-height: 100vh;
 }
 
@@ -39,13 +85,13 @@ h1 {
   margin: 0 auto;
 }
 
-/* Cover */
+/* Cover (index.html) */
 .cover {
   display: flex;
   justify-content: center;
   gap: 60px;
   align-items: center;
-  padding-top: 150px;
+  padding-top: 75px;
 }
 
 .cover_content {
@@ -62,7 +108,7 @@ h1 {
   font-size: 2.25rem;
 }
 
-/*  */
+/* Main (index.html) */
 .main_news {
   display: flex;
   justify-content: center;
@@ -73,11 +119,11 @@ h1 {
   margin-top: 150px;
 }
 
-/* Article */
+/* Articles (index.html) */
 .articles {
   display: grid;
   padding-top: 150px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -97,7 +143,7 @@ h1 {
   grid-row-start: 2;
 }
 
-/* Article center */
+/* Article center (index.html) */
 .article_img_3 {
   grid-column: span 3 / span 3;
   grid-row: span 2 / span 2;
@@ -113,4 +159,78 @@ h1 {
 .article_img_5 {
   grid-row-start: 2;
   grid-column-start: 5;
+}
+
+/* Must read section (index.html) */
+.must_read {
+  background-color: white;
+  padding: 12px;
+  margin: 50px 0px 50px 0px;
+}
+
+.must_read_title {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.must_read_title h3 {
+  text-align: center;
+}
+
+.must_read_articles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.must_read_art {
+  display: flex;
+  gap: 8px;
+}
+
+.must_read_art_img {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+/* Celebrity Style section (index.html)*/
+.celebrity_section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 0px 50px 0px;
+}
+
+.celebrity_section_container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.celebrity_section_art_content {
+  padding: 12px;
+}
+
+.celebrity_section_title {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+}
+
+.celebrity_section_title h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.celebrity_section_art {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
