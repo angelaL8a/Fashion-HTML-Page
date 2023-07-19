@@ -12,6 +12,7 @@ headerElement.innerHTML = `
 const categories = [
   {
     name: "News",
+    href: "#",
     sub_cat: [
       { name: "Awards and Events" },
       { name: "Music Culture" },
@@ -20,14 +21,16 @@ const categories = [
   },
   {
     name: "Fashion",
+    href: "fashion.html",
     sub_cat: [
-      { name: "Models" },
+      { name: "Models", href: "fashion.html#models" },
       { name: "Clothing" },
       { name: "Designers & Trends" },
     ],
   },
   {
     name: "Beauty",
+    href: "#",
     sub_cat: [
       { name: "Celebrity" },
       { name: "Makeup & Skincare" },
@@ -36,10 +39,12 @@ const categories = [
   },
   {
     name: "Culture",
+    href: "#",
     sub_cat: [{ name: "Music" }, { name: "Arts" }, { name: "Sports" }],
   },
   {
     name: "Lifestyle",
+    href: "#",
     sub_cat: [
       { name: "Travel" },
       { name: "Home & Decorating" },
@@ -57,7 +62,7 @@ categories.forEach((item, index) => {
   itemElement.classList.add(`link_${index}`);
 
   itemElement.innerHTML = `
-    <a href="#">${item.name}</a>
+    <a href="${item.href}">${item.name}</a>
 
     <div id="link_card_${index}" class="link_card group-hover:flex hidden">
       <div class="arrow_container">
@@ -71,7 +76,7 @@ categories.forEach((item, index) => {
 
   item.sub_cat.forEach((sub, sub_index) => {
     const sub_item = document.createElement("a");
-    sub_item.href = "#";
+    sub_item.href = sub.href;
     sub_item.classList.add("sub_link");
 
     sub_item.innerHTML = `

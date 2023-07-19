@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion</title>
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header id="header" class="header"></header>
+
+    <main class="main">
+      <h1 class="h1_titles">
+        <!-- Through the Eyes of Supermodels: A Glimpse into the High-Fashion
+        Universe and the Lives of Fashion's Elite -->
+        Fashion
+      </h1>
+
+      <!-- Articles - Cards -->
+      <div class="articles_container">
+        <div id="articles" class="articles"></div>
+      </div>
+
+      <!-- Models I -->
+      <div id="models" class="sizesCards_section">
+        <div class="section_title"><h3>Latest in Models</h3></div>
+        <div id="sizesCards_container" class="sizesCards_container"></div>
+      </div>
+      <!-- Models - TABS -->
+      <div id="tabs" class="tabs">
+        <div class="section_title"><h3>Trending Models</h3></div>
+
+        <div class="tab-header">
+          <button class="tab-button active" data-tab="tab1">Ice Spice</button>
+          <button class="tab-button" data-tab="tab2">Kendall Jenner</button>
+          <button class="tab-button" data-tab="tab3">Gigi Hadid</button>
+          <button class="tab-button" data-tab="tab4">Linda Evangelista</button>
+          <button class="tab-button" data-tab="tab5">Ashley Graham</button>
+          <button class="tab-button" data-tab="tab6">Bella Hadid</button>
+        </div>
+      </div>
+      <!-- Models - CAROUSEL -->
+      <div class="models_carousel">
+        <h2 class="h2_titles">MEET THE 10 STANDOUT MODELS OF FALL 2023</h2>
+        <div class="wrapper">
+          <i id="left" class="arrow-right">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="carousel_arrow"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </i>
+
+          <div class="carousel">
+            <img
+              src="https://assets.vogue.com/photos/640baeffc6d5c2b85d9ae9d1/master/w_1920,c_limit/00057-versace-fall-2023-ready-to.jpeg"
+              alt="img"
+              draggable="false"
+            />
+            <img
+              src="https://assets.vogue.com/photos/640baeffc6d5c2b85d9ae9d1/master/w_1920,c_limit/00057-versace-fall-2023-ready-to.jpeg"
+              alt="img"
+              draggable="false"
+            />
+            <img
+              src="https://assets.vogue.com/photos/640baeffc6d5c2b85d9ae9d1/master/w_1920,c_limit/00057-versace-fall-2023-ready-to.jpeg"
+              alt="img"
+              draggable="false"
+            />
+            <img
+              src="https://assets.vogue.com/photos/640baeffc6d5c2b85d9ae9d1/master/w_1920,c_limit/00057-versace-fall-2023-ready-to.jpeg"
+              alt="img"
+              draggable="false"
+            />
+            <img
+              src="https://assets.vogue.com/photos/640baeffc6d5c2b85d9ae9d1/master/w_1920,c_limit/00057-versace-fall-2023-ready-to.jpeg"
+              alt="img"
+              draggable="false"
+            />
+            <img
+              src="https://assets.vogue.com/photos/640baeffc6d5c2b85d9ae9d1/master/w_1920,c_limit/00057-versace-fall-2023-ready-to.jpeg"
+              alt="img"
+              draggable="false"
+            />
+          </div>
+
+          <i id="right" class="arrow-left">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="carousel_arrow"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </i>
+        </div>
+      </div>
+      <!-- Models - DISCOVER -->
+      <div class="models_discover">
+        <div class="section_title"><h3>Discover Models</h3></div>
+
+        <div
+          id="models_discover_container"
+          class="models_discover_container"
+        ></div>
+      </div>
+    </main>
+
+    <footer id="footer_container" class="footer_container"></footer>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/fashion.js"></script>
+    <script src="./js/carousel_images.js"></script>
+  </body>
+</html>

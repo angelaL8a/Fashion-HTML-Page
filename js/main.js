@@ -3,27 +3,27 @@ const elements = [
   {
     title: "Test1",
     index: "article_img_1",
-    src: "./Images/card.jpg",
+    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
   },
   {
     title: "Test2",
     index: "article_img_2",
-    src: "./Images/card.jpg",
+    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
   },
   {
     title: "Test3",
     index: "article_img_3",
-    src: "./Images/card.jpg",
+    src: "https://assets.vogue.com/photos/64aef1c311f7aacca57c43f2/master/w_1920,c_limit/GettyImages-1527911229.jpg",
   },
   {
     title: "Test4",
     index: "article_img_4",
-    src: "./Images/card.jpg",
+    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
   },
   {
     title: "Test5",
     index: "article_img_5",
-    src: "./Images/card.jpg",
+    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
   },
 ];
 
