@@ -52,17 +52,18 @@ elements.forEach((element) => {
 const mustReadElements = [
   {
     category: "Fashion",
-    title: "String",
+    title:
+      "Forget ’90s Thong Sandals, Nicola Peltz Brings Back the Y2K Wedge in St Tropez",
     src: "https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_120,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20120w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_240,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20240w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_320,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20320w",
   },
   {
     category: "Culture",
-    title: "String",
+    title: "The 7 Biggest Summer Haircuts of 2023",
     src: "https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_120,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20120w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_240,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20240w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_320,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20320w",
   },
   {
     category: "Beauty",
-    title: "String",
+    title: "Amal Clooney Brings Studio 54 to Lake Como",
     src: "https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_120,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20120w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_240,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20240w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_320,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20320w",
   },
 ];
@@ -80,9 +81,9 @@ mustReadElements.forEach((i, index) => {
       />
     </div>
 
-    <div>
-      <a href="#">${i.category}</a>
-      <p>${i.title}</p>
+    <div class="flex-1">
+      <a class="uppercase font-semibold" href="#">${i.category}</a>
+      <p class="text-lg" >${i.title}</p>
     </div>
   `;
   mustReadContainer.appendChild(item);

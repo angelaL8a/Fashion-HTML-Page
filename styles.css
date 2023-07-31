@@ -197,7 +197,7 @@ h1 {
   display: flex;
   justify-content: center;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .must_read_title h3 {
@@ -209,6 +209,7 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   max-width: 1400px;
   margin: 0 auto;
+  gap: 20px;
 }
 
 .must_read_art {
@@ -486,7 +487,7 @@ h1 {
   min-height: 650px;
 }
 
-/* TABS */
+/* FASHION PAGE TABS */
 .tabs {
   max-width: 1400px;
   margin: 0 auto;
@@ -527,7 +528,7 @@ h1 {
   gap: 20px;
 }
 
-/* Home: Carousel */
+/* FASHION PAGE Home: Carousel */
 .wrapper {
   display: flex;
   max-width: 1370px;
@@ -603,7 +604,7 @@ h1 {
   overflow: hidden;
 }
 
-/* Models Section - DISCOVER MODELS */
+/* FASHION PAGE Models Section - DISCOVER MODELS */
 .models_discover {
   padding-top: 100px;
   max-width: 1400px;
@@ -640,7 +641,7 @@ h1 {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Models Section - DISCOVER MODELS - Modals */
+/* FASHION PAGE Models Section - DISCOVER MODELS - Modals */
 .modal {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -668,6 +669,103 @@ h1 {
 
 .modal_close {
   display: none;
+}
+
+/* FASHION PAGE- Clothing section - Explore by topic  */
+.clothing_tabs {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.clothing-tab-button {
+  padding: 5px 15px;
+  background-color: #f7dfe9;
+  border-radius: 9999px;
+  transition-duration: 400ms;
+}
+
+.clothing-tab-button.active {
+  background-color: black;
+  color: white;
+}
+
+.clothing-tab-button.active:hover {
+  background-color: black;
+}
+
+.clothing-tab-button:hover {
+  background-color: rgb(252, 200, 229);
+}
+
+/* FASHION PAGE - "More in Models" */
+.moreInModels {
+  padding-top: 100px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.moreInModels_container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 80px 60px;
+}
+
+.moreInModels_image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.moreInModels_card {
+  border-radius: 12px;
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+
+.moreInModels_card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.9s;
+}
+
+.moreInModels_card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.moreInModels_card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(255, 34, 237);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.moreInModels_card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.moreInModels_card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+.moreInModels_content {
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal (animations) */

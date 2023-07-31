@@ -24,8 +24,8 @@ const categories = [
     href: "fashion.html",
     sub_cat: [
       { name: "Models", href: "fashion.html#models" },
-      { name: "Clothing" },
-      { name: "Designers & Trends" },
+      { name: "Clothing", href: "fashion.html#clothing_tabs" },
+      { name: "Designers & Trends", href: "fashion.html#designers" },
     ],
   },
   {

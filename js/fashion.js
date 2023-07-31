@@ -113,6 +113,7 @@ models.forEach((model) => {
   modelsSection.appendChild(modelElement);
 });
 
+// Trending Models section
 const trending = [
   {
     name: "Ice Spice",
@@ -431,4 +432,246 @@ modelsDiscover.forEach((mod, index) => {
       modal.classList.add("modal_close");
     }
   });
+});
+
+//Explore by topic section
+const topics = [
+  {
+    name: "Ice Spice",
+    dataTab: "clothingTab1",
+    cards: [
+      {
+        title:
+          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
+        image:
+          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+      },
+      {
+        title:
+          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
+        image:
+          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+      },
+      {
+        title:
+          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
+        image:
+          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+      },
+      {
+        title:
+          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
+        image:
+          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+      },
+    ],
+  },
+  {
+    name: "Kendall Jenner",
+    dataTab: "clothingTab2",
+    cards: [
+      {
+        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
+        image:
+          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+      },
+      {
+        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
+        image:
+          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+      },
+      {
+        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
+        image:
+          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+      },
+      {
+        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
+        image:
+          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+      },
+    ],
+  },
+  {
+    name: "Gigi Hadid",
+    dataTab: "clothingTab3",
+    cards: [
+      {
+        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
+        image:
+          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+      },
+      {
+        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
+        image:
+          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+      },
+      {
+        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
+        image:
+          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+      },
+      {
+        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
+        image:
+          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+      },
+    ],
+  },
+  {
+    name: "Linda Eangelista",
+    dataTab: "clothingTab4",
+    cards: [
+      {
+        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
+        image:
+          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+      },
+      {
+        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
+        image:
+          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+      },
+      {
+        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
+        image:
+          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+      },
+      {
+        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
+        image:
+          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+      },
+    ],
+  },
+];
+
+const clothingTabs = document.getElementById("clothing_tabs");
+
+topics.forEach((item, index) => {
+  const itemDiv = document.createElement("div");
+  itemDiv.classList.add("clothing-tab-content");
+  itemDiv.id = item.dataTab;
+
+  itemDiv.innerHTML = `
+  <div class="tab-content-cards" id="clothing-tab-content-cards-${index}">
+  </div>
+  `;
+
+  clothingTabs.appendChild(itemDiv);
+
+  const itemContainer = document.getElementById(
+    `clothing-tab-content-cards-${index}`
+  );
+
+  item.cards.forEach((card) => {
+    const itemChild = document.createElement("div");
+    itemChild.classList.add("tab-card");
+
+    itemChild.innerHTML = `
+      <div>
+        <img
+          src="${card.image}"
+          alt=""
+        />
+      </div>
+
+      <div>
+        <h4>
+          ${card.title}
+        </h4>
+      </div>
+    `;
+
+    itemContainer.appendChild(itemChild);
+  });
+});
+
+// Models section - TABS
+// Obtener los elementos de los tabs y su contenido
+const clothingTabButtons = document.querySelectorAll(".clothing-tab-button");
+const clothingTabContents = document.querySelectorAll(".clothing-tab-content");
+
+// Asignar el evento click a los botones de tabs
+clothingTabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Desactivar la clase 'active' en todos los botones y ocultar los contenidos de tabs
+    clothingTabButtons.forEach((btn) => btn.classList.remove("active"));
+    clothingTabContents.forEach((content) => (content.style.display = "none"));
+
+    // Obtener el ID del tab activo y mostrar su contenido correspondiente
+    const tabId = button.dataset.tab;
+    const tabContent = document.getElementById(tabId);
+
+    button.classList.add("active");
+    tabContent.style.display = "block";
+  });
+});
+
+// Mostrar el contenido del primer tab al cargar la página
+clothingTabButtons[0].click();
+
+// Explore By Topic section
+const designers = [
+  {
+    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
+    image:
+      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
+  },
+  {
+    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
+    image:
+      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
+  },
+  {
+    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
+    image:
+      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
+  },
+  {
+    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
+    image:
+      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
+  },
+  {
+    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
+    image:
+      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
+  },
+  {
+    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
+    image:
+      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
+  },
+];
+
+const latestContainer = document.getElementById("moreInModels_container");
+
+designers.forEach((item, index) => {
+  const itemDiv = document.createElement("div");
+  itemDiv.classList.add("moreInModels_card");
+  itemDiv.innerHTML = `
+    <div class="face front">
+      <div class="moreInModels_image">
+        <img
+            src="${item.image}"
+            alt="${item.title}"
+            class="object-cover w-full h-full"
+        />
+      </div>
+
+      <div class="moreInModels_content">
+        <h4 class="font-semibold text-xl">
+          ${item.title}
+        </h4>
+      </div>
+    </div>
+
+    <div class="face back">
+      <h3>Japan</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+    </div>
+  `;
+
+  latestContainer.appendChild(itemDiv);
 });
