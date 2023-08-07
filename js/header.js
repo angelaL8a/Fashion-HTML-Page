@@ -30,7 +30,7 @@ const categories = [
   },
   {
     name: "Beauty",
-    href: "#",
+    href: "beauty.html",
     sub_cat: [
       { name: "Celebrity" },
       { name: "Makeup & Skincare" },
