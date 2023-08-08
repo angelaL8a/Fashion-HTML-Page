@@ -87,7 +87,7 @@ h1 {
   background-color: #f8f8f8;
 }
 
-/* Main (index.html) */
+/* Main PAGE (index.html) */
 .main {
   background-image: linear-gradient(to bottom, #f8f8f8, #f2f3f5);
   /* background-color: #f3f4f6; */
@@ -134,7 +134,7 @@ h1 {
   margin-top: 150px;
 }
 
-/* Articles (index.html) */
+/* Articles (MainPage) (index.html) */
 .articles_container {
   max-width: 1400px;
   margin: 0 auto;
@@ -168,7 +168,7 @@ h1 {
   text-align: justify;
 }
 
-/* Article center (index.html) */
+/* Article center (MainPage) (index.html) */
 .article_img_3 {
   grid-column: span 3 / span 3;
   grid-row: span 2 / span 2;
@@ -186,7 +186,7 @@ h1 {
   grid-column-start: 5;
 }
 
-/* Must read section (index.html) */
+/* Must read section (MainPage) (index.html) */
 .must_read {
   background-color: white;
   padding: 12px;
@@ -222,7 +222,7 @@ h1 {
   border-radius: 5px;
 }
 
-/* Celebrity Style section (index.html)*/
+/* Celebrity Style section (MainPage) (index.html)*/
 .sizesCards_section {
   max-width: 1400px;
   margin: 0 auto;
@@ -261,7 +261,7 @@ h1 {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
-/* Carousel */
+/* Carousel  (MainPage) (index.html)*/
 .carousel_container {
   max-width: 1400px;
   margin: 0 auto;
@@ -284,6 +284,7 @@ h1 {
   box-shadow: 0 3px 6px rgba(174, 173, 173, 0.23);
   transform: translateY(-50%);
   transition: transform 0.1s linear;
+  z-index: 50;
 }
 
 .wrapper i:active {
@@ -441,7 +442,6 @@ h1 {
   padding: 20px;
   top: -35px;
   width: 800px;
-  height: 80px;
   border-radius: 5px;
   color: black;
   display: flex;
@@ -529,7 +529,7 @@ h1 {
 }
 
 /* FASHION PAGE Home: Carousel */
-.wrapper {
+.wrapperFashionPage {
   display: flex;
   max-width: 1370px;
   margin-top: 25px;
@@ -538,7 +538,7 @@ h1 {
   position: relative;
 }
 
-.wrapper i {
+.wrapperFashionPage i {
   top: 50%;
   height: 44px;
   width: 44px;
@@ -556,20 +556,20 @@ h1 {
   transform: rotate(-90deg) scale(1.5);
 }
 
-.wrapper i:active {
+.wrapperFashionPage i:active {
   transform: translateY(-50%) scale(0.9);
 }
 
-.wrapper i:first-child {
+.wrapperFashionPage i:first-child {
   left: -22px;
   display: none;
 }
 
-.wrapper i:last-child {
+.wrapperFashionPage i:last-child {
   right: -22px;
 }
 
-.wrapper .carousel {
+.wrapperFashionPage .carouselFashionPage {
   font-size: 0px;
   cursor: pointer;
   overflow: hidden;
@@ -577,16 +577,16 @@ h1 {
   scroll-behavior: smooth;
 }
 
-.carousel.dragging {
+.carouselFashionPage.dragging {
   cursor: grab;
   scroll-behavior: auto;
 }
 
-.carousel.dragging img {
+.carouselFashionPage.dragging img {
   pointer-events: none;
 }
 
-.carousel img {
+.carouselFashionPage img {
   height: 640px;
   object-fit: cover;
   user-select: none;
@@ -595,13 +595,14 @@ h1 {
   border-radius: 10px;
 }
 
-.carousel img:first-child {
+.carouselFashionPage img:first-child {
   margin-left: 0px;
 }
 
-.carousel {
+.carouselFashionPage {
   border-radius: 20px;
   overflow: hidden;
+  display: flex;
 }
 
 /* FASHION PAGE Models Section - DISCOVER MODELS */
@@ -649,7 +650,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 50;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -792,7 +793,7 @@ h1 {
 }
 
 .slider-frame {
-  width: 1400px;
+  max-width: 1400px;
   height: auto;
   margin: auto;
   max-height: 750px;
@@ -804,7 +805,6 @@ h1 {
   display: flex;
   padding: 0;
   width: 400%;
-
   animation: slide 20s infinite alternate ease-in-out;
 }
 
@@ -850,6 +850,56 @@ h1 {
   100% {
     margin-left: -300%;
   }
+}
+
+/* Carousel Videos (Bauty page) (beauty.html) */
+.carouselBeautyPage {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  scroll-snap-type: proximity;
+  overflow-x: auto;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+}
+
+.carouselBeautyPage::-webkit-scrollbar {
+  display: none;
+}
+
+.cardVideo {
+  height: 100%;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  max-width: calc((100% / 3.3));
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cardVideo_img {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+}
+
+.cardVideo_titleVideo {
+  font-size: 23px;
+  padding: 10px 15px;
+  font-weight: 500;
+}
+
+.video_modal_content {
+  background-color: white;
+  width: 600px;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 /* RESPONSIVE */

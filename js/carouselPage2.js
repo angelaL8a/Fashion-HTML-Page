@@ -1,6 +1,6 @@
-const carousel = document.querySelector(".carousel"),
+const carousel = document.querySelector(".carouselFashionPage"),
   firstImg = carousel.querySelectorAll("img")[0],
-  arrowIcons = document.querySelectorAll(".wrapper i");
+  arrowIcons = document.querySelectorAll(".wrapperFashionPage i");
 let isDragStart = false;
 let isDragging = false;
 let prevPageX;
