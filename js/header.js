@@ -11,15 +11,6 @@ headerElement.innerHTML = `
 // Header links
 const categories = [
   {
-    name: "News",
-    href: "#",
-    sub_cat: [
-      { name: "Awards and Events" },
-      { name: "Music Culture" },
-      { name: "Entertainment" },
-    ],
-  },
-  {
     name: "Fashion",
     href: "fashion.html",
     sub_cat: [
@@ -32,15 +23,15 @@ const categories = [
     name: "Beauty",
     href: "beauty.html",
     sub_cat: [
-      { name: "Celebrity" },
-      { name: "Makeup & Skincare" },
-      { name: "Fragance" },
+      { name: "Celebrity", href: "beauty.html#glamour&Glow" },
+      { name: "Latest in Fashion", href: "beauty.html#magazines_Section" },
+      { name: "Makeup & Skincare", href: "beauty.html#tips_Section" },
     ],
   },
   {
     name: "Culture",
-    href: "#",
-    sub_cat: [{ name: "Music" }, { name: "Arts" }, { name: "Sports" }],
+    href: "culture.html",
+    sub_cat: [{ name: "TV & Movies" }, { name: "Arts" }, { name: "Sports" }],
   },
   {
     name: "Lifestyle",
@@ -74,7 +65,7 @@ categories.forEach((item, index) => {
 
   const subContainer = document.getElementById(`link_card_${index}`);
 
-  item.sub_cat.forEach((sub, sub_index) => {
+  item.sub_cat?.forEach((sub, sub_index) => {
     const sub_item = document.createElement("a");
     sub_item.href = sub.href;
     sub_item.classList.add("sub_link");

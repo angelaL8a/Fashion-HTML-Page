@@ -18,6 +18,12 @@ const videos = [
       "https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill%2Cd_placeholder_image.jpg%2Cfl_progressive%2Cg_center%2Ch_900%2Cq_80%2Cw_1600/v1682520102/vogue_anok-yai-beauty-secrets.jpg",
     videoURL: "https://www.youtube.com/embed/juAPaOUQmGY",
   },
+  {
+    name: "Watch Lola Tung Do Her Berry-Hued Beauty Look",
+    thumbnail:
+      "https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill%2Cd_placeholder_image.jpg%2Cfl_progressive%2Cg_center%2Ch_900%2Cq_80%2Cw_1600/v1689096533/vogue_lola-tungs-beauty-secrets.jpg",
+    videoURL: "https://www.youtube.com/embed/u-voLtzDD9Q",
+  },
 ];
 
 const videosContainer = document.getElementById("carouselBeautyPage");

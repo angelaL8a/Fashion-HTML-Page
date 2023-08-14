@@ -1,5 +1,6 @@
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 
 /* Global */
 h1 {
@@ -23,10 +24,11 @@ h1 {
   height: 60px;
   align-items: center;
   padding: 0px 140px;
-  background-color: #f8f8f8;
+  background-color: #f8f8f8ef;
   position: sticky;
+  backdrop-filter: blur(8px);
   top: 0;
-  z-index: 50;
+  z-index: 9999;
 }
 
 .header_links {
@@ -153,6 +155,7 @@ h1 {
 
 .article_img img {
   width: 100%;
+  border-radius: 2px;
 }
 
 .article_img_2 {
@@ -900,6 +903,244 @@ h1 {
   width: 600px;
   padding: 20px;
   border-radius: 5px;
+}
+
+/* Magazines Buy section - BEAUTY PAGE (beauty.html) */
+.magazineContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.magazine-image {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.magazine-image img:hover {
+  transform: scale(1.1);
+}
+
+.magazine-image img {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.magazine-content {
+  padding: 10px;
+}
+
+.magazine-content h4 {
+  font-size: 20px;
+}
+
+.magazine-button {
+  background-color: #f7dfe9;
+  padding: 5px 20px;
+  margin-top: 5px;
+  border-radius: 9999px;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.magazine-button:hover {
+  opacity: 0.9;
+}
+
+.magazine-0 {
+  grid-row: span 2 / span 2;
+  grid-column: span 2 / span 2;
+}
+
+.makeupContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 150px 40px;
+}
+
+.makeup_item {
+  max-width: 500px;
+  position: relative;
+}
+
+.makeup_item_0 h4 {
+  font-family: "Rock Salt", cursive;
+  font-size: 70px;
+  color: #8a609e;
+  position: absolute;
+  top: 100px;
+  text-shadow: 1px 1px 2px #975677, 0 0 1em #d4a1bb;
+}
+
+.makeup_item_0 {
+  grid-row: span 2 / span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.makeup_item_0_img {
+  overflow: hidden;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px #8d63a3, 0 2px 4px -2px #8d63a3;
+  height: 450px;
+  width: 450px;
+}
+
+.makeup_item_img {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.makeup_item_content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  z-index: 50;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.makeup_item_content h4 {
+  font-size: 20px;
+}
+
+.careContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 150px 40px;
+}
+
+.skincare_item {
+  max-width: 500px;
+  position: relative;
+}
+
+.skincare_item_0 h4 {
+  font-family: "Rock Salt", cursive;
+  font-size: 110px;
+  color: #99c6d7;
+  position: absolute;
+  bottom: 2px;
+  text-shadow: 1px 1px 2px #975677, 0 0 1em #826373;
+}
+
+.skincare_item_0 {
+  grid-row: span 2 / span 2;
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.skincare_item_0_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skincare_item_0_img {
+  overflow: hidden;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px #8d63a3, 0 2px 4px -2px #8d63a3;
+  height: 650px;
+  width: 650px;
+}
+
+.skincare_item_img {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skincare_item_content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  z-index: 50;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.skincare_item_content h4 {
+  font-size: 20px;
+}
+
+/* CULTURE PAGE (culture.html) */
+.cover_culture {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cover_culture img {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.tvMovies {
+  display: flex;
+  gap: 45px;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tvMovies_main {
+  flex: 1;
+}
+
+.tvMovies_sidebar {
+  width: 450px;
+  height: 100vh;
+  position: sticky;
+  top: 60px;
+}
+
+.tvMovies_sidebar img {
+  border-radius: 4px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tvMovies_card {
+  display: flex;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.tvMovies_card_img {
+  width: 350px;
+}
+
+.tvMovies_card_content {
+  padding: 20px 25px;
+  background-color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* RESPONSIVE */
