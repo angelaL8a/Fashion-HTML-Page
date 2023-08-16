@@ -340,6 +340,7 @@ tabButtons.forEach((button) => {
 // Mostrar el contenido del primer tab al cargar la página
 tabButtons[0].click();
 
+//MEET THE 10 STANDOUT MODELS OF FALL 2023
 const modelsDiscover = [
   {
     name: "Kendal Jenner",

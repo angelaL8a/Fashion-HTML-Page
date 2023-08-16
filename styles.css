@@ -250,6 +250,9 @@ h1 {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 40px;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .section_title h3 {
@@ -265,7 +268,7 @@ h1 {
 }
 
 /* Carousel  (MainPage) (index.html)*/
-.carousel_container {
+.section_container {
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -1098,6 +1101,8 @@ h1 {
   margin-bottom: 100px;
 }
 
+/* SHOWTIME TREASURES - Culture page (culture.html) */
+
 .tvMovies {
   display: flex;
   gap: 45px;
@@ -1123,11 +1128,34 @@ h1 {
   object-fit: cover;
 }
 
+/* SHOWTIME TREASURES cards animations */
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateX(7rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 .tvMovies_card {
   display: flex;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 5px;
   margin-bottom: 50px;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+.tvMovies_card:last-of-type {
+  margin-bottom: 0px;
 }
 
 .tvMovies_card_img {
@@ -1141,6 +1169,131 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+/* INSPIRARTION INSIGHTS section - Culture page (culture.html) */
+.art_container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.art_card {
+  height: 630px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  border-radius: 3px;
+}
+
+.art_card.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.art_card.dragging .art_card_article {
+  cursor: grab;
+  user-select: none;
+}
+
+.art_card_article {
+  height: 630px;
+  background-color: white;
+  scroll-snap-align: start;
+  border-radius: 3px;
+  position: relative;
+}
+
+.art_card_arrow_upside_down {
+  transform: rotate(180deg);
+}
+
+.card_topic {
+  position: relative;
+}
+
+.art_card_article_content {
+  padding: 10px;
+}
+
+.art_card_article_img {
+  width: 100%;
+  height: 60%;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  overflow: hidden;
+}
+
+.art_card_article_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.art_card_article_content {
+  padding: 20px 35px;
+}
+
+.art_card_article_content h4 {
+  font-size: 22px;
+}
+
+.art_card_topic {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: rgb(56, 56, 56);
+}
+
+.art_card_arrow {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  animation: bounceArrow 1s infinite;
+}
+
+.sports_container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sports_tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 250px;
+}
+
+@keyframes arrow_bounce {
+  from {
+    opacity: 0;
+    transform: translateX(7rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes bounceArrow {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
 
 /* RESPONSIVE */

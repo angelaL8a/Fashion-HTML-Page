@@ -31,7 +31,11 @@ const categories = [
   {
     name: "Culture",
     href: "culture.html",
-    sub_cat: [{ name: "TV & Movies" }, { name: "Arts" }, { name: "Sports" }],
+    sub_cat: [
+      { name: "TV & Movies", href: "culture.html#showtime_treasures" },
+      { name: "Arts" },
+      { name: "Sports" },
+    ],
   },
   {
     name: "Lifestyle",
