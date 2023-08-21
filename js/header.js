@@ -33,16 +33,16 @@ const categories = [
     href: "culture.html",
     sub_cat: [
       { name: "TV & Movies", href: "culture.html#showtime_treasures" },
-      { name: "Arts" },
-      { name: "Sports" },
+      { name: "Arts", href: "culture.html#art_section" },
+      { name: "Sports", href: "culture.html#sports_section" },
     ],
   },
   {
     name: "Lifestyle",
-    href: "#",
+    href: "lifestyle.html",
     sub_cat: [
-      { name: "Travel" },
       { name: "Home & Decorating" },
+      { name: "Travel" },
       { name: "Holidays" },
     ],
   },

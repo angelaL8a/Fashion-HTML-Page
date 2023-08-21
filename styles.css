@@ -1091,12 +1091,12 @@ h1 {
 }
 
 /* CULTURE PAGE (culture.html) */
-.cover_culture {
+.cover_page_img {
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.cover_culture img {
+.cover_page_img img {
   width: 100%;
   margin-bottom: 100px;
 }
@@ -1267,9 +1267,168 @@ h1 {
 
 .sports_tabs {
   display: flex;
+  flex-direction: row;
+  gap: 25px;
+  height: 600px;
+}
+
+.buttons_container {
+  display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 250px;
+  justify-content: center;
+  width: 250px;
+  margin-right: -50px;
+  z-index: 51;
+}
+
+.tab-button-sport {
+  padding: 25px 15px;
+  background-color: white;
+  transition-duration: 300ms;
+  font-size: 20px;
+}
+
+.tab-button-sport.active {
+  background-color: #f42e91;
+  color: white;
+  transform: scale(1.05);
+  border-radius: 10px;
+}
+
+.tab-button-sport.active:hover {
+  background-color: #f64ea2;
+}
+
+.tab-button-sport:hover {
+  background-color: rgb(252, 200, 229);
+}
+
+.tab-sport {
+  flex: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tab-sport-img {
+  width: 100%;
+  height: 100%;
+}
+
+.tab-sport-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tab-sport-content {
+  padding: 20px 30px;
+  position: absolute;
+  z-index: 50;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  margin: 0px 40px 20px 40px;
+  border-radius: 10px;
+}
+
+.tab-sport-content p {
+  font-size: 17px;
+  text-align: justify;
+}
+
+.tab-sport-content h4 {
+  font-size: 23px;
+}
+
+/* LIFESTYLE SECTION - lifestyle.html */
+.home_decorating_container {
+  display: flex;
+  gap: 25px;
+}
+
+.poster {
+  width: 40%;
+  display: flex;
+}
+
+.poster img {
+  object-fit: cover;
+}
+
+.cards_homedecorating_container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.lifestyle_card {
+  width: 100%;
+  position: relative;
+}
+
+.lifestyle_card_content {
+  position: absolute;
+  bottom: 0px;
+}
+
+.lifestyle_card_img {
+  height: 100%;
+  width: 100%;
+}
+
+.lifestyle_card_img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.lifestyle_card_0 {
+  grid-column: span 1 / span 1;
+  grid-row: span 1 / span 1;
+  grid-column-start: 1;
+}
+
+.lifestyle_card_1 {
+  grid-column: span 2 / span 2;
+  grid-row: span 1 / span 1;
+  grid-column-start: 2;
+}
+
+.lifestyle_card_2 {
+  grid-column: span 2 / span 2;
+  grid-row: span 1 / span 1;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.lifestyle_card_3 {
+  grid-column: span 1 / span 1;
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+
+.lifestyle_card_4 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.lifestyle_card_5 {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.lifestyle_panel {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
 }
 
 @keyframes arrow_bounce {

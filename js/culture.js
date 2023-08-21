@@ -39,21 +39,18 @@ movies.forEach((movie, index) => {
   divMovie.classList.add("tvMovies_card");
 
   divMovie.innerHTML = `
-    <div class="tvMovies_card_img">
-      <img
-        src="${movie.image}"
-        alt="${movie.title}"
-      />
-    </div>
-    <div class="tvMovies_card_content">
-      <h4 class="text-2xl mb-3">
+<div class="tvMovies_card_img">
+    <img src="${movie.image}" alt="${movie.title}" />
+</div>
+<div class="tvMovies_card_content">
+    <h4 class="text-2xl mb-3">
         ${movie.title}
-      </h4>
-      <p class="text-justify">
+    </h4>
+    <p class="text-justify">
         ${movie.text}
-      </p>
-    </div>
-  `;
+    </p>
+</div>
+`;
 
   moviesContainer.appendChild(divMovie);
 });
@@ -143,10 +140,10 @@ artsItems.forEach((artItem, index) => {
   divTopic.classList.add("card_topic");
 
   divTopic.innerHTML = `
-    <h3 class="art_card_topic">${artItem.title}</h3>
+<h3 class="art_card_topic">${artItem.title}</h3>
 
-    <div id="art_card_${index}" class="art_card"></div>
-  `;
+<div id="art_card_${index}" class="art_card"></div>
+`;
 
   artTopicsContainer.appendChild(divTopic);
 
@@ -157,29 +154,27 @@ artsItems.forEach((artItem, index) => {
     divCard.classList.add("art_card_article");
 
     divCard.innerHTML = `
-    <div class="art_card_article_img">
-      <img
-        src="${card.img}"
-        alt="${card.title}"
-        draggable="false"
-      />
-    </div>
+<div class="art_card_article_img">
+    <img src="${card.img}" alt="${card.title}" draggable="false" />
+</div>
 
-    <div class="art_card_article_content">
-      <h4>
-      ${card.title}
-      </h4>
-      <p>
-      ${card.text}
-      </p>
-    </div>
+<div class="art_card_article_content">
+    <h4>
+        ${card.title}
+    </h4>
+    <p>
+        ${card.text}
+    </p>
+</div>
 
-    <div class="art_card_arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-gray-700 ${
+<div class="art_card_arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-gray-700 ${
       artItem.items[artItem.items.length - 1].title === card.title
-        ? "art_card_arrow_upside_down"
+        ? " art_card_arrow_upside_down"
         : ""
-    }"><path d="m6 9 6 6 6-6"/></svg></div>
-    `;
+    }">
+        <path d="m6 9 6 6 6-6" />
+    </svg></div>
+`;
 
     artCard.appendChild(divCard);
   });
@@ -220,9 +215,9 @@ const sportsItems = [
     dataTab: "tab1",
     titleArticle: "Wimbledon Finals Preview: We’ll Have a New Women’s",
     textArticle:
-      "olina in the quarterfinals, thus freeing her up to finally see that Harry Styles concert) will play sixth-seeded Ons Jabeur from Tunisia for the women’s title. While Jabeur will be appearing in her second straight final here—oddly enough",
+      "Colina in the quarterfinals, thus freeing her up to finally see that Harry Styles concert) will play sixth-seeded Ons Jabeur from Tunisia for the women’s title. While Jabeur will be appearing in her second straight final here—oddly enough. Colina in the quarterfinals, thus freeing her up to finally see that Harry Styles concert) will play sixth-seeded Ons Jabeur from Tunisia for the women’s title. While Jabeur will be appearing in her second straight final here—oddly enough.",
     imgArticle:
-      "https://assets.vogue.com/photos/6484af72956dd488a4432518/4:3/w_640,c_limit/GettyImages-1497450253.jpg",
+      "https://images.unsplash.com/photo-1674574124567-79b2ee3d22fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
   },
   {
     nameButton: "Racing",
@@ -260,25 +255,73 @@ const sportsItems = [
     imgArticle:
       "https://assets.vogue.com/photos/6484af72956dd488a4432518/4:3/w_640,c_limit/GettyImages-1497450253.jpg",
   },
+  {
+    nameButton: "Nose",
+    dataTab: "tab6",
+    titleArticle: "Wimbledon Finals Preview: We’ll Have a New Women’s",
+    textArticle:
+      "olina in the quarterfinals, thus freeing her up to finally see that Harry Styles concert) will play sixth-seeded Ons Jabeur from Tunisia for the women’s title. While Jabeur will be appearing in her second straight final here—oddly enough",
+    imgArticle:
+      "https://assets.vogue.com/photos/6484af72956dd488a4432518/4:3/w_640,c_limit/GettyImages-1497450253.jpg",
+  },
 ];
 
 const sportTabs = document.getElementById("sports_tabs");
+const buttonsContainer = document.getElementById("buttons_container");
 sportsItems.forEach((tab, index) => {
-  const divSport = document.createElement("button");
-  divSport.classList.add("tab-button");
-  divSport.setAttribute("data-tab", tab.dataTab);
+  const buttonSport = document.createElement("button");
+  buttonSport.classList.add("tab-button-sport");
+  buttonSport.setAttribute("data-tab", tab.dataTab);
 
   if (index === 0) {
-    divSport.classList.add("active");
+    buttonSport.classList.add("active");
   }
 
-  divSport.innerHTML = `
-    ${tab.nameButton}
-  `;
+  buttonSport.innerHTML = `
+${tab.nameButton}
+`;
 
-  sportTabs.appendChild(divSport);
+  buttonsContainer.appendChild(buttonSport);
 });
 
 const sportsContainer = document.getElementById("sports_container");
 
-sportsItems.forEach((sport, index) => {});
+sportsItems.forEach((item, index) => {
+  const itemDiv = document.createElement("div");
+  itemDiv.classList.add("tab-sport");
+  itemDiv.id = item.dataTab;
+
+  itemDiv.innerHTML = `
+	    <div class="tab-sport-img">
+        <img src="${item.imgArticle}" alt="${item.titleArticle}">
+      </div>
+
+	    <div class="tab-sport-content">
+	        <h4>${item.titleArticle}</h4>
+	        <p>${item.textArticle}</p>
+	    </div>
+	`;
+
+  sportTabs.appendChild(itemDiv);
+});
+
+const tabButtons = document.querySelectorAll(".tab-button-sport");
+const tabContents = document.querySelectorAll(".tab-sport");
+
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Desactivar la clase 'active' en todos los botones y ocultar los contenidos de tabs
+    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    tabContents.forEach((content) => (content.style.display = "none"));
+
+    // Obtener el ID del tab activo y mostrar su contenido correspondiente
+    const tabId = button.dataset.tab;
+    const tabContent = document.getElementById(tabId);
+
+    button.classList.add("active");
+    tabContent.style.display = "block";
+  });
+});
+
+// Mostrar el contenido del primer tab al cargar la página
+tabButtons[0].click();

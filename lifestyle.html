@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header id="header" class="header"></header>
+    <main class="main">
+      <h1 class="h1_titles">Lifestyle</h1>
+      <div class="cover_page_img rounded-[5px] mt-[20px] overflow-hidden">
+        <img
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d6589a93903297.5e70edfaddf5a.jpg"
+          alt=""
+        />
+      </div>
+
+      <div id="travel" class="section_title">
+        <h3>Home & Decorating</h3>
+      </div>
+
+      <div class="section_container home_decorating_container">
+        <div class="poster">
+          <img
+            src="https://images.unsplash.com/photo-1551298698-66b830a4f11c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=715&q=80"
+            alt=""
+          />
+        </div>
+
+        <div
+          id="cards_homedecorating_container"
+          class="cards_homedecorating_container"
+        ></div>
+      </div>
+    </main>
+    <footer id="footer_container" class="footer_container"></footer>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/lifestyle.js"></script>
+  </body>
+</html>
