@@ -28,7 +28,7 @@ h1 {
   position: sticky;
   backdrop-filter: blur(8px);
   top: 0;
-  z-index: 9999;
+  z-index: 500;
 }
 
 .header_links {
@@ -1345,6 +1345,7 @@ h1 {
 .home_decorating_container {
   display: flex;
   gap: 25px;
+  position: relative;
 }
 
 .poster {
@@ -1367,6 +1368,20 @@ h1 {
 .lifestyle_card {
   width: 100%;
   position: relative;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  cursor: pointer;
+}
+
+.lifestyle_card_active {
+  aspect-ratio: 16 / 9;
+  max-width: 650px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 560;
 }
 
 .lifestyle_card_content {
@@ -1428,7 +1443,15 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 10000;
+  z-index: 550;
+}
+
+.panel_close {
+  display: none;
+}
+
+.panel_open {
+  display: block;
 }
 
 @keyframes arrow_bounce {

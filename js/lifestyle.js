@@ -44,17 +44,40 @@ const cardsContainer = document.getElementById(
 cards.forEach((card, index) => {
   const cardDiv = document.createElement("div");
   cardDiv.classList.add("lifestyle_card");
-  cardDiv.classList.add("group");
   cardDiv.classList.add(`lifestyle_card_${index}`);
+  cardDiv.id = `lifestyle_card_${index}`;
 
   cardDiv.innerHTML = `
     <div class="lifestyle_card_img"><img src="${card.image}" alt=""></div>
     <div class="lifestyle_card_content">${card.title}</div>
-
-    <div id="lifestyle_panel" class="lifestyle_panel hidden group-hover:block"></div>
   `;
 
+  const modalCard = document.createElement("div");
+  modalCard.id = `lifestyle_modal_${index}`;
+  modalCard.classList.add("lifestyle_panel");
+  modalCard.classList.add("lifestyle_panel");
+  modalCard.classList.add("panel_close");
+
   cardsContainer.appendChild(cardDiv);
+  cardsContainer.appendChild(modalCard);
+
+  const cardForModal = document.getElementById(`lifestyle_card_${index}`);
+
+  cardForModal.addEventListener("click", () => {
+    const modal = document.getElementById(`lifestyle_modal_${index}`);
+
+    if (modal.className.includes("panel_open")) {
+      modal.classList.remove("panel_open");
+      modal.classList.add("panel_close");
+
+      cardDiv.classList.remove("lifestyle_card_active");
+    } else {
+      modal.classList.remove("panel_close");
+      modal.classList.add("panel_open");
+
+      cardDiv.classList.add("lifestyle_card_active");
+    }
+  });
 });
 
 // Transition in panel for hover effect in cards
