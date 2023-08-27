@@ -1368,20 +1368,6 @@ h1 {
 .lifestyle_card {
   width: 100%;
   position: relative;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  cursor: pointer;
-}
-
-.lifestyle_card_active {
-  aspect-ratio: 16 / 9;
-  max-width: 650px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 560;
 }
 
 .lifestyle_card_content {
@@ -1444,6 +1430,12 @@ h1 {
   right: 0;
   bottom: 0;
   z-index: 550;
+  justify-content: center;
+  align-items: center;
+}
+
+.lifestyle_panel_content {
+  background-color: white;
 }
 
 .panel_close {
@@ -1451,7 +1443,7 @@ h1 {
 }
 
 .panel_open {
-  display: block;
+  display: flex;
 }
 
 @keyframes arrow_bounce {

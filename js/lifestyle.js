@@ -48,18 +48,15 @@ cards.forEach((card, index) => {
   cardDiv.id = `lifestyle_card_${index}`;
 
   cardDiv.innerHTML = `
-    <div class="lifestyle_card_img"><img src="${card.image}" alt=""></div>
-    <div class="lifestyle_card_content">${card.title}</div>
+    <div class="lifestyle_card_img cursor-pointer"><img src="${card.image}" alt=""></div>
+    <div class="lifestyle_card_content cursor-pointer">${card.title}</div>
+
+    <div id="lifestyle_modal_${index}" class="panel_close lifestyle_panel">
+      <div class="lifestyle_panel_content">${card.title}</div>
+    </div>
   `;
 
-  const modalCard = document.createElement("div");
-  modalCard.id = `lifestyle_modal_${index}`;
-  modalCard.classList.add("lifestyle_panel");
-  modalCard.classList.add("lifestyle_panel");
-  modalCard.classList.add("panel_close");
-
   cardsContainer.appendChild(cardDiv);
-  cardsContainer.appendChild(modalCard);
 
   const cardForModal = document.getElementById(`lifestyle_card_${index}`);
 
@@ -69,13 +66,9 @@ cards.forEach((card, index) => {
     if (modal.className.includes("panel_open")) {
       modal.classList.remove("panel_open");
       modal.classList.add("panel_close");
-
-      cardDiv.classList.remove("lifestyle_card_active");
     } else {
       modal.classList.remove("panel_close");
       modal.classList.add("panel_open");
-
-      cardDiv.classList.add("lifestyle_card_active");
     }
   });
 });
