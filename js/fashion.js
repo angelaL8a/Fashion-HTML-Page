@@ -421,7 +421,7 @@ modelsDiscover.forEach((mod, index) => {
     }
   });
 
-  document.addEventListener("click", function (event) {
+  modelsDiscoverContainer.addEventListener("click", function (event) {
     let modal = document.querySelector(`#models_modal_${index}_content`);
     let button = document.querySelector(`#models_discover_card_image_${index}`);
 

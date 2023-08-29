@@ -41,9 +41,9 @@ const categories = [
     name: "Lifestyle",
     href: "lifestyle.html",
     sub_cat: [
-      { name: "Home & Decorating" },
-      { name: "Travel" },
-      { name: "Holidays" },
+      { name: "Home & Decorating", href: "lifestyle.html#home_decorating" },
+      { name: "Travel", href: "lifestyle.html#travel" },
+      { name: "Holidays", href: "lifestyle.html#holidays" },
     ],
   },
 ];
