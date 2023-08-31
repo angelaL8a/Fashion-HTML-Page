@@ -73,13 +73,8 @@ const artsItems = [
         img: "https://assets.vogue.com/photos/64c287928cdda64d26c4bd12/4:3/w_640,c_limit/DSCF2772%5B1%5D%20(1).jpg",
         text: "W​​hat’s the secret to a great portrait? At 86 years old, David Hockney has a few ideas. A lifetime of looking has taught him to always start with the face. W​​hat’s the secret to a great portrait? At 86 years old, David Hockney has a few ideas. A lifetime of looking has taught him to always start with the face.",
       },
-      {
-        title:
-          "When Headadadat42654262rry Styles Met David Hockney: An Exclusive First Look at a Special New Portrait",
-        img: "https://assets.vogue.com/photos/64867fa1a216a76b845000a3/4:3/w_320,c_limit/corey-tenold-photography-0323.jpg",
-        text: "W​​hat’s the secret to a great portrait? At 86 years old, David Hockney has a few ideas. A lifetime of looking has taught him to always start with the face. W​​hat’s the secret to a great portrait? At 86 years old, David Hockney has a few ideas. A lifetime of looking has taught him to always start with the face.",
-      },
     ],
+    cardID: "2rWtm6hZqP11",
   },
   {
     title: "The Late Glenda Jackson, in Glo",
@@ -97,6 +92,7 @@ const artsItems = [
         text: "W​​hat’s the secret to a great portrait? At 86 years old, David Hockney has a few ideas. A lifetime of looking has taught him to always start with the face.",
       },
     ],
+    cardID: "YJfyyd9RVvax",
   },
   {
     title: "The Late Glenda Jackson, in Glo",
@@ -114,6 +110,7 @@ const artsItems = [
         text: "W​​hat’s the secret to a great portrait? At 86 years old, David Hockney has a few ideas. A lifetime of looking has taught him to always start with the face.",
       },
     ],
+    cardID: "mlo5N7zIyuy9",
   },
   {
     title: "The Late Glenda Jackson, in Glo",
@@ -131,6 +128,7 @@ const artsItems = [
         text: "W​​hat’s the secret to a great portrait? At 86 years old, David Hockney has a few ideas. A lifetime of looking has taught him to always start with the face.",
       },
     ],
+    cardID: "PlxiBs8yWOKc",
   },
 ];
 
@@ -150,7 +148,7 @@ artsItems.forEach((artItem, index) => {
 
   const artCard = document.getElementById(`art_card_${index}`);
 
-  artItem.items.forEach((card, index) => {
+  artItem.items.forEach((card, index_card) => {
     const divCard = document.createElement("div");
     divCard.classList.add("art_card_article");
 
@@ -168,7 +166,15 @@ artsItems.forEach((artItem, index) => {
     </p>
 </div>
 
-<div class="art_card_arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-gray-700 ${
+<div
+id="arrow_${artItem.cardID}_${index}_${
+      artItem.items[artItem.items.length - 1].title === card.title
+        ? "top"
+        : "bottom"
+    }"
+class="art_card_arrow art_card_arrow_${
+      artItem.cardID
+    }"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-gray-700 ${
       artItem.items[artItem.items.length - 1].title === card.title
         ? " art_card_arrow_upside_down"
         : ""
@@ -182,7 +188,8 @@ artsItems.forEach((artItem, index) => {
 
   let isDragging = false,
     startY,
-    startScrollTop;
+    startScrollTop,
+    timeoutId;
 
   const dragStart = (e) => {
     isDragging = true;
@@ -204,6 +211,21 @@ artsItems.forEach((artItem, index) => {
     artCard.classList.remove("dragging");
   };
 
+  const arrowBtns = document.querySelectorAll(
+    `.art_card_arrow_${artItem.cardID}`
+  );
+
+  // Add event listeners for the arrow buttons to scroll the carousel left and right
+  arrowBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      artCard.scrollTop +=
+        btn.id == `arrow_${artItem.cardID}_${index}_top`
+          ? startScrollTop - startY
+          : -1 * (startScrollTop - startY);
+    });
+  });
+
+  artCard.addEventListener("mouseenter", () => clearTimeout(timeoutId));
   artCard.addEventListener("mousedown", dragStart);
   artCard.addEventListener("mousemove", dragging);
   document.addEventListener("mouseup", dragStop);

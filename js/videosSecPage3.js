@@ -91,8 +91,7 @@ const carousel = document.querySelector(".carouselBeautyPage");
 const firstCardWidth = carousel.querySelector(".cardVideo").offsetWidth;
 const arrowBtns = document.querySelectorAll(".wrapper i");
 
-let isAutoPlay = true,
-  timeoutId;
+let timeoutId;
 
 // Add event listeners for the arrow buttons to scroll the carousel left and right
 arrowBtns.forEach((btn) => {
@@ -101,10 +100,4 @@ arrowBtns.forEach((btn) => {
   });
 });
 
-const autoPlay = () => {
-  if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false // Autoplay the carousel after every 2500 ms timeoutId=setTimeout(()=> (carousel.scrollLeft += firstCardWidth), 2500);
-};
-autoPlay();
-
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-wrapper.addEventListener("mouseleave", autoPlay);
