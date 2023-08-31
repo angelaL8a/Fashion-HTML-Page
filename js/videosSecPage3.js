@@ -49,7 +49,7 @@ videos.forEach((video, index) => {
   videoModal.id = `video_modal_${index}`;
   videoModal.innerHTML = `
   <div id="video_modal_content_${index}" class="video_modal_content"> 
-  <iframe width="560" height="315" src="${video.videoURL}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+  <iframe class="w-full h-full aspect-video" src="${video.videoURL}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
   ${video.name}
 
   </div>

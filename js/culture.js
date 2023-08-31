@@ -39,17 +39,18 @@ movies.forEach((movie, index) => {
   divMovie.classList.add("tvMovies_card");
 
   divMovie.innerHTML = `
-<div class="tvMovies_card_img">
-    <img src="${movie.image}" alt="${movie.title}" />
-</div>
-<div class="tvMovies_card_content">
-    <h4 class="text-2xl mb-3">
-        ${movie.title}
-    </h4>
-    <p class="text-justify">
-        ${movie.text}
-    </p>
-</div>
+  <div class="tvMovies_card_img">
+      <img src="${movie.image}" alt="${movie.title}" />
+  </div>
+
+  <div class="tvMovies_card_content">
+      <h4 class="text-2xl mb-3">
+          ${movie.title}
+      </h4>
+      <p class="text-justify">
+          ${movie.text}
+      </p>
+  </div>
 `;
 
   moviesContainer.appendChild(divMovie);

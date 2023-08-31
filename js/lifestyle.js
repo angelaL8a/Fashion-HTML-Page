@@ -62,7 +62,7 @@ cards.forEach((card, index) => {
   cardDiv.innerHTML = `
     <div class="lifestyle_card_img cursor-pointer"><img src="${card.image}" alt=""></div>
 
-    <div class="lifestyle_card_panel"></div>
+    <div class="lifestyle_card_panel cursor-pointer"></div>
 
     <div class="lifestyle_card_content cursor-pointer">${card.title}</div>
   `;
@@ -205,6 +205,7 @@ const holidaysContainer = document.getElementById("holidays_main");
 holidaysItems.forEach((item, index) => {
   const holidayDiv = document.createElement("div");
   holidayDiv.classList.add("holiday_card");
+  holidayDiv.classList.add(`holiday_card_${index}`);
   holidayDiv.innerHTML = `
   <div>
     <img
@@ -213,7 +214,7 @@ holidaysItems.forEach((item, index) => {
     />
   </div>
 
-  <div>
+  <div class="holiday_card_content">
     <h4>${item.title}</h4>
   </div>
   `;

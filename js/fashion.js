@@ -1,6 +1,13 @@
 // Grid section (index.html)
 const elements = [
   {
+    title: "Test3",
+    index: "article_img_3",
+    content:
+      "The annual British Vogue X Self-Portrait soirée in London is perpetually a magnet for fashion insiders and A-listers. This year was no different, with the event receiving stellar patronage.",
+    src: "https://assets.vogue.com/photos/64aef1c311f7aacca57c43f2/master/w_1920,c_limit/GettyImages-1527911229.jpg",
+  },
+  {
     title: "Test1",
     index: "article_img_1",
     content:
@@ -13,13 +20,6 @@ const elements = [
     content:
       "The annual British Vogue X Self-Portrait soirée in London is perpetually a magnet for fashion insiders and A-listers. This year was no different, with the event receiving stellar patronage.",
     src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
-  },
-  {
-    title: "Test3",
-    index: "article_img_3",
-    content:
-      "The annual British Vogue X Self-Portrait soirée in London is perpetually a magnet for fashion insiders and A-listers. This year was no different, with the event receiving stellar patronage.",
-    src: "https://assets.vogue.com/photos/64aef1c311f7aacca57c43f2/master/w_1920,c_limit/GettyImages-1527911229.jpg",
   },
   {
     title: "Test4",
@@ -95,7 +95,7 @@ models.forEach((model) => {
   modelElement.classList.add(`${model.size}`);
 
   modelElement.innerHTML = `
-    <div>
+    <div class="sizesCard_img">
       <img
         src="${model.image}"
         alt=""
@@ -393,7 +393,17 @@ modelsDiscover.forEach((mod, index) => {
 
   <div id="models_modal_${index}" class="modal modal_close">
     <div id="models_modal_${index}_content" class="modal_content">
-      <h1>${mod.content}</h1>
+      <div class="sticky top-0 bg-white/80 backdrop-blur p-5 border-b">
+        <h1>${mod.name}</h1>
+      </div>
+      
+     <div class="p-5">
+      <div class="my-4">
+        <img src="${mod.img}">
+      </div>
+
+      <p>${mod.content}</p>
+     </div>
     </div>
   </div>
   `;

@@ -23,7 +23,7 @@ h1 {
   justify-content: space-between;
   height: 60px;
   align-items: center;
-  padding: 0px 140px;
+  padding: 0px 20px;
   background-color: #f8f8f8ef;
   position: sticky;
   backdrop-filter: blur(8px);
@@ -32,7 +32,7 @@ h1 {
 }
 
 .header_links {
-  display: flex;
+  display: none;
   gap: 25px;
   align-items: center;
   height: 100%;
@@ -100,23 +100,17 @@ h1 {
 .main_cover {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0px 30px;
 }
 
 /* Cover (index.html) */
 .cover {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 60px;
   align-items: center;
   padding-top: 75px;
-}
-
-.cover_content {
-  width: 50%;
-}
-
-.cover_image {
-  width: 50%;
 }
 
 .cover_content h1 {
@@ -128,34 +122,41 @@ h1 {
 /* Main (index.html) */
 .main_news {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   gap: 60px;
   align-items: center;
   max-width: 880px;
   margin: 0 auto;
   margin-top: 150px;
+  padding: 0px 30px;
 }
 
 /* Articles (MainPage) (index.html) */
 .articles_container {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0px 30px;
 }
 
 .articles {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
 .article {
   width: 100%;
+  margin-bottom: 40px;
+}
+
+.article_img {
+  aspect-ratio: 1 / 1;
 }
 
 .article_img img {
   width: 100%;
   border-radius: 2px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .article_img_2 {
@@ -177,6 +178,10 @@ h1 {
   grid-row: span 2 / span 2;
   grid-column-start: 2;
   grid-row-start: 1;
+}
+
+.article_img_3 .article_img {
+  aspect-ratio: 9 / 14;
 }
 
 .article_img_4 {
@@ -209,15 +214,15 @@ h1 {
 
 .must_read_articles {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin: 20px auto;
   max-width: 1400px;
-  margin: 0 auto;
   gap: 20px;
 }
 
 .must_read_art {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .must_read_art_img {
@@ -229,13 +234,13 @@ h1 {
 .sizesCards_section {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 50px 0px 50px 0px;
+  padding: 30px;
 }
 
 .celebrity_section_container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 25px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .celebrity_section_art_content {
@@ -271,6 +276,7 @@ h1 {
 .section_container {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0px 30px;
 }
 
 .wrapper {
@@ -390,12 +396,13 @@ h1 {
   background: #f42e91;
   color: white;
   position: relative;
+  padding: 10px;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 30px;
   gap: 30px;
   max-width: 1400px;
   margin: 0 auto;
@@ -415,20 +422,20 @@ h1 {
 .footer_links_container {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   gap: 80px;
   width: 100%;
+  flex-direction: column;
 }
 
 .footer_links {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: start;
-  width: 50%;
 }
 
 .footer_text {
-  width: 50%;
   text-align: justify;
 }
 
@@ -443,22 +450,23 @@ h1 {
 
 .footer_subcribe {
   background-color: #ffffff;
-  position: absolute;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   padding: 20px;
   top: -35px;
-  width: 800px;
+  width: 600px;
   border-radius: 5px;
   color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 }
 
 .footer_subcribe_div {
   display: flex;
   gap: 20px;
   align-items: center;
+  flex-direction: column;
 }
 
 /* FASHION PAGE */
@@ -471,10 +479,11 @@ h1 {
 /* Models section - FASHION PAGE */
 .sizesCards_container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   align-items: center;
   gap: 22px;
 }
+
 .sizesCard {
   background-color: #ffffff;
   overflow: hidden;
@@ -482,9 +491,15 @@ h1 {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
     0 2px 4px -2px rgba(255, 152, 222, 0.902);
 }
+
+.sizesCard_img img {
+  width: 100%;
+}
+
 .sizesCard_content {
   padding: 22px;
 }
+
 .sizesCard_content p {
   text-align: justify;
 }
@@ -497,6 +512,7 @@ h1 {
 .tabs {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0px 30px;
 }
 
 .tab-header {
@@ -504,7 +520,8 @@ h1 {
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
-  gap: 4px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .tab-button {
@@ -530,8 +547,12 @@ h1 {
 .tab-content-cards {
   display: grid;
   margin-top: 30px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
+}
+
+.models_carousel {
+  padding: 0px 30px;
 }
 
 /* FASHION PAGE Home: Carousel */
@@ -613,7 +634,7 @@ h1 {
 
 /* FASHION PAGE Models Section - DISCOVER MODELS */
 .models_discover {
-  padding-top: 100px;
+  padding: 100px 30px 0px 30px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -621,7 +642,7 @@ h1 {
 .models_discover_container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px;
+  gap: 20px;
 }
 
 .models_discover_card_content {
@@ -660,14 +681,16 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .modal_content {
   background-color: white;
-  width: 600px;
-  padding: 20px;
   border-radius: 5px;
   font-size: 1.2rem;
+  max-width: 600px;
+  max-height: 500px;
+  overflow: auto;
 }
 
 .modal_open {
@@ -682,7 +705,7 @@ h1 {
 .clothing_tabs {
   max-width: 1400px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding: 100px 30px 0px 30px;
 }
 
 .clothing-tab-button {
@@ -707,15 +730,15 @@ h1 {
 
 /* FASHION PAGE - "More in Models" */
 .moreInModels {
-  padding-top: 100px;
+  padding: 100px 30px 0px 30px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .moreInModels_container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 80px 60px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 30px;
 }
 
 .moreInModels_image {
@@ -861,7 +884,6 @@ h1 {
 /* Carousel Videos (Bauty page) (beauty.html) */
 .carouselBeautyPage {
   position: relative;
-  height: 350px;
   width: 100%;
   display: flex;
   gap: 1.5rem;
@@ -883,7 +905,7 @@ h1 {
   flex-direction: column;
   background: #fff;
   border-radius: 8px;
-  max-width: calc((100% / 3.3));
+  max-width: 100%;
   overflow: hidden;
   cursor: pointer;
 }
@@ -911,7 +933,7 @@ h1 {
 /* Magazines Buy section - BEAUTY PAGE (beauty.html) */
 .magazineContainer {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: 25px;
 }
@@ -964,13 +986,13 @@ h1 {
 
 .makeupContainer {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 150px 40px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 200px 40px;
+  justify-items: center;
 }
 
 .makeup_item {
-  max-width: 500px;
+  max-width: 80%;
   position: relative;
 }
 
@@ -978,16 +1000,16 @@ h1 {
   font-family: "Rock Salt", cursive;
   font-size: 70px;
   color: #8a609e;
-  position: absolute;
+  position: relative;
   top: 100px;
   text-shadow: 1px 1px 2px #975677, 0 0 1em #d4a1bb;
 }
 
 .makeup_item_0 {
-  grid-row: span 2 / span 2;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: relative;
 }
 
@@ -995,8 +1017,9 @@ h1 {
   overflow: hidden;
   border-radius: 9999px;
   box-shadow: 0 4px 6px -1px #8d63a3, 0 2px 4px -2px #8d63a3;
-  height: 450px;
-  width: 450px;
+  max-height: 450px;
+  max-width: 450px;
+  aspect-ratio: 1 / 1;
 }
 
 .makeup_item_img {
@@ -1023,35 +1046,32 @@ h1 {
 
 .careContainer {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 150px 40px;
+  justify-items: center;
 }
 
 .skincare_item {
-  max-width: 500px;
+  max-width: 80%;
+  position: relative;
+}
+
+.skincare_item_0 {
+  grid-row-start: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
 .skincare_item_0 h4 {
   font-family: "Rock Salt", cursive;
-  font-size: 110px;
+  font-size: 50px;
   color: #99c6d7;
-  position: absolute;
+  position: relative;
   bottom: 2px;
   text-shadow: 1px 1px 2px #975677, 0 0 1em #826373;
-}
-
-.skincare_item_0 {
-  grid-row: span 2 / span 2;
-  grid-column: span 2 / span 2;
-  grid-column-start: 3;
-  grid-row-start: 1;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
 
 .skincare_item_0_img img {
@@ -1061,11 +1081,12 @@ h1 {
 }
 
 .skincare_item_0_img {
+  max-height: 450px;
+  max-width: 450px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 9999px;
   box-shadow: 0 4px 6px -1px #8d63a3, 0 2px 4px -2px #8d63a3;
-  height: 650px;
-  width: 650px;
 }
 
 .skincare_item_img {
@@ -1104,11 +1125,11 @@ h1 {
 /* SHOWTIME TREASURES - Culture page (culture.html) */
 
 .tvMovies {
-  display: flex;
   gap: 45px;
   align-items: start;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0px 30px;
 }
 
 .tvMovies_main {
@@ -1116,13 +1137,13 @@ h1 {
 }
 
 .tvMovies_sidebar {
-  width: 450px;
-  height: 100vh;
-  position: sticky;
-  top: 60px;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .tvMovies_sidebar img {
+  width: 100%;
   border-radius: 4px;
   height: 100%;
   object-fit: cover;
@@ -1146,12 +1167,12 @@ h1 {
   overflow: hidden;
   border-radius: 5px;
   margin-bottom: 50px;
-  view-timeline-name: --image;
-  view-timeline-axis: block;
   animation-timeline: --image;
   animation-name: show;
-  animation-range: entry 25% cover 30%;
   animation-fill-mode: both;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-range: entry 25% cover 30%;
 }
 
 .tvMovies_card:last-of-type {
@@ -1160,6 +1181,11 @@ h1 {
 
 .tvMovies_card_img {
   width: 350px;
+}
+.tvMovies_card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .tvMovies_card_content {
@@ -1414,10 +1440,11 @@ h1 {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 400ms;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .lifestyle_card_panel:hover {
-  opacity: 0.85;
+  opacity: 0.65;
 }
 
 .lifestyle_card_img img {
@@ -1523,6 +1550,7 @@ h1 {
   border-radius: 7px;
   overflow: hidden;
   width: 100%;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 .card_travel_img img {
@@ -1536,6 +1564,7 @@ h1 {
 
 .card_travel_title h4 {
   font-size: 40px;
+  text-align: center;
 }
 
 @keyframes show_left_right {
@@ -1603,7 +1632,19 @@ h1 {
   width: 50%;
   position: sticky;
   top: 0;
-  height: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.panel_holiday_poster {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+
+.panel_holiday_poster:hover {
+  opacity: 0.45;
 }
 
 .holidays_main {
@@ -1635,6 +1676,21 @@ h1 {
     rgba(0, 0, 0, 0),
     rgba(0, 0, 0, 0.7)
   );
+}
+
+.holiday_card {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.holiday_card_content {
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  backdrop-filter: blur(4px);
+  text-align: center;
+  padding: 10px;
 }
 
 @keyframes arrow_bounce {
@@ -1671,5 +1727,203 @@ h1 {
 @media screen and (max-width: 600px) {
   .wrapper .carousel {
     grid-auto-columns: 100%;
+  }
+}
+
+/* MD */
+@media (min-width: 768px) {
+  /* Main page - cover */
+  .cover {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cover_content {
+    width: 50%;
+  }
+
+  .cover_image {
+    width: 50%;
+  }
+
+  /* Main page - TODAY'S STORIES section */
+  .main_news {
+    flex-direction: row;
+  }
+
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .article_img {
+    aspect-ratio: 9 / 14;
+  }
+
+  /* FASHION PAGE */
+  .tab-content-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .moreInModels_container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 80px 60px;
+  }
+
+  /* Beauty Page GLAMOUR & GLOW */
+  .cardVideo {
+    max-width: calc((100% / 2));
+  }
+
+  /* Beauty Page STYLE SPOTLIGHT: THE LATEST IN FASHION */
+  .magazineContainer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  /* FOOTER */
+  .footer_subcribe {
+    flex-direction: row;
+  }
+
+  .footer_subcribe_div {
+    flex-direction: row;
+  }
+}
+
+/* LG */
+@media (min-width: 1024px) {
+  /* FASHION PAGE */
+  .sizesCards_container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .moreInModels_container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Beauty page SKIN & BEAUTY CARE TIPS */
+  .makeupContainer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .makeup_item_0 {
+    grid-column: auto;
+    grid-row: span 2 / span 2;
+  }
+
+  .makeup_item_0 h4 {
+    position: absolute;
+  }
+
+  .makeup_item_0 {
+    flex-direction: row;
+  }
+
+  .makeup_item {
+    max-width: 500px;
+  }
+
+  .careContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skincare_item_0 {
+    grid-column: span 2 / span 2;
+    flex-direction: row;
+  }
+
+  .skincare_item_0 h4 {
+    position: absolute;
+  }
+
+  /* Culture page SHOWTIME TREASURES */
+
+  /* Footer */
+  .footer {
+    padding: 50px;
+  }
+
+  .footer_subcribe {
+    width: 800px;
+    position: absolute;
+  }
+
+  .footer_links_container {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .footer_links {
+    width: 50%;
+  }
+
+  .footer_text {
+    width: 50%;
+  }
+}
+
+/* XL */
+@media (min-width: 1280px) {
+  /* Header */
+  .header {
+    padding: 0px 140px;
+  }
+
+  .header_links {
+    display: flex;
+  }
+
+  /* Main page - MUST READ section*/
+  .must_read_articles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Main page - CELEBRITY STYLE section  */
+  .celebrity_section_container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  /* Beauty Page GLAMOUR & GLOW */
+  .cardVideo {
+    max-width: calc((100% / 3.3));
+  }
+
+  /* Beauty page SKIN & BEAUTY CARE TIPS */
+  .makeupContainer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .careContainer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .skincare_item {
+    max-width: 500px;
+  }
+
+  .skincare_item_0 h4 {
+    font-size: 110px;
+  }
+
+  .skincare_item_0 {
+    grid-row: span 2 / span 2;
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
+
+  /* Culture page SHOWTIME TREASURES */
+  .tvMovies {
+    display: flex;
+  }
+
+  .tvMovies_sidebar {
+    width: 450px;
+    height: 100vh;
+    position: sticky;
+    top: 60px;
+    margin-bottom: 0px;
   }
 }
