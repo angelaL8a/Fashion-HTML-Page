@@ -1,7 +1,13 @@
 // Header
 var headerElement = document.getElementById("header");
 headerElement.innerHTML = `
-  <a href="/" class="header_logo">Logo</a>
+   <div class="flex items-center gap-1">
+    <button id="burger_button" class="active:bg-gray-200 p-2 rounded-full lg:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    </button>
+
+    <a href="/" class="header_logo">Logo</a>
+  </div>
 
   <div class="header_links" id="header_links"></div>
 
@@ -79,4 +85,129 @@ categories.forEach((item, index) => {
     `;
     subContainer.appendChild(sub_item);
   });
+});
+
+//CREATE A MENU FOR MOBILE DEVICES
+
+const button = document.getElementById("burger_button");
+
+const modal = document.createElement("div");
+modal.classList.add("header_drawer");
+modal.classList.add("header_drawer_close");
+modal.innerHTML = `
+<div id="header_drawer_content" class="header_drawer_content">
+  <div>
+    <img src="https://www.vogue.com/verso/static/vogue/assets/us/logo-header.svg" >
+  </div>
+
+  <div class="accordions_container" id="accordions_container">
+  </div>
+</div>
+`;
+document.body.appendChild(modal);
+
+const accordionsContainer = document.getElementById("accordions_container");
+categories.forEach((cat, index) => {
+  //Create a accordian for each category
+  const divCategory = document.createElement("div");
+  divCategory.classList.add("accordion_item");
+  divCategory.id = `accordion_item_${index}`;
+  divCategory.setAttribute("data-tab", `accordion_item_button_${index}`);
+
+  divCategory.innerHTML = `
+    <button id="accordion_item_button_${index}" class="accordion_item_button">${cat.name}</button>
+
+    <div data-tab="accordion_item_button_${index}" id="accordion_item_content_${index}" class="accordion_item_content accordion_item_content_close">
+      
+    </div>
+  `;
+  accordionsContainer.appendChild(divCategory);
+
+  //Add each sub categorie for each category
+  const subCatsContainer = document.getElementById(
+    `accordion_item_content_${index}`
+  );
+  cat.sub_cat.forEach((sub_cat) => {
+    const subDiv = document.createElement("div");
+    subDiv.classList.add("accordion_subitem");
+    subDiv.innerHTML = `
+      <a href="${sub_cat.href}">${sub_cat.name}</a>
+    `;
+
+    subCatsContainer.appendChild(subDiv);
+  });
+
+  //(accordion) Open sub categories  for each category
+  const button = document.getElementById(`accordion_item_button_${index}`);
+  button.addEventListener("click", (e) => {
+    const card = document.getElementById(`accordion_item_${index}`);
+
+    const content = document.getElementById(`accordion_item_content_${index}`);
+
+    let contents = document.querySelectorAll(".accordion_item_content");
+    let cards = document.querySelectorAll(".accordion_item");
+
+    const contentsArray = Array.from(contents);
+    const cardsArray = Array.from(cards);
+
+    const newContents = contentsArray.filter(
+      (item) => item.dataset.tab !== e.target.id
+    );
+    const newCards = cardsArray.filter(
+      (item) => item.dataset.tab !== e.target.id
+    );
+
+    if (content.classList.contains("accordion_item_content_close")) {
+      newContents.forEach((item) => {
+        if (item.classList.contains("accordion_item_content_open")) {
+          item.classList.remove("accordion_item_content_open");
+          item.classList.add("accordion_item_content_close");
+        }
+      });
+
+      newCards.forEach((item) => {
+        item.classList.remove("accordion_item_anim");
+      });
+
+      content.classList.remove("accordion_item_content_close");
+      content.classList.add("accordion_item_content_open");
+      card.classList.add("accordion_item_anim");
+    } else {
+      content.classList.remove("accordion_item_content_open");
+      content.classList.add("accordion_item_content_close");
+
+      card.classList.remove("accordion_item_anim");
+    }
+  });
+
+  // Close drawer when sub category is clicked
+  const subButtons = document.querySelectorAll(".accordion_subitem");
+  subButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      modal.classList.remove("header_drawer_open");
+      modal.classList.add("header_drawer_close");
+    });
+  });
+});
+
+// Open and close the drawer
+button.addEventListener("click", (e) => {
+  if (modal.className.includes("header_drawer_open")) {
+    modal.classList.remove("header_drawer_open");
+    modal.classList.add("header_drawer_close");
+  } else {
+    modal.classList.remove("header_drawer_close");
+    modal.classList.add("header_drawer_open");
+  }
+});
+
+// Close the drawer when you click out of it
+document.addEventListener("click", function (event) {
+  let modalContent = document.querySelector("#header_drawer_content");
+
+  // Check if the click is not inside the div
+  if (!modalContent.contains(event.target) && !button.contains(event.target)) {
+    modal.classList.remove("header_drawer_open");
+    modal.classList.add("header_drawer_close");
+  }
 });
