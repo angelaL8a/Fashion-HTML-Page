@@ -393,7 +393,7 @@ modelsDiscover.forEach((mod, index) => {
 
   <div id="models_modal_${index}" class="modal modal_close">
     <div id="models_modal_${index}_content" class="modal_content">
-      <div class="sticky top-0 bg-white/80 backdrop-blur p-5 border-b">
+      <div class="sticky top-0 bg-white/80 backdrop-blur p-5 border-b dark:bg-background dark:border-border">
         <h1>${mod.name}</h1>
       </div>
       

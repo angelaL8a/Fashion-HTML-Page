@@ -7,6 +7,20 @@
     <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles.css" />
+    <!-- SUPPORT DARK MODE FOR TAILWIND -->
+    <script>
+      tailwind.config = {
+        darkMode: ["class"],
+        theme: {
+          extend: {
+            colors: {
+              border: "var(--border)",
+              background: "var(--background)",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
     <header id="header" class="header"></header>
@@ -43,7 +57,10 @@
       <!-- ARTS - INSPIRARTION INSIGHTS -->
       <div class="section_container">
         <div id="art_section" class="section_title mt-[100px]">
-          <h3>Inspir<span class="text-[#f42e91]">ART</span>ion Insights</h3>
+          <h3>
+            Inspir<span class="text-[20px] text-[#f42e91]">ART</span>ion
+            Insights
+          </h3>
         </div>
 
         <div class="art_container" id="art_container"></div>
@@ -67,5 +84,6 @@
     <script src="./js/header.js"></script>
     <script src="./js/footer.js"></script>
     <script src="./js/culture.js"></script>
+    <script src="./js/darkmode.js"></script>
   </body>
 </html>

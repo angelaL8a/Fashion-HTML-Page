@@ -7,6 +7,19 @@
     <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles.css" />
+    <!-- SUPPORT DARK MODE FOR TAILWIND -->
+    <script>
+      tailwind.config = {
+        darkMode: ["class"],
+        theme: {
+          extend: {
+            colors: {
+              border: "var(--border)",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
     <header id="header" class="header"></header>
@@ -16,8 +29,8 @@
       <div class="main_cover">
         <div class="cover">
           <div class="cover_content">
-            <h1 class="text-slate-700">Unveil your essence</h1>
-            <p class="mt-2 text-gray-700">
+            <h1 class="text-slate-700 dark:text-white">Unveil your essence</h1>
+            <p class="mt-2 text-gray-700 dark:text-white">
               Discover a world of style, beauty, and culture on our leading
               fashion page. Immerse yourself in an oasis of inspiration where
               the latest fashion trends, cutting-edge beauty tips, and
@@ -46,8 +59,8 @@
         </div>
 
         <div class="cover_content">
-          <h1 class="text-slate-700">Unveil your essence</h1>
-          <p class="mt-2 text-gray-700">
+          <h1 class="text-slate-700 dark:text-white">Unveil your essence</h1>
+          <p class="mt-2 text-gray-700 dark:text-white">
             Discover a world of style, beauty, and culture on our leading
             fashion page. Immerse yourself in an oasis of inspiration where the
             latest fashion trends, cutting-edge beauty tips, and fascinating
@@ -64,9 +77,11 @@
 
       <!-- Must read section -->
       <div class="must_read">
-        <div class="must_read_title text-slate-700"><h3>Must read</h3></div>
+        <div class="must_read_title text-slate-700 dark:text-white">
+          <h3>Must read</h3>
+        </div>
 
-        <div class="bg-gray-100 h-[1px] w-full my-2"></div>
+        <div class="bg-gray-100 h-[1px] w-full my-2 dark:bg-border"></div>
 
         <div id="must_read_articles" class="must_read_articles"></div>
       </div>
@@ -82,7 +97,7 @@
       </div>
 
       <!-- Carousel Section -->
-      <div class="section_container">
+      <div class="section_container px-[30px]">
         <div class="section_title"><h3>Glamour & Glow</h3></div>
 
         <div class="wrapper">
@@ -196,5 +211,6 @@
     <script src="./js/footer.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/carousel.js"></script>
+    <script src="./js/darkmode.js"></script>
   </body>
 </html>

@@ -7,6 +7,20 @@
     <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles.css" />
+    <!-- SUPPORT DARK MODE FOR TAILWIND -->
+    <script>
+      tailwind.config = {
+        darkMode: ["class"],
+        theme: {
+          extend: {
+            colors: {
+              border: "var(--border)",
+              background: "var(--background)",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
     <header id="header" class="header"></header>
@@ -142,5 +156,6 @@
     <script src="./js/footer.js"></script>
     <script src="./js/videosSecPage3.js"></script>
     <script src="./js/beauty.js"></script>
+    <script src="./js/darkmode.js"></script>
   </body>
 </html>

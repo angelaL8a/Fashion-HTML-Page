@@ -1,0 +1,3 @@
+- beauty.html videos section
+- transitions
+- content
