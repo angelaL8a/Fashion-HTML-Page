@@ -58,25 +58,25 @@ const tipsMakeup = [
   {
     title: "Title",
     image:
-      "https://images.pexels.com/photos/7290622/pexels-photo-7290622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     text: "Doctors and dermatologists are in agreement that SPF is a non-negotiable in order to protect skin from cancer, premature aging, and issues like hyperpigmentation.",
   },
   {
     title: "Title",
     image:
-      "https://images.pexels.com/photos/7290622/pexels-photo-7290622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     text: "Doctors and dermatologists are in agreement that SPF is a non-negotiable in order to protect skin from cancer, premature aging, and issues like hyperpigmentation.",
   },
   {
     title: "Title",
     image:
-      "https://images.pexels.com/photos/7290622/pexels-photo-7290622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     text: "Doctors and dermatologists are in agreement that SPF is a non-negotiable in order to protect skin from cancer, premature aging, and issues like hyperpigmentation.",
   },
   {
     title: "Title",
     image:
-      "https://images.pexels.com/photos/7290622/pexels-photo-7290622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     text: "Doctors and dermatologists are in agreement that SPF is a non-negotiable in order to protect skin from cancer, premature aging, and issues like hyperpigmentation.",
   },
 ];
@@ -109,25 +109,25 @@ const tipsSkincare = [
   {
     title: "5 Key Things a Doctor Wants You to Know About SPF",
     image:
-      "https://assets.vogue.com/photos/64d256c000f098f3cdad4175/4:3/w_640,c_limit/CN00032104.jpg",
+      "https://images.pexels.com/photos/3846049/pexels-photo-3846049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     text: "a",
   },
   {
     title: "5 Key Things a Doctor Wants You to Know About SPF",
     image:
-      "https://assets.vogue.com/photos/64d256c000f098f3cdad4175/4:3/w_640,c_limit/CN00032104.jpg",
+      "https://images.pexels.com/photos/3846049/pexels-photo-3846049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     text: "a",
   },
   {
     title: "5 Key Things a Doctor Wants You to Know About SPF",
     image:
-      "https://assets.vogue.com/photos/64d256c000f098f3cdad4175/4:3/w_640,c_limit/CN00032104.jpg",
+      "https://images.pexels.com/photos/3846049/pexels-photo-3846049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     text: "a",
   },
   {
     title: "5 Key Things a Doctor Wants You to Know About SPF",
     image:
-      "https://assets.vogue.com/photos/64d256c000f098f3cdad4175/4:3/w_640,c_limit/CN00032104.jpg",
+      "https://images.pexels.com/photos/3846049/pexels-photo-3846049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     text: "a",
   },
 ];
@@ -155,3 +155,143 @@ tipsSkincare.forEach((tip, index) => {
 
   careContainer.appendChild(tipDiv);
 });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//GLAMOUR & GLOW (carousel) section
+// array of videos
+const videos = [
+  {
+    name: "Lexi Underwood’s Guide to Girls-Night-Out Makeup",
+    thumbnail:
+      "https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill%2Cd_placeholder_image.jpg%2Cfl_progressive%2Cg_center%2Ch_900%2Cq_80%2Cw_1600/v1686775973/vogue_lexi-underwood-beauty-secrets.jpg",
+    videoURL: "iFS7U2qHLb4",
+  },
+  {
+    name: "Alexis Ren's Guide to Face-Lifting Romantic Makeup",
+    thumbnail:
+      "https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill%2Cd_placeholder_image.jpg%2Cfl_progressive%2Cg_center%2Ch_900%2Cq_80%2Cw_1600/v1684868985/vogue_alexis-ren-beauty-secrets.jpg",
+    videoURL: "t0OsW8M-owE",
+  },
+  {
+    name: "Model Anok Yai's Off-Duty Smudged Eyeliner Look",
+    thumbnail:
+      "https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill%2Cd_placeholder_image.jpg%2Cfl_progressive%2Cg_center%2Ch_900%2Cq_80%2Cw_1600/v1682520102/vogue_anok-yai-beauty-secrets.jpg",
+    videoURL: "juAPaOUQmGY",
+  },
+  {
+    name: "Watch Lola Tung Do Her Berry-Hued Beauty Look",
+    thumbnail:
+      "https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill%2Cd_placeholder_image.jpg%2Cfl_progressive%2Cg_center%2Ch_900%2Cq_80%2Cw_1600/v1689096533/vogue_lola-tungs-beauty-secrets.jpg",
+    videoURL: "u-voLtzDD9Q",
+  },
+];
+
+//call the container for the carousel
+const videosContainer = document.getElementById("carouselBeautyPage");
+
+/* The YouTube API was utilized to embed the videos within the carousel and to leverage functions such as stopVideo() for stop the when clicking outside the modal. REFERENCE for YOUTUBE API: https://developers.google.com/youtube/iframe_api_reference */
+//YouTube Player API Reference for iframe Embeds
+function onYouTubeIframeAPIReady() {
+  // iterate over each element in "videos" array
+  videos.forEach((video, index) => {
+    // Create a variable to assign the YouTube player for the video
+    let myPlayer;
+
+    // Create a div element for each video to display in the carousel
+    const videoDiv = document.createElement("div");
+    videoDiv.classList.add("cardVideo");
+    videoDiv.id = `cardVideo_${index}`;
+
+    videoDiv.innerHTML = /**/ `
+    <div class="cardVideo_img">
+        <img src="${video.thumbnail}" class="w-full h-full object-cover" alt="img" />
+    </div>
+    
+    <h2 class="cardVideo_titleVideo">
+        ${video.name}
+    </h2>
+  `;
+
+    // Create a modal div for each video
+    const videoModal = document.createElement("div");
+    videoModal.classList.add("modal");
+    videoModal.classList.add("modal_close");
+    videoModal.id = `video_modal_${index}`;
+    videoModal.innerHTML = `
+  <div id="video_modal_content_${index}" class="video_modal_content"> 
+    <div class="w-full h-full aspect-video" id="player_${index}"></div>
+
+    ${video.name}
+  </div>
+  `;
+
+    // Append video elements to a container (assumed to be defined elsewhere as 'videosContainer')
+    videosContainer.appendChild(videoDiv);
+    videosContainer.appendChild(videoModal);
+
+    // Initialize the YouTube player for the video
+    myPlayer = new YT.Player(`player_${index}`, {
+      height: "360",
+      width: "640",
+      videoId: video.videoURL,
+      events: {
+        onReady: onPlayerReady, // Call onPlayerReady when the player is ready
+      },
+    });
+
+    // Function to handle the onReady event of the YouTube player
+    function onPlayerReady(event) {
+      event.target.stopVideo(); // Stop the video when it's ready
+    }
+
+    // Function to stop the video playback
+    function stopVideo() {
+      myPlayer.stopVideo();
+    }
+
+    // Add a click event listener to the video div to open/close the modal
+    const modalButton = document.getElementById(`cardVideo_${index}`);
+    modalButton.addEventListener("click", () => {
+      const modal = document.getElementById(`video_modal_${index}`);
+
+      // Toggle the modal between open and close states
+      if (modal.className.includes("modal_open")) {
+        modal.classList.remove("modal_open");
+        modal.classList.add("modal_close");
+      } else {
+        modal.classList.remove("modal_close");
+        modal.classList.add("modal_open");
+      }
+    });
+
+    // Add a click event listener to the videosContainer to close the modal if clicked outside
+    videosContainer.addEventListener("click", function (event) {
+      let modal = document.querySelector(`#video_modal_content_${index}`);
+
+      // Check if the click is not inside the modal or the modalButton
+      if (
+        !modal.contains(event.target) &&
+        !modalButton.contains(event.target)
+      ) {
+        const modal = document.getElementById(`video_modal_${index}`);
+
+        // Close the modal and stop video playback
+        modal.classList.remove("modal_open");
+        modal.classList.add("modal_close");
+        stopVideo();
+      }
+    });
+  });
+
+  // Add event listeners for the arrow buttons to scroll the carousel left and right
+  const carousel = document.querySelector(".carouselBeautyPage");
+  const firstCardWidth = carousel.querySelector(".cardVideo").offsetWidth;
+  const arrowBtns = document.querySelectorAll(".wrapper i");
+  arrowBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      carousel.scrollLeft +=
+        btn.id == "left" ? -firstCardWidth : firstCardWidth;
+    });
+  });
+}

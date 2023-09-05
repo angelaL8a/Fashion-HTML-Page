@@ -644,16 +644,6 @@ const designers = [
     image:
       "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
   },
-  {
-    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
-    image:
-      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
-  },
-  {
-    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
-    image:
-      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
-  },
 ];
 
 const latestContainer = document.getElementById("moreInModels_container");

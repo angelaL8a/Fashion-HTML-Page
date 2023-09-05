@@ -199,6 +199,8 @@ categories.forEach((cat, index) => {
   });
 });
 
+const drawerContent = document.getElementById("header_drawer_content");
+
 // Open and close the drawer
 button.addEventListener("click", (e) => {
   if (modal.className.includes("header_drawer_open")) {
