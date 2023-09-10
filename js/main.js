@@ -1,30 +1,31 @@
 // Grid section (index.html)
 const elements = [
   {
-    title: "Test3",
+    title:
+      "The Harmonious Intersection of Fashion, Serenity, and Art: Exploring the Therapeutic Beauty of Clothing as a Form of Artistic Expression",
     index: "article_img_3",
-    src: "https://assets.vogue.com/photos/64aef1c311f7aacca57c43f2/master/w_1920,c_limit/GettyImages-1527911229.jpg",
+    src: "/Images/index_page/main_photo.jpg",
   },
   {
-    title: "Test1",
+    title: "Elle Fanning Is Killing the Cannes Red Carpet",
     index: "article_img_1",
-    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
+    src: "/Images/index_page/main_photo_1.jpg",
   },
   {
-    title: "Test2",
+    title: "Lindsay Lohan’s Girl Band in Freaky Friday Still Rocks",
     index: "article_img_2",
-    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
+    src: "/Images/index_page/main_photo_2.jpg",
   },
 
   {
-    title: "Test4",
+    title: "5 Style Lessons We’ve Learned From Sarah Jessica Parker",
     index: "article_img_4",
-    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
+    src: "/Images/index_page/main_photo_3.jpg",
   },
   {
-    title: "Test5",
+    title: "Every Vintage Chanel Reference You Might Have Missed in Barbie",
     index: "article_img_5",
-    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
+    src: "/Images/index_page/main_photo_4.jpg",
   },
 ];
 
@@ -37,7 +38,7 @@ elements.forEach((element) => {
 
   articleElement.innerHTML = `
           <div class="article_img">
-            <img src=${element.src} alt="card image 1" />
+            <img src=${element.src} alt="${element.title}" />
           </div>
           <div class="article_content">
             <h4>
@@ -52,20 +53,20 @@ elements.forEach((element) => {
 // Must read section (index.html)
 const mustReadElements = [
   {
-    category: "Fashion",
-    title:
-      "Forget ’90s Thong Sandals, Nicola Peltz Brings Back the Y2K Wedge in St Tropez",
-    src: "https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_120,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20120w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_240,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20240w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_320,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20320w",
-  },
-  {
     category: "Culture",
-    title: "The 7 Biggest Summer Haircuts of 2023",
-    src: "https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_120,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20120w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_240,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20240w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_320,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20320w",
+    title:
+      "Four Women, One Pink Lamborghini, and a Race to Win the Ultimate Endurance Test",
+    src: "/Images/index_page/must_read_1.jpg",
   },
   {
     category: "Beauty",
-    title: "Amal Clooney Brings Studio 54 to Lake Como",
-    src: "https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_120,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20120w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_240,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20240w,%20https://assets.vogue.com/photos/64ac10920def6fd42956fb15/1:1/w_320,c_limit/Dua%20Lipa_100723_GettyImages-1529735402.jpg%20320w",
+    title: "Who Is The Masked Singer's Pink Crocodile?",
+    src: "/Images/index_page/must_read_2.jpg",
+  },
+  {
+    category: "FASHION",
+    title: "Inside Jacquemus' 10-Year Anniversary Show",
+    src: "/Images/index_page/must_read_3.jpg",
   },
 ];
 
@@ -82,9 +83,9 @@ mustReadElements.forEach((i, index) => {
       />
     </div>
 
-    <div class="flex-1">
+    <div class="must_read_content flex-1">
       <a class="uppercase font-semibold" href="#">${i.category}</a>
-      <p class="text-lg" >${i.title}</p>
+      <p class="text-[20px]" >${i.title}</p>
     </div>
   `;
   mustReadContainer.appendChild(item);
@@ -93,24 +94,27 @@ mustReadElements.forEach((i, index) => {
 // Celebrity Style section (index.html)
 const celebrityItems = [
   {
-    category: "Fashion",
-    title: "La billie",
-    src: "https://assets.vogue.com/photos/64ac4b21406cf236781d59d2/4:3/w_1920,c_limit/1530545876",
+    category: "Beauty",
+    title: "Lana Condor Looks Like a Millennial Pink Dream in a Tulle gown",
+    src: "/Images/index_page/celebrity_0.jpg",
   },
   {
     category: "Fashion",
-    title: "La billie",
-    src: "https://assets.vogue.com/photos/64ac4b21406cf236781d59d2/4:3/w_1920,c_limit/1530545876",
+    title:
+      "Anya Taylor-Joy Channeled '60s Barbie in a Pink Dior Dress and Beret",
+    src: "/Images/index_page/celebrity_1.jpg",
   },
   {
     category: "Fashion",
-    title: "La billie",
-    src: "https://assets.vogue.com/photos/64ac4b21406cf236781d59d2/4:3/w_1920,c_limit/1530545876",
+    title:
+      "Zendaya Stunned in a Barbie Pink Valentino Suit at Paris Fashion Week",
+    src: "/Images/index_page/celebrity_2.jpg",
   },
   {
-    category: "Fashion",
-    title: "La billie",
-    src: "https://assets.vogue.com/photos/64ac4b21406cf236781d59d2/4:3/w_1920,c_limit/1530545876",
+    category: "Beauty",
+    title:
+      "Kacey Musgraves Dressed Like a Princess in a Pink Giambattista Valli Tulle",
+    src: "/Images/index_page/celebrity_3.jpg",
   },
 ];
 
@@ -123,17 +127,113 @@ celebrityItems.forEach((c, index) => {
   item.classList.add("celebrity_section_art");
 
   item.innerHTML = `
-    <div>
-      <img
+    <div class="celebrity_section_art_img">
+      <img 
         src="${c.src}"
         alt="labillie"
       />
     </div>
     <div class="celebrity_section_art_content">
-      <a href="#">${c.category}</a>
-      <p>${c.title}</p>
+      <a href="#" class="text-[14px] text-center" >${c.category}</a>
+      <p class="text-[20px] ">${c.title}</p>
     </div>
   `;
 
   celebrityContainer.appendChild(item);
 });
+
+const wrapper = document.querySelector(".wrapper");
+const carousel = document.querySelector(".carousel");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const carouselChildrens = [...carousel.children];
+
+let isDragging = false,
+  isAutoPlay = true,
+  startX,
+  startScrollLeft,
+  timeoutId;
+
+// Get the number of cards that can fit in the carousel at once
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+// Insert copies of the last few cards to beginning of carousel for infinite scrolling
+carouselChildrens
+  .slice(-cardPerView)
+  .reverse()
+  .forEach((card) => {
+    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+  });
+
+// Insert copies of the first few cards to end of carousel for infinite scrolling
+carouselChildrens.slice(0, cardPerView).forEach((card) => {
+  carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+});
+
+// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+carousel.classList.add("no-transition");
+carousel.scrollLeft = carousel.offsetWidth;
+carousel.classList.remove("no-transition");
+
+// Add event listeners for the arrow buttons to scroll the carousel left and right
+arrowBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+  });
+});
+
+const dragStart = (e) => {
+  isDragging = true;
+  carousel.classList.add("dragging");
+  // Records the initial cursor and scroll position of the carousel
+  startX = e.pageX;
+  startScrollLeft = carousel.scrollLeft;
+};
+
+const dragging = (e) => {
+  if (!isDragging) return; // if isDragging is false return from here
+  // Updates the scroll position of the carousel based on the cursor movement
+  console.log(e.pageX - startX);
+  carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+};
+
+const dragStop = () => {
+  isDragging = false;
+  carousel.classList.remove("dragging");
+};
+
+const infiniteScroll = () => {
+  // If the carousel is at the beginning, scroll to the end
+  if (carousel.scrollLeft === 0) {
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+  }
+  // If the carousel is at the end, scroll to the beginning
+  else if (
+    Math.ceil(carousel.scrollLeft) ===
+    carousel.scrollWidth - carousel.offsetWidth
+  ) {
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+  }
+
+  // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+  clearTimeout(timeoutId);
+  if (!wrapper.matches(":hover")) autoPlay();
+};
+
+const autoPlay = () => {
+  if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+  // Autoplay the carousel after every 2500 ms
+  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2500);
+};
+autoPlay();
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);

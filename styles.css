@@ -72,6 +72,10 @@ h1 {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.header_logo {
+  margin-top: 5px;
+}
+
 @keyframes drawerAnim {
   0% {
     opacity: 0;
@@ -258,7 +262,7 @@ h1 {
 
 /* Main PAGE (index.html) */
 .main {
-  background-image: linear-gradient(to bottom, #f8f8f8, #f2f3f5);
+  background-image: linear-gradient(to bottom, #f8f8f8, #fdf0f3);
   /* background-color: #f3f4f6; */
   min-height: 100vh;
   padding-bottom: 150px;
@@ -270,7 +274,7 @@ h1 {
 }
 
 .main_cover {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0px 30px;
 }
@@ -283,6 +287,7 @@ h1 {
   gap: 60px;
   align-items: center;
   padding-top: 75px;
+  position: relative;
 }
 
 .cover_content h1 {
@@ -298,17 +303,71 @@ h1 {
     0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
+@keyframes coveressenceMainAnimation {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.main_cover_essenceTag {
+  position: absolute;
+  width: 740px;
+  bottom: -80px;
+  right: -50px;
+  animation: coveressenceMainAnimation 1s ease-in-out;
+}
+
+.main_cover_essenceTag img {
+  width: 100%;
+  height: 100%;
+}
+
 /* Main (index.html) */
 .main_news {
   display: flex;
+  position: relative;
   flex-direction: column-reverse;
   justify-content: center;
   gap: 60px;
   align-items: center;
-  max-width: 880px;
+  max-width: 1200px;
   margin: 0 auto;
   margin-top: 150px;
   padding: 0px 30px;
+}
+
+@keyframes coversereinMainAnimation {
+  from {
+    opacity: 0.5;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.main_cover_sereinTag {
+  position: absolute;
+  margin-right: 0px;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  animation: coversereinMainAnimation 2s ease-in-out;
+  animation-timeline: --image;
+  animation-name: coversereinMainAnimation;
+  animation-fill-mode: both;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-range: entry 15% cover 40%;
+}
+
+.main_cover_sereinTag img {
+  width: 50%;
+  height: 100%;
 }
 
 /* Articles (MainPage) (index.html) */
@@ -328,7 +387,7 @@ h1 {
 }
 
 .article_img {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 2;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
@@ -349,8 +408,8 @@ h1 {
   padding: 5px;
 }
 
-.article_content p {
-  text-align: justify;
+.article_content h4 {
+  text-align: center;
 }
 
 /* Article center (MainPage) (index.html) */
@@ -362,7 +421,7 @@ h1 {
 }
 
 .article_img_3 .article_img {
-  aspect-ratio: 9 / 14;
+  aspect-ratio: 12 / 14;
 }
 
 .article_img_4 {
@@ -412,6 +471,8 @@ h1 {
 .must_read_art_img {
   overflow: hidden;
   border-radius: 5px;
+  max-width: 140px;
+  height: 100%;
 }
 
 /* Celebrity Style section (MainPage) (index.html)*/
@@ -428,7 +489,17 @@ h1 {
 }
 
 .celebrity_section_art_content {
-  padding: 12px;
+  padding: 12px 20px;
+}
+
+.celebrity_section_art_img {
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.celebrity_section_art_img img {
+  height: 100%;
+  object-fit: cover;
 }
 
 .section_title {
@@ -555,50 +626,41 @@ h1 {
   user-select: none;
 }
 
-.carousel :where(.card, .img) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .carousel .card {
   scroll-snap-align: start;
-  height: 342px;
+  height: 350px;
   list-style: none;
   background: #fff;
   cursor: pointer;
   padding-bottom: 15px;
-  flex-direction: column;
   border-radius: 8px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .dark .carousel .card {
   background-color: var(--background);
 }
 
-.carousel .card .img {
-  background: var(--pinkBg);
-  height: 148px;
-  width: 226px;
+.carousel .card .glamour_glow_img {
+  height: 250px;
+  width: 100%;
   border-radius: 2px;
 }
 
-.card .img img {
-  height: 142px;
-  width: 220px;
+.card .glamour_glow_img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 2px;
 }
 
 .carousel .card h2 {
   font-weight: 500;
-  font-size: 1.56rem;
-  margin: 30px 0 5px;
-}
-
-.carousel .card span {
-  color: #6a6d78;
-  font-size: 1.31rem;
+  font-size: 18px;
+  padding: 20px 25px;
 }
 
 /* footer */
@@ -687,6 +749,7 @@ h1 {
 }
 
 /* Models section - FASHION PAGE */
+
 .sizesCards_container {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -711,11 +774,13 @@ h1 {
 }
 
 .sizesCard_content {
-  padding: 22px;
+  padding: 22px 30px;
 }
 
 .sizesCard_content p {
   text-align: justify;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .sizesCard.tiny {
@@ -2080,6 +2145,10 @@ h1 {
     aspect-ratio: 9 / 14;
   }
 
+  .carousel .card h2 {
+    font-size: 23px;
+  }
+
   /* FASHION PAGE */
   .tab-content-cards {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2322,7 +2391,7 @@ h1 {
 @media (min-width: 1280px) {
   /* Header */
   .header {
-    padding: 0px 140px;
+    padding: 0px 30px;
   }
 
   .header_links {

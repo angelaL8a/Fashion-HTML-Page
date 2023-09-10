@@ -1,39 +1,30 @@
 // Grid section (index.html)
 const elements = [
   {
-    title: "Test3",
+    title: "The Most Anticipated Winter Outfit: A Fashion Extravaganza",
     index: "article_img_3",
-    content:
-      "The annual British Vogue X Self-Portrait soirée in London is perpetually a magnet for fashion insiders and A-listers. This year was no different, with the event receiving stellar patronage.",
-    src: "https://assets.vogue.com/photos/64aef1c311f7aacca57c43f2/master/w_1920,c_limit/GettyImages-1527911229.jpg",
+    src: "Images/fashion_page/main.jpg",
   },
   {
-    title: "Test1",
+    title: "Fenty x Puma Is Back! Rihanna Dishes on Her New Sneaker Design",
     index: "article_img_1",
-    content:
-      "The annual British Vogue X Self-Portrait soirée in London is perpetually a magnet for fashion insiders and A-listers. This year was no different, with the event receiving stellar patronage.",
-    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
+    src: "/Images/fashion_page/main_1.jpg",
   },
   {
-    title: "Test2",
+    title:
+      "The Trending Outfits For Autumn 2023 All Have Pop-To-The-Corner-Shop Energy",
     index: "article_img_2",
-    content:
-      "The annual British Vogue X Self-Portrait soirée in London is perpetually a magnet for fashion insiders and A-listers. This year was no different, with the event receiving stellar patronage.",
-    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
+    src: "/Images/fashion_page/main_2.jpg",
   },
   {
-    title: "Test4",
+    title: "Dior’s “Quiet Luxury” AW23 Haute Couture Show",
     index: "article_img_4",
-    content:
-      "The annual British Vogue X Self-Portrait soirée in London is perpetually a magnet for fashion insiders and A-listers. This year was no different, with the event receiving stellar patronage.",
-    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
+    src: "/Images/fashion_page/main_3.jpg",
   },
   {
-    title: "Test5",
+    title: "At Valentino, Extreme Black Eyeliner Is the Ultimate Power Move",
     index: "article_img_5",
-    content:
-      "The annual British Vogue X Self-Portrait soirée in London is perpetually a magnet for fashion insiders and A-listers. This year was no different, with the event receiving stellar patronage.",
-    src: "https://assets.vogue.com/photos/64b57f3cdc90cc14d7b916d9/16:9/w_1920%2Cc_limit/00-trip%2520(2).jpg",
+    src: "/Images/fashion_page/main_4.jpg",
   },
 ];
 
@@ -46,13 +37,12 @@ elements.forEach((element) => {
 
   articleElement.innerHTML = `
           <div class="article_img">
-            <img src=${element.src} alt="card image 1" />
+            <img src=${element.src} alt="${element.title}" />
           </div>
           <div class="article_content">
-            <h4 class="uppercase font-bold">
+            <h4 class="uppercase font-bold text-[18px]">
               ${element.title}
             </h4>
-            <p>${element.content}</p>
           </div>
   `;
 
@@ -62,11 +52,11 @@ elements.forEach((element) => {
 // Models Section
 const models = [
   {
-    title: "Naomi Campbell",
+    title:
+      "Harlem’s Fashion Row Launches HFR&Co., a New Designer Directory Supporting Black and Latinx Designers",
     content:
-      "The annual British Vogue X Self-Portrait soirée in London is perpetually a magnet for fashion insiders and A-listers. This year was no different, with the event receiving stellar patronage, thanks to the co-hosts—Edward Enninful, the editor-in-chief of British Vogue and European editorial director of Vogue, Han Chong, the founder and creative director of Self-Portrait. editorial director of Vogue, Han Chong, the founder and creative director of Self-Portrait.",
-    image:
-      "https://assets.vogue.com/photos/643c538f7e76a5018e56f53e/4:3/w_640,c_limit/GettyIma3ges-1147442024%20(1).jpeg",
+      "Brandice Daniel is a dreamer. Since she founded Harlem’s Fashion Row in 2007, her goal has been bridging the gap between Black designers and the retail market. “For the last 15 years, we’ve said to people that black designers represent less than 1% of the designers sold in major retailers,” said Daniel. “But we have never given people a way to then shop these Black brands on the HFR platform.” Now that’s all changed with the official launch of HFR&Co., Harlem’s Fashion Row’s online shopping directory.",
+    image: "Images/fashion_page/models_1.jpg",
     size: "tiny",
   },
   {
@@ -103,7 +93,7 @@ models.forEach((model) => {
     </div>
 
     <div class="sizesCard_content">
-      <h4 class="uppercase font-bold">${model.title}</h4>
+      <h4 class="uppercase font-bold text-[17px]">${model.title}</h4>
       <p>
         ${model.content}
       </p>
@@ -452,28 +442,21 @@ const topics = [
     dataTab: "clothingTab1",
     cards: [
       {
-        title:
-          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title: "The show took place on Isola Bella",
+        image: "/Images/fashion_page/topic_1_1.jpg",
       },
       {
         title:
-          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+          "The cruise was centred around the castles of the Borromeo family",
+        image: "/Images/fashion_page/topic_1_2.jpg",
       },
       {
-        title:
-          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title: "It was a wardrobe for time-travelling ballroom divers",
+        image: "/Images/fashion_page/topic_1_3.jpg",
       },
       {
-        title:
-          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title: "The show concluded with epic eveningwear",
+        image: "/Images/fashion_page/topic_1_4.jpg",
       },
     ],
   },
@@ -482,24 +465,20 @@ const topics = [
     dataTab: "clothingTab2",
     cards: [
       {
-        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title: "The show was a through-the-floor experience",
+        image: "/Images/fashion_page/topic_2_1.jpg",
       },
       {
-        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title: "It was romantic futurism",
+        image: "/Images/fashion_page/topic_2_2.jpg",
       },
       {
-        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title: "It was inspired by New Wave and Blitz Kids",
+        image: "/Images/fashion_page/topic_2_3.jpg",
       },
       {
-        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title: "It featured Chinese “ronghua” hats by Stephen Jones",
+        image: "/Images/fashion_page/topic_2_4.jpg",
       },
     ],
   },
@@ -508,24 +487,20 @@ const topics = [
     dataTab: "clothingTab3",
     cards: [
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title: "It was all about the sun",
+        image: "/Images/fashion_page/topic_3_1.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title: "It was loaded with cultural significance",
+        image: "/Images/fashion_page/topic_3_2.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title: "It reimagined the iconography of Louis Vuitton",
+        image: "/Images/fashion_page/topic_3_3.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title: "It was packed with brilliant pieces",
+        image: "/Images/fashion_page/topic_3_4.jpg",
       },
     ],
   },
@@ -534,24 +509,21 @@ const topics = [
     dataTab: "clothingTab4",
     cards: [
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title: "The set was part artist’s loft, part cowboy barn",
+        image: "/Images/fashion_page/topic_4_1.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title: "Everyone was there",
+        image: "/Images/fashion_page/topic_4_2.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title:
+          "It cemented the great contradictions at the heart of Ralph Lauren",
+        image: "/Images/fashion_page/topic_4_3.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title: "The collection was about American contrasts",
+        image: "/Images/fashion_page/topic_4_4.jpg",
       },
     ],
   },
