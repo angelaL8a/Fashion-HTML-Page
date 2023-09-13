@@ -18,6 +18,23 @@
     0 2px 4px -2px rgb(0 0 0 / 0.1);
   --pinkBg: #f42e91;
 }
+/* scroll bar*/
+::-webkit-scrollbar {
+  width: 12px;
+}
+/*  Pista */
+::-webkit-scrollbar-track {
+  background-color: #fbf2f4;
+}
+/* Mango (agarre) */
+::-webkit-scrollbar-thumb {
+  background-color: #f2c0c8;
+  border-radius: 2px;
+}
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f3b7c1;
+}
 
 /* Global */
 h1 {
@@ -749,7 +766,6 @@ h1 {
 }
 
 /* Models section - FASHION PAGE */
-
 .sizesCards_container {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -838,6 +854,22 @@ h1 {
   margin-top: 30px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
+}
+.tab_content_image {
+  height: 500px;
+}
+
+.tab_content_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.tab_card_title {
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+  padding: 6px 20px;
 }
 
 .models_carousel {
@@ -1004,12 +1036,22 @@ h1 {
   padding: 100px 30px 0px 30px;
 }
 
+.tab-header_byTopic {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .clothing-tab-button {
   padding: 5px 15px;
   background-color: #f7dfe9;
   border-radius: 5px;
   transition-duration: 400ms;
   box-shadow: var(--mdBlackShadow);
+  font-size: 20px;
 }
 
 .dark .clothing-tab-button {
@@ -1054,9 +1096,36 @@ h1 {
   object-fit: cover;
 }
 
+@keyframes coverDesignersAnimation {
+  from {
+    opacity: 0.5;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 .moreInModels_cover {
+  display: grid;
   grid-row: span 2 / span 2;
   grid-column-start: 1;
+  animation-timeline: --image;
+  animation-name: coverDesignersAnimation;
+  animation-fill-mode: both;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-range: entry 15% cover 40%;
+}
+
+.dark .moreInModels_cover {
+  display: none;
+}
+
+.moreInModels_cover img {
+  width: 100%;
+  height: 100%;
 }
 
 .moreInModels img {
@@ -1069,7 +1138,7 @@ h1 {
   border-radius: 12px;
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 600px;
   cursor: pointer;
 }
 
@@ -1090,14 +1159,29 @@ h1 {
 
 .moreInModels_card .back {
   transform: perspective(900px) rotateY(180deg);
-  background: var(--pinkBg);
+  background: white;
   padding: 15px;
-  color: #f3f3f3;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
+  color: black;
   box-shadow: var(--blackShadow);
+  overflow: auto;
+  display: flex; /* Usa un contenedor flexible */
+  flex-direction: column;
+  align-items: center;
+}
+
+.moreInModels_content_face_back {
+  padding: 1%;
+}
+
+.moreInModels_content_face_back img {
+  height: 300px;
+  border-radius: 2px;
+}
+
+.moreInModels_card .back p {
+  font-size: 1px;
+  text-align: justify;
+  margin-top: 10px;
 }
 
 .dark .moreInModels_card .back {
@@ -1147,7 +1231,7 @@ h1 {
   max-width: 1400px;
   height: auto;
   margin: auto;
-  max-height: 750px;
+  max-height: 800px;
   overflow: hidden;
   border-radius: 5px;
 }
@@ -1241,9 +1325,14 @@ h1 {
 
 .cardVideo_img {
   width: 100%;
-  height: 100%;
+  height: 400px;
   flex: 1;
   display: flex;
+}
+
+.cardVideo_img img {
+  width: 100%;
+  height: 350px;
 }
 
 .cardVideo_titleVideo {
@@ -1322,42 +1411,30 @@ h1 {
   grid-column: span 2 / span 2;
 }
 
+/* BEAUTY PAGE - SKIN & BEAUTY section */
+
 .makeupContainer {
+  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 200px 40px;
+  gap: 50px 40px;
   justify-items: center;
 }
 
 .makeup_item {
-  max-width: 80%;
-  position: relative;
-}
-
-.makeup_item_0 h4 {
-  font-family: "Rock Salt", cursive;
-  font-size: 70px;
-  color: #8a609e;
-  position: relative;
-  top: 100px;
-  text-shadow: 1px 1px 2px #975677, 0 0 1em #d4a1bb;
-}
-
-.makeup_item_0 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  max-width: 100%;
   position: relative;
 }
 
 .makeup_item_0_img {
   overflow: hidden;
-  max-width: 800px;
-  height: 100%;
+  max-width: 1400px;
+  height: 800px;
+  border-radius: 5px;
 }
 
 .makeup_item_0_img img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -1369,11 +1446,12 @@ h1 {
 }
 
 .makeup_item_content {
-  background-color: white;
-  border-radius: 10px;
-  padding: 10px;
+  backdrop-filter: blur(12px);
+  color: white;
+  border-radius: 4px;
+  padding: 10px 15px;
   position: absolute;
-  margin-top: -30px;
+  bottom: 10px;
   margin-left: 15px;
   margin-right: 15px;
   z-index: 50;
@@ -1385,42 +1463,22 @@ h1 {
   box-shadow: var(--lgBlackShadow);
 }
 
+.makeup_item_content p {
+  font-size: 5px;
+  text-align: justify;
+  text-shadow: 4px 4px 4px #000;
+}
+
 .makeup_item_content h4 {
   font-size: 20px;
+  font-weight: 900;
 }
-
-.careContainer {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 150px 40px;
-  justify-items: center;
-}
-
-.skincare_item {
-  max-width: 80%;
-  position: relative;
-}
-
-.skincare_item img {
-}
-
-.skincare_item_0 {
-  grid-row-start: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 100%;
-}
-
-.skincare_item_0 h4 {
-  font-family: "Rock Salt", cursive;
-  font-size: 50px;
-  color: #99c6d7;
-  position: relative;
-  bottom: 2px;
-  text-shadow: 1px 1px 2px #975677, 0 0 1em #826373;
+/* skincare */
+.skincare_item_0_img {
+  margin-top: 80px;
+  max-width: 1400px;
+  height: 800px;
+  overflow: hidden;
 }
 
 .skincare_item_0_img img {
@@ -1429,29 +1487,41 @@ h1 {
   object-fit: cover;
 }
 
-.skincare_item_0_img {
-  height: 100%;
-  max-width: 450px;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
+.careContainer {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 50px 20px;
+  justify-items: center;
 }
+
+.skincare_item {
+  position: relative;
+  width: 100%;
+}
+
 .skincare_item_img {
   box-shadow: var(--blackShadow);
   border-radius: 3px;
   overflow: hidden;
-  max-height: 200px;
+  height: 500px;
+}
+
+.skincare_item_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .skincare_item_content {
-  background-color: white;
-  border-radius: 10px;
+  color: white;
+  border-radius: 4px;
   padding: 10px;
+  bottom: 10px;
   position: absolute;
-  margin-top: -30px;
   margin-left: 15px;
   margin-right: 15px;
-  z-index: 50;
-  box-shadow: var(--blackShadow);
+  background-color: rgba(151, 106, 106, 0.5); /* Color rosa con opacidad */
+  backdrop-filter: blur(40px) brightness(1.2) saturate(1.5);
 }
 
 .dark .skincare_item_content {
@@ -1461,6 +1531,12 @@ h1 {
 
 .skincare_item_content h4 {
   font-size: 20px;
+  font-weight: 900;
+}
+
+.skincare_item_content p {
+  font-size: 15px;
+  text-align: justify;
 }
 
 /* CULTURE PAGE (culture.html) */
@@ -2170,6 +2246,14 @@ h1 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
+  /* Beauty Page - SKIN & BEAUTY section */
+  .makeupContainer {
+    gap: 60px 40px;
+  }
+  .makeup_item_content p {
+    font-size: 13px;
+  }
+
   /* SHOWTIME TREASURES */
   .tvMovies_card {
     flex-direction: row;
@@ -2279,6 +2363,11 @@ h1 {
   .moreInModels_container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .dark .moreInModels_container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   /* DISCOVER MODELS section */
   .modal_content {
     max-width: 800px;
@@ -2309,15 +2398,6 @@ h1 {
 
   .careContainer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .skincare_item_0 {
-    grid-column: span 2 / span 2;
-    flex-direction: row;
-  }
-
-  .skincare_item_0 h4 {
-    position: absolute;
   }
 
   /* Culture page INSPIRARTION INSIGHTS */
@@ -2356,6 +2436,7 @@ h1 {
   .holidays_container {
     flex-direction: row;
   }
+
   .holidays_poster {
     position: sticky;
     top: 0;
@@ -2419,22 +2500,7 @@ h1 {
   }
 
   .careContainer {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .skincare_item {
-    max-width: 500px;
-  }
-
-  .skincare_item_0 h4 {
-    font-size: 110px;
-  }
-
-  .skincare_item_0 {
-    grid-row: span 2 / span 2;
-    grid-column: span 2 / span 2;
-    grid-column-start: 3;
-    grid-row-start: 1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   /* Culture page SHOWTIME TREASURES */

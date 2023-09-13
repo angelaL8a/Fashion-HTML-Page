@@ -53,26 +53,24 @@ elements.forEach((element) => {
 const models = [
   {
     title:
-      "Harlem’s Fashion Row Launches HFR&Co., a New Designer Directory Supporting Black and Latinx Designers",
+      "Gisele Returns to the Red Carpet in Archival Chanel at the Met Gala 2023",
     content:
-      "Brandice Daniel is a dreamer. Since she founded Harlem’s Fashion Row in 2007, her goal has been bridging the gap between Black designers and the retail market. “For the last 15 years, we’ve said to people that black designers represent less than 1% of the designers sold in major retailers,” said Daniel. “But we have never given people a way to then shop these Black brands on the HFR platform.” Now that’s all changed with the official launch of HFR&Co., Harlem’s Fashion Row’s online shopping directory.",
+      "The Brazilian supermodel’s ethereal dress—cut from white silk tulle and embroidered with vertical stripes of sequins—was the bridal look in Karl Lagerfeld’s spring 2007 Chanel couture show. While the look was originally worn on the runway by Freja Beha Erichsen, Bündchen wore it for a fashion editorial that same year. Speaking to the Met Gala’s red carpet host La La Anthony, Bündchen said that she saw the design, remembered having worn it for a shoot, and immediately thought: “This is the one.”",
     image: "Images/fashion_page/models_1.jpg",
     size: "tiny",
   },
   {
-    title: "Naomi Campbell",
+    title: "Marion Cotillard Debuts Punk Pink Hair at the Met Gala 2023",
     content:
-      "The annual British Vogue X Self-Portrait soirée in London is perpetually a magnet for fashion insiders and A-listers. This year was no different, with the event receiving stellar patronage, thanks to the co-hosts—Edward Enninful, the editor-in-chief of British Vogue and European editorial director of Vogue, Han Chong, the founder and creative director of Self-Portrait, and Emily Ratajkowski. The guest list was nothing short of impressive, featuring the likes of Rita Ora, Michaela Jaé Rodrigues, Hari Nef, and British Vogue’s August cover girl Maya Jama. Ratajkowski’s all-black summer look, however, stood out amidst the sea of glimmering, colorful dresses.",
-    image:
-      "https://assets.vogue.com/photos/643c538f7e76a5018e56f53e/4:3/w_640,c_limit/GettyIma3ges-1147442024%20(1).jpeg",
+      "When considering Karl Lagerfeld’s iconic runway stylings, an assemblage of textured touches come to mind. Ribbons? Often. Pearls? Always. And feathers? A luxurious must. Marion Cotillard opted to channel the spirit of the feather finish for the 2023 Met Gala; her medium-length brunette switched for a pink mop top piecey enough to mimic thin strands of plumage.",
+    image: "Images/fashion_page/models_2.jpg",
     size: "big",
   },
   {
-    title: "Naomi Campbell",
+    title: "Kate Moss and Lila Moss Wear Coordinating to the 2023 Met Gala",
     content:
-      "The annual British Vogue X Self-Portrait soirée in London is perpetually a magnet for fashion insiders and A-listers. This year was no different, with the event receiving stellar patronage, thanks to the co-hosts—Edward Enninful, the editor-in-chief of British Vogue and European editorial director of Vogue, Han Chong, the founder and creative director of Self-Portrait. editorial director of Vogue, Han Chong, the founder and creative director of Self-Portrait.",
-    image:
-      "https://assets.vogue.com/photos/643c538f7e76a5018e56f53e/4:3/w_640,c_limit/GettyIma3ges-1147442024%20(1).jpeg",
+      "There are few attendees as well equipped to deliver a meaningful mother-daughter moment on the Met Gala red carpet as Kate and Lila Moss. Tonight, while walking the steps of the Metropolitan Museum of Art in New York, the Mosses wore Fendi couture gowns by Kim Jones. As with so many of tonight’s looks, their gowns served as a subtle homage to Karl Lagerfeld, whose work is celebrated in this year’s exhibition, “Karl Lagerfeld: A Line of Beauty”.",
+    image: "Images/fashion_page/models_3.jpg",
     size: "tiny",
   },
 ];
@@ -106,162 +104,98 @@ models.forEach((model) => {
 // Trending Models section
 const trending = [
   {
-    name: "Ice Spice",
+    name: "Hailey Bieber",
     dataTab: "tab1",
     cards: [
       {
-        title:
-          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title: "Hailey Bieber Shows How to Elevate Sporty Staples",
+        image: "Images/fashion_page/hailey_1.jpg",
       },
       {
         title:
-          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+          "A Shoppable Ode to Hailey Bieber’s Oversized Outerwear Obsession",
+        image: "Images/fashion_page/hailey_2.jpg",
       },
       {
         title:
-          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+          "The Easy Way to Achieve Hailey Bieber’s “Strawberry Girl” Flush",
+        image: "Images/fashion_page/hailey_3.jpg",
       },
       {
-        title:
-          "A First Look at Kendall Jenner as the New Face of L’Oréal Paris",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title: "Hailey Bieber’s Vintage Jorts Are Her New Hot-Weather Staple",
+        image: "Images/fashion_page/hailey_4.jpg",
       },
     ],
   },
   {
-    name: "Kendall Jenner",
+    name: "Emily Ratajkowski",
     dataTab: "tab2",
     cards: [
       {
-        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title: "Emily Ratajkowski Wears 3Trends All At Once",
+        image: "Images/fashion_page/emily_1.jpg",
       },
       {
-        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title: "EmRata’s Abs Say Summer Is Almost Here",
+        image: "Images/fashion_page/emily_2.jpg",
       },
       {
-        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title:
+          "Gigi Hadid’s Met Gala Looks Have Always Been About the Transformation",
+        image: "Images/fashion_page/emily_3.jpg",
       },
       {
-        title: "A Classic Carrie Bradshaw Look Lives Again, Thanks to Kendall",
-        image:
-          "https://assets.vogue.com/photos/64b695a1dc90cc14d7b918af/3:4/w_640,c_limit/VOGUE%20KJ%20IMAGE%20FINAL%20TO%20USE.jpg",
+        title:
+          "How to Make Your Wardrobe Cozy and Presentable, According to Gigi Hadid",
+        image: "Images/fashion_page/emily_4.jpg",
       },
     ],
   },
   {
-    name: "Gigi Hadid",
+    name: "Jennifer Lawrence",
     dataTab: "tab3",
     cards: [
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title: "Jennifer Lawrence Brings Bombshell Glamour to Cannes",
+        image: "Images/fashion_page/jennifer_1.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title: "Jennifer Lawrence’s Perfect Summer Shoe Takes Cue From Barbie",
+        image: "Images/fashion_page/jennifer_2.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title: "Jennifer Lawrence Perfects Understated New Yorker Style",
+        image: "Images/fashion_page/jennifer_3.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title: "Jennifer Lawrence Is On Board With This Surprising Summer Shoe",
+        image: "Images/fashion_page/jennifer_4.jpg",
       },
     ],
   },
   {
-    name: "Linda Eangelista",
+    name: "Naomi Campbell",
     dataTab: "tab4",
     cards: [
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title:
+          "Palm Angels Recruits Naomi Campbell—and Remixes Tod’s—for Its Latest Moncler Genius Collection",
+        image: "Images/fashion_page/naomi_1.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title:
+          "Naomi Campbell Jump-Starts New York Fashion Week With Her First Collection for PrettyLittleThing",
+        image: "Images/fashion_page/naomi_3.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
+        title:
+          "Naomi Campbell Reminded Everyone What “Supermodel” Means at Paris Fashion Week",
+        image: "Images/fashion_page/naomi_2.jpg",
       },
       {
-        title: "Birkenstock Fans Will Love This Gigi Hadid–Approved Shoe",
-        image:
-          "https://assets.vogue.com/photos/6308e235437c40c9d7958fed/master/w_1920,c_limit/GH1108_01.jpeg",
-      },
-    ],
-  },
-  {
-    name: "Ashley Graham",
-    dataTab: "tab5",
-    cards: [
-      {
-        title: "Maternity Versace? Ashley Graham Says, Why Not!",
-        image:
-          "https://assets.vogue.com/photos/5fe200e6a16e61c4d9cb38c7/master/w_1920,c_limit/00_story%20(1).gif",
-      },
-      {
-        title: "Maternity Versace? Ashley Graham Says, Why Not!",
-        image:
-          "https://assets.vogue.com/photos/5fe200e6a16e61c4d9cb38c7/master/w_1920,c_limit/00_story%20(1).gif",
-      },
-      {
-        title: "Maternity Versace? Ashley Graham Says, Why Not!",
-        image:
-          "https://assets.vogue.com/photos/5fe200e6a16e61c4d9cb38c7/master/w_1920,c_limit/00_story%20(1).gif",
-      },
-      {
-        title: "Maternity Versace? Ashley Graham Says, Why Not!",
-        image:
-          "https://assets.vogue.com/photos/5fe200e6a16e61c4d9cb38c7/master/w_1920,c_limit/00_story%20(1).gif",
-      },
-    ],
-  },
-  {
-    name: "Bella Hadid",
-    dataTab: "tab6",
-    cards: [
-      {
-        title: "Maternity Versace? Ashley Graham Says, Why Not!",
-        image:
-          "https://assets.vogue.com/photos/5fe200e6a16e61c4d9cb38c7/master/w_1920,c_limit/00_story%20(1).gif",
-      },
-      {
-        title: "Maternity Versace? Ashley Graham Says, Why Not!",
-        image:
-          "https://assets.vogue.com/photos/5fe200e6a16e61c4d9cb38c7/master/w_1920,c_limit/00_story%20(1).gif",
-      },
-      {
-        title: "Maternity Versace? Ashley Graham Says, Why Not!",
-        image:
-          "https://assets.vogue.com/photos/5fe200e6a16e61c4d9cb38c7/master/w_1920,c_limit/00_story%20(1).gif",
-      },
-      {
-        title: "Maternity Versace? Ashley Graham Says, Why Not!",
-        image:
-          "https://assets.vogue.com/photos/5fe200e6a16e61c4d9cb38c7/master/w_1920,c_limit/00_story%20(1).gif",
+        title:
+          "In Paris, Naomi Campbell and MatchesFashion Feted Steven Klein’s New Book",
+        image: "Images/fashion_page/naomi_4.jpg",
       },
     ],
   },
@@ -288,14 +222,14 @@ trending.forEach((item, index) => {
     itemChild.classList.add("tab-card");
 
     itemChild.innerHTML = `
-      <div>
+      <div class="tab_content_image">
         <img
           src="${card.image}"
           alt=""
         />
       </div>
 
-      <div>
+      <div class="tab_card_title">
         <h4>
           ${card.title}
         </h4>
@@ -333,28 +267,28 @@ tabButtons[0].click();
 //MEET THE 10 STANDOUT MODELS OF FALL 2023
 const modelsDiscover = [
   {
-    name: "Kendal Jenner",
-    img: "https://assets.vogue.com/photos/6418c85246d1a1c58bdf0f66/4:3/w_1920,c_limit/2023%20Messika%20Brand%20Campaign%20-%20Kendall%20Jenner%20-%20D-Vibes%20Collection%20%E2%94%AC%E2%8C%90%20Chris%20Colls%20copy.jpg",
+    name: "Gigi Hadid",
+    img: "Images/fashion_page/latest_Gigi.jpg",
     content:
-      "Con más de 100 millones de seguidores en su cuenta de Instagram , Kendall Jenner se ha convertido en una de las personalidades más buscadas por los objetivos de medio mundo y en una de las principales representantes del fenómeno de las 'supermodelos sociales' . La buscan, casi por igual, paparazzi y fotógrafos de moda, marcas, followers y revistas de tendencias. Hija del medallista olímpico estadounidense que ganó el decatlón para su país en los juegos del 76, Bruce Jenner, y de Kris Jenner, una azafata de vuelo casada en primeras nupcias con el abogado de O. J. Simpso n, Robert Kardashian, debe su salto a la fama al reality televisivo Keeping Up with the Kardashians, un programa de telerrealidad en el que ella, sus padres, su hermana menor Kylie –ambas fruto del matrimonio de estos– y sus hermanastros Kim , Khloé y Kourntey Kardashian exponían, sin tapujos, sus intimidades. El reality, que emitía la cadena E!, permaneció en antena 20 temporadas durante 14 años .",
+      "Gigi Hadid is an American supermodel and television personality who gained widespread recognition for her striking beauty and successful modeling career. Born on April 23, 1995, in Los Angeles, California, as Jelena Noura Hadid, she comes from a family with strong connections to the fashion industry. Gigi's modeling journey began at a young age, and she quickly rose to prominence in the fashion world. Her portfolio includes campaigns for renowned fashion brands such as Victoria's Secret, Versace, and Tommy Hilfiger, among many others. Hadid is celebrated not only for her stunning looks but also for her down-to-earth personality and social media presence, which have garnered her a massive global fan base. In addition to her modeling career, she has made appearances on reality TV shows and has become a prominent figure in the world of fashion and entertainment.",
   },
   {
-    name: "Gigi Hadid",
-    img: "https://assets.vogue.com/photos/6418c85246d1a1c58bdf0f66/4:3/w_1920,c_limit/2023%20Messika%20Brand%20Campaign%20-%20Kendall%20Jenner%20-%20D-Vibes%20Collection%20%E2%94%AC%E2%8C%90%20Chris%20Colls%20copy.jpg",
+    name: "Kendall Jenner",
+    img: "Images/fashion_page/latest_Kendal.jpg",
     content:
-      "Con más de 100 millones de seguidores en su cuenta de Instagram , Kendall Jenner se ha convertido en una de las personalidades más buscadas por los objetivos de medio mundo y en una de las principales representantes del fenómeno de las 'supermodelos sociales' . La buscan, casi por igual, paparazzi y fotógrafos de moda, marcas, followers y revistas de tendencias. Hija del medallista olímpico estadounidense que ganó el decatlón para su país en los juegos del 76, Bruce Jenner, y de Kris Jenner, una azafata de vuelo casada en primeras nupcias con el abogado de O. J. Simpso n, Robert Kardashian, debe su salto a la fama al reality televisivo Keeping Up with the Kardashians, un programa de telerrealidad en el que ella, sus padres, su hermana menor Kylie –ambas fruto del matrimonio de estos– y sus hermanastros Kim , Khloé y Kourntey Kardashian exponían, sin tapujos, sus intimidades. El reality, que emitía la cadena E!, permaneció en antena 20 temporadas durante 14 años .",
+      "Kendall Jenner is an American model, television personality, and social media influencer. Born on November 3, 1995, in Los Angeles, Californi. Kendall began her modeling career at a young age, signing with Wilhelmina Models when she was just 14 years old. She quickly gained recognition in the fashion industry for her tall, slender frame and striking looks. Throughout her career, Kendall Jenner has walked the runways for numerous high-profile fashion brands, including Chanel, Givenchy, and Marc Jacobs. She has also graced the covers of prestigious fashion magazines like Vogue and Harper's Bazaar. In addition to her modeling success, Kendall is known for her strong presence on social media, where she has millions of followers. Her combination of beauty, fame, and influence has made her one of the most prominent figures in the world of fashion and entertainment.",
   },
   {
     name: "Bella Hadid",
-    img: "https://assets.vogue.com/photos/6418c85246d1a1c58bdf0f66/4:3/w_1920,c_limit/2023%20Messika%20Brand%20Campaign%20-%20Kendall%20Jenner%20-%20D-Vibes%20Collection%20%E2%94%AC%E2%8C%90%20Chris%20Colls%20copy.jpg",
+    img: "Images/fashion_page/latest_Bella.jpg",
     content:
-      "Con más de 100 millones de seguidores en su cuenta de Instagram , Kendall Jenner se ha convertido en una de las personalidades más buscadas por los objetivos de medio mundo y en una de las principales representantes del fenómeno de las 'supermodelos sociales' . La buscan, casi por igual, paparazzi y fotógrafos de moda, marcas, followers y revistas de tendencias. Hija del medallista olímpico estadounidense que ganó el decatlón para su país en los juegos del 76, Bruce Jenner, y de Kris Jenner, una azafata de vuelo casada en primeras nupcias con el abogado de O. J. Simpso n, Robert Kardashian, debe su salto a la fama al reality televisivo Keeping Up with the Kardashians, un programa de telerrealidad en el que ella, sus padres, su hermana menor Kylie –ambas fruto del matrimonio de estos– y sus hermanastros Kim , Khloé y Kourntey Kardashian exponían, sin tapujos, sus intimidades. El reality, que emitía la cadena E!, permaneció en antena 20 temporadas durante 14 años .",
+      "Bella Hadid, whose full name is Isabella Khair Hadid, is an American model known for her striking beauty and successful modeling career. She was born on October 9, 1996, in Los Angeles, California, and is the younger sister of fellow supermodel Gigi Hadid. Bella's rise to fame in the fashion world was meteoric, thanks to her unique and captivating features. \n Throughout her career, Bella Hadid has walked the runways for some of the world's most prestigious fashion houses, including Chanel, Dior, and Givenchy. She has also graced the covers of numerous fashion magazines, solidifying her status as a top model. Bella is celebrated for her versatility and ability to adapt to various fashion styles, from high fashion to streetwear.",
   },
   {
-    name: "Ashley Graham",
-    img: "https://assets.vogue.com/photos/6418c85246d1a1c58bdf0f66/4:3/w_1920,c_limit/2023%20Messika%20Brand%20Campaign%20-%20Kendall%20Jenner%20-%20D-Vibes%20Collection%20%E2%94%AC%E2%8C%90%20Chris%20Colls%20copy.jpg",
+    name: "Cara Delevigne",
+    img: "Images/fashion_page/latest_Cara.jpg",
     content:
-      "Con más de 100 millones de seguidores en su cuenta de Instagram , Kendall Jenner se ha convertido en una de las personalidades más buscadas por los objetivos de medio mundo y en una de las principales representantes del fenómeno de las 'supermodelos sociales' . La buscan, casi por igual, paparazzi y fotógrafos de moda, marcas, followers y revistas de tendencias. Hija del medallista olímpico estadounidense que ganó el decatlón para su país en los juegos del 76, Bruce Jenner, y de Kris Jenner, una azafata de vuelo casada en primeras nupcias con el abogado de O. J. Simpso n, Robert Kardashian, debe su salto a la fama al reality televisivo Keeping Up with the Kardashians, un programa de telerrealidad en el que ella, sus padres, su hermana menor Kylie –ambas fruto del matrimonio de estos– y sus hermanastros Kim , Khloé y Kourntey Kardashian exponían, sin tapujos, sus intimidades. El reality, que emitía la cadena E!, permaneció en antena 20 temporadas durante 14 años .",
+      "Cara Delevingne is a British actress, model, and singer who rose to prominence in the fashion world before transitioning to a successful career in acting and music. Born on August 12, 1992, in London, England. She began her modeling career at a young age and walked the runways for numerous high-fashion brands, including Chanel, Burberry, and Dolce & Gabbana. Cara's career reached its peak during the early 2010s when she was one of the most sought-after models in the world. In addition to her modeling success, Cara Delevingne has pursued acting, appearing in films such as Paper Towns, Suicide Squad, and Valerian and the City of a Thousand Planets. She has received acclaim for her performances and has become a respected figure in the entertainment industry. Cara has also ventured into music and released her own songs.",
   },
 ];
 
@@ -392,7 +326,7 @@ modelsDiscover.forEach((mod, index) => {
         <img src="${mod.img}">
       </div>
 
-      <p>${mod.content}</p>
+      <p class="text-justify" >${mod.content}</p>
      </div>
     </div>
   </div>
@@ -438,8 +372,30 @@ modelsDiscover.forEach((mod, index) => {
 //Explore by topic section
 const topics = [
   {
-    name: "Ice Spice",
+    name: "Kim Jone",
     dataTab: "clothingTab1",
+    cards: [
+      {
+        title: "The show was a through-the-floor experience",
+        image: "/Images/fashion_page/topic_2_1.jpg",
+      },
+      {
+        title: "It was romantic futurism",
+        image: "/Images/fashion_page/topic_2_2.jpg",
+      },
+      {
+        title: "It was inspired by New Wave and Blitz Kids",
+        image: "/Images/fashion_page/topic_2_3.jpg",
+      },
+      {
+        title: "It featured Chinese “ronghua” hats by Stephen Jones",
+        image: "/Images/fashion_page/topic_2_4.jpg",
+      },
+    ],
+  },
+  {
+    name: "Louis Vuitton",
+    dataTab: "clothingTab2",
     cards: [
       {
         title: "The show took place on Isola Bella",
@@ -461,29 +417,7 @@ const topics = [
     ],
   },
   {
-    name: "Kendall Jenner",
-    dataTab: "clothingTab2",
-    cards: [
-      {
-        title: "The show was a through-the-floor experience",
-        image: "/Images/fashion_page/topic_2_1.jpg",
-      },
-      {
-        title: "It was romantic futurism",
-        image: "/Images/fashion_page/topic_2_2.jpg",
-      },
-      {
-        title: "It was inspired by New Wave and Blitz Kids",
-        image: "/Images/fashion_page/topic_2_3.jpg",
-      },
-      {
-        title: "It featured Chinese “ronghua” hats by Stephen Jones",
-        image: "/Images/fashion_page/topic_2_4.jpg",
-      },
-    ],
-  },
-  {
-    name: "Gigi Hadid",
+    name: "Pharell Williams",
     dataTab: "clothingTab3",
     cards: [
       {
@@ -505,7 +439,7 @@ const topics = [
     ],
   },
   {
-    name: "Linda Eangelista",
+    name: "Ralph Lauren",
     dataTab: "clothingTab4",
     cards: [
       {
@@ -559,7 +493,7 @@ topics.forEach((item, index) => {
         />
       </div>
 
-      <div>
+      <div class="tab_card_title">
         <h4>
           ${card.title}
         </h4>
@@ -570,7 +504,7 @@ topics.forEach((item, index) => {
   });
 });
 
-// Models section - TABS
+//TABS
 // Obtener los elementos de los tabs y su contenido
 const clothingTabButtons = document.querySelectorAll(".clothing-tab-button");
 const clothingTabContents = document.querySelectorAll(".clothing-tab-content");
@@ -594,27 +528,35 @@ clothingTabButtons.forEach((button) => {
 // Mostrar el contenido del primer tab al cargar la página
 clothingTabButtons[0].click();
 
-// Explore By Topic section
+// LATEST IN DESIGNERS
 const designers = [
   {
-    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
-    image:
-      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
+    title: "Chanel",
+    image: "/Images/fashion_page/chanel_1.jpg",
+    secondImage: "/Images/fashion_page/chanel_2.jpg",
+    content:
+      "Chanel is a renowned French luxury fashion house founded by Coco Chanel in the early 20th century. The brand is synonymous with timeless elegance, innovation, and sophistication in the world of fashion and beauty. Chanel's iconic double-C logo and its signature black-and-white color scheme have become symbols of luxury and high fashion. <br /> Coco Chanel, the founder, revolutionized women's fashion by introducing comfortable and functional clothing, such as the little black dress and the Chanel suit, which featured clean lines and a more relaxed fit compared to the rigid fashions of the time. Chanel is also famous for popularizing the use of jersey fabric in haute couture, a groundbreaking move that defied convention. <br /> Beyond clothing, Chanel has a significant presence in the fragrance and beauty industry. The brand's iconic perfume, Chanel No. 5, is one of the most famous and enduring fragrances in the world. Chanel's cosmetics and skincare lines are also highly regarded for their quality and innovation. <br /> Chanel's current creative director, Virginie Viard, continues to uphold the brand's legacy of chic and sophisticated design, while also introducing modern elements to keep the fashion house relevant in today's ever-changing fashion landscape. Chanel's influence on the fashion world remains profound, making it a symbol of timeless luxury and style.",
   },
   {
-    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
-    image:
-      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
+    title: "Gucci",
+    image: "/Images/fashion_page/gucci.jpg",
+    secondImage: "/Images/fashion_page/gucci_2.jpg",
+    content:
+      "Gucci is an Italian luxury fashion brand that has earned global recognition for its high-quality craftsmanship, distinctive designs, and association with luxury and glamour. Founded in 1921 by Guccio Gucci in Florence, Italy, the brand started as a small leather goods and luggage company. Over the years, Gucci has evolved into one of the world's leading luxury fashion houses. <br />Gucci is known for its iconic GG logo pattern, horsebit hardware, and use of bold colors and patterns in its designs. The brand has a rich history of creating iconic fashion pieces, including the Gucci loafer, the Jackie bag, and the Flora scarf, which have become timeless classics in the fashion world.<br /> Throughout its history, Gucci has been celebrated for its innovative and eclectic approach to design, often pushing the boundaries of conventional fashion. Under the creative direction of Alessandro Michele since 2015, Gucci has embraced a more eclectic and unconventional style, featuring a mix of vintage-inspired pieces, bold prints, and a gender-fluid approach to fashion. <br /> Gucci's product range extends beyond clothing and accessories to include fragrances, eyewear, and beauty products. The brand has a strong presence in the world of celebrity fashion, often worn by A-list stars and influencers.",
   },
   {
-    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
-    image:
-      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
+    title: "Fendi",
+    image: "/Images/fashion_page/fendi.jpg",
+    secondImage: "/Images/fashion_page/fendi_2.jpg",
+    content:
+      "Fendi is an Italian luxury fashion house renowned for its opulent and high-quality designs. Established in 1925 by Adele and Edoardo Fendi in Rome, Italy, Fendi began as a fur and leather shop. Over the years, it has evolved into a global fashion brand celebrated for its iconic craftsmanship and innovation.<br />Fendi is particularly renowned for its expertise in fur and leather craftsmanship, and it is credited with introducing the concept of fur ready-to-wear collections. The brand's logo, featuring two interlocking F's, has become an emblem of luxury and style.<br />Throughout its history, Fendi has collaborated with prominent designers and artists, including Karl Lagerfeld, who served as creative director for over five decades and played a pivotal role in elevating Fendi's status in the fashion world. Lagerfeld's influence brought avant-garde designs and creative concepts to the brand's collections.",
   },
   {
-    title: "Irina Shayk Delivers the Most Literal Take on the Lingerie Trend",
-    image:
-      "https://assets.vogue.com/photos/64b04716346bc63165212933/4:3/w_640,c_limit/1540362456",
+    title: "Bottega Veneta",
+    image: "/Images/fashion_page/bottega.jpg",
+    secondImage: "/Images/fashion_page/bottega_2.jpg",
+    content:
+      "Bottega Veneta is an Italian luxury fashion brand celebrated for its artisanal craftsmanship, minimalist design, and commitment to quality. Founded in 1966 in Vicenza, Italy, by Michele Taddei and Renzo Zengiaro, the brand has become synonymous with understated luxury and timeless elegance.<br />Bottega Veneta is best known for its distinctive weaving technique called intrecciato, which involves meticulously weaving strips of leather to create a unique and durable texture. This technique has been a hallmark of the brand and is used in various products, including handbags, shoes, and accessories.<br />The brand's philosophy is centered around a quiet luxury aesthetic, focusing on craftsmanship, quality materials, and the absence of visible logos or flashy branding. Bottega Veneta's design approach emphasizes clean lines, simple silhouettes, and a refined color palette, which appeals to those seeking a more discreet and sophisticated form of luxury.",
   },
 ];
 
@@ -640,9 +582,17 @@ designers.forEach((item, index) => {
       </div>
     </div>
 
-    <div class="face back">
-      <h3>Japan</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+    <div class="face back" id="moreInModels_face_back_${index}">
+      <h3>${item.title}</h3>
+      <div class="moreInModels_content_face_back">
+        <img
+            src="${item.secondImage}"
+            alt="${item.title}"
+            class="object-cover w-full h-full"
+        />
+        <p>${item.content}</p>
+      </div>
+      
     </div>
   `;
 
