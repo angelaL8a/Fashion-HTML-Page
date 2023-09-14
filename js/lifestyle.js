@@ -2,50 +2,42 @@
 //Home & Decorating section
 const cards = [
   {
-    title: "See Inside Gwyneth Paltrow’s Montecito Guest House",
-    image:
-      "https://assets.vogue.com/photos/64c81a4fd9567128b713024c/4:3/w_640,c_limit/ID2668_7.jpg",
+    title: "PINKCOCO ULUWATU",
+    image: "Images/lifestyle_page/elegant_1.jpg",
     content:
-      "Atrás quedaron el pelo rosa efecto lavado de Florence Pugh o el tono Cherry Coke de Katie Holmes; las tendencias en color de pelo de otoño-invierno 2023 nos traen coloraciones mucho más naturales y universalmente favorecedoras. “Al igual que estos últimos años hemos percibido cómo el cuidado de la piel recibe una gran atención, con la coloración capilar sucede algo semejante, con tonalidades orgánicas que realzan los matices de la piel, variando para adaptarse del subtono más dorado al rosado.",
+      "Located in Uluwatu, Bali, a stone’s throw away from the famous Padang-Padang surf breaks. We have created 28 rooms, just 5 minutes walk from the beach. Wake up to the sound of the ocean in our contemporary-chic lodgings, and hit the waves or explore what Bali has to offer. Experience sunset along one of the most beautiful beachfront in Bali. Lounge under the stars by our pool and dine at our award winning Tapas del Mar.Make your next destination Pink!",
   },
   {
     title:
-      "Inside the Surreal London Home of Artists Philip and Charlotte Colbert",
-    image:
-      "https://assets.vogue.com/photos/64c81cfc9392c584d37d73bd/4:3/w_640,c_limit/230215_RWG_GOD_Furniture_Lighting_GH_SET01_SHOT_01_WINDOW_SET_NaturallyElegantCraft1_729_HERO.jpg",
+      "Unprecedented interest in the Paris Region during Olympic Games Paris 2024",
+    image: "Images/lifestyle_page/elegant_2.jpg",
     content:
-      "Atrás quedaron el pelo rosa efecto lavado de Florence Pugh o el tono Cherry Coke de Katie Holmes; las tendencias en color de pelo de otoño-invierno 2023 nos traen coloraciones mucho más naturales y universalmente favorecedoras. “Al igual que estos últimos años hemos percibido cómo el cuidado de la piel recibe una gran atención, con la coloración capilar sucede algo semejante, con tonalidades orgánicas que realzan los matices de la piel, variando para adaptarse del subtono más dorado al rosado.",
+      "Airbnb has reported a significant increase in interest in the Paris Region ahead of the Paris 2024 Olympics, with listings available during the Games being viewed over 100 times more than the previous year, a 10,000% increase. Searches for stays in the Paris Region during the Olympics have increased by over 30% in the second quarter of 2023 compared to the first quarter. Local hosts are expected to benefit from the surge in bookings, and nearly 20% of inhabitants in Ile-de-France who do not currently rent their homes on Airbnb plan to become hosts during the Games. The most viewed neighborhoods in the Paris Region include the 18th, 15th, 11th, 10th, and 19th arrondissements. Interest in these areas indicates that neighborhoods outside the main tourist areas are likely to benefit the most from the influx of visitors during Paris 2024.",
   },
   {
     title:
-      "See Inside Mila Kunis and Ashton Kutcher’s Beachy Santa Barbara Guest House",
-    image:
-      "https://assets.vogue.com/photos/64dbd3743a74fead8c2428ae/4:3/w_640,c_limit/Front%20Entrance%20-%20Credit_%20Katya%20Grozovskaya.jpg",
+      "Barbie’s Malibu DreamHouse is back on Airbnb – but this time, Ken’s hosting",
+    image: "Images/lifestyle_page/elegant_3.jpg",
     content:
-      "Atrás quedaron el pelo rosa efecto lavado de Florence Pugh o el tono Cherry Coke de Katie Holmes; las tendencias en color de pelo de otoño-invierno 2023 nos traen coloraciones mucho más naturales y universalmente favorecedoras. “Al igual que estos últimos años hemos percibido cómo el cuidado de la piel recibe una gran atención, con la coloración capilar sucede algo semejante, con tonalidades orgánicas que realzan los matices de la piel, variando para adaptarse del subtono más dorado al rosado.",
+      "This summer, Ken is taking over Barbie's iconic Malibu DreamHouse on Airbnb, celebrating the release of the BARBIE film. Ken, played by Ryan Gosling, is hosting two individual one-night stays in his bedroom for up to two guests each on July 21 and July 22, 2023. The stays are free of charge, and guests can enjoy various activities, including exploring Ken's wardrobe, dancing on the outdoor disco dance floor, relaxing by the infinity pool, and taking home a set of yellow-and-pink Impala skates and surfboards. Reservations can be requested starting July 17 at 10:00 AM PT on Airbnb's website, and guests are responsible for their own travel to and from Malibu. In honor of the BARBIE film release and to support girls' empowerment, Airbnb will make a one-time donation to Save the Children.",
   },
   {
-    title: "How to Refresh Your Bathroom, the Easy Way",
-    image:
-      "https://assets.vogue.com/photos/64c82c097377bfbdd604f20b/4:3/w_640,c_limit/0412-VO-WELL65.01.jpg",
+    title: "Homes to Help You Recharge This Month",
+    image: "Images/lifestyle_page/elegant_6.jpg",
     content:
-      "Atrás quedaron el pelo rosa efecto lavado de Florence Pugh o el tono Cherry Coke de Katie Holmes; las tendencias en color de pelo de otoño-invierno 2023 nos traen coloraciones mucho más naturales y universalmente favorecedoras. “Al igual que estos últimos años hemos percibido cómo el cuidado de la piel recibe una gran atención, con la coloración capilar sucede algo semejante, con tonalidades orgánicas que realzan los matices de la piel, variando para adaptarse del subtono más dorado al rosado.",
+      "If you're feeling restless and in need of relaxation, Airbnb offers options for rejuvenation, whether through an online experience or renting a local home. You can meditate to manifest gratitude and happiness in Mexico, enjoy a Spanish-style casita in Hollywood with a saltwater pool, learn about traditional Haitian healing and houseplants in New York, escape to a private cabin in Hudson with stunning views, explore astrology to create abundance in Miami, or unwind in a cozy bungalow in Atlanta. Whatever your choice, these options provide relaxation and rejuvenation close to home.",
   },
   {
-    title:
-      "Naomi Osaka on Motherhood, Designing Her First Nursery, and Returning to Tennis",
-    image:
-      "https://assets.vogue.com/photos/64aedaf2f89668452743b7d7/4:3/w_640,c_limit/CB_F23_NO_02_502_Hor_032.jpg",
+    title: "Blooming this spring: Duo travel and city breaks",
+    image: "Images/lifestyle_page/elegant_4.jpg",
     content:
-      "Atrás quedaron el pelo rosa efecto lavado de Florence Pugh o el tono Cherry Coke de Katie Holmes; las tendencias en color de pelo de otoño-invierno 2023 nos traen coloraciones mucho más naturales y universalmente favorecedoras. “Al igual que estos últimos años hemos percibido cómo el cuidado de la piel recibe una gran atención, con la coloración capilar sucede algo semejante, con tonalidades orgánicas que realzan los matices de la piel, variando para adaptarse del subtono más dorado al rosado.",
+      "US travelers are planning their spring break getaways, with a focus on historic cities, small beach towns, and adventure destinations. International travel is on the rise, with top trending destinations for US guests this spring including Rome, Italy; Seoul, South Korea; London, United Kingdom; Porto, Portugal; and Barcelona, Spain. Domestically, cities like Augusta, Georgia, and Indianapolis, Indiana, are popular due to major sporting events like The Masters golf tournament and the Final Four NCAA championship game. Beach towns and warm-weather destinations are also trending, with Virginia Beach, Tampa, and St. Petersburg among the top choices. The most booked categories for spring travel on Airbnb include Amazing Pools, Beach, Iconic Cities, Surfing, Skiing, and Golfing. Affordable wishlisted homes for spring break are also available for under $100 in many trending destinations.",
   },
   {
-    title:
-      "Inside the Surreal London Home of Artists Philip and Charlotte Colbert",
-    image:
-      "https://assets.vogue.com/photos/64c1920b321e5a10a0c8c9aa/4:3/w_640,c_limit/HIGH%20RES%20WIDE.jpg",
+    title: "Yuvraj Singh is hosting an stay at his Goa home",
+    image: "Images/lifestyle_page/elegant_5.jpg",
     content:
-      "Atrás quedaron el pelo rosa efecto lavado de Florence Pugh o el tono Cherry Coke de Katie Holmes; las tendencias en color de pelo de otoño-invierno 2023 nos traen coloraciones mucho más naturales y universalmente favorecedoras. “Al igual que estos últimos años hemos percibido cómo el cuidado de la piel recibe una gran atención, con la coloración capilar sucede algo semejante, con tonalidades orgánicas que realzan los matices de la piel, variando para adaptarse del subtono más dorado al rosado.",
+      "International cricket legend Yuvraj Singh is becoming an Airbnb Host and offering an exclusive two-night stay for six guests at his home in Goa, India. The hilltop villa boasts stunning views of the sea and is decorated with meaningful keepsakes from Singh's cricket career. The home will be available for INR 1212 per night, coinciding with Singh's birthday and jersey number. Guests will have the opportunity to experience Goa and stay in a cricket legend's personal retreat. The booking is available for October 14-16, 2022, and can be reserved on Airbnb's website.",
   },
 ];
 
@@ -114,19 +106,16 @@ cards.forEach((card, index) => {
 // Travel section
 const travelItems = [
   {
-    title: "Everything You Need To Know About Vogue World: London",
-    image:
-      "https://media.vogue.es/photos/64b130f243d251bcd59d0acb/16:9/w_1600,c_limit/Slider_Stripes_5.jpg",
+    title: "ELAN Café",
+    image: "Images/lifestyle_page/rest_1.jpg",
   },
   {
-    title: "Everything You Need To Know About Vogue World: London",
-    image:
-      "https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Odette",
+    image: "Images/lifestyle_page/rest_2.jpg",
   },
   {
-    title: "Everything You Need To Know About Vogue World: London",
-    image:
-      "https://images.pexels.com/photos/1154638/pexels-photo-1154638.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Annabel's",
+    image: "Images/lifestyle_page/rest_3.jpg",
   },
 ];
 

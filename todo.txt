@@ -1,3 +1,8 @@
 - beauty.html videos section
 - transitions
 - content
+
+
+class="lg:px-[20px] cover_page_img rounded-[5px] mt-[20px] overflow-hidden"
+
+cover_page_img rounded-[5px] mt-[20px] overflow-hidden

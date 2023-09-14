@@ -1186,6 +1186,7 @@ h1 {
 
 .dark .moreInModels_card .back {
   background: var(--background);
+  color: white;
 }
 
 .moreInModels_card:hover .front {
@@ -1427,16 +1428,45 @@ h1 {
 }
 
 .makeup_item_0_img {
-  overflow: hidden;
   max-width: 1400px;
   height: 800px;
   border-radius: 5px;
+  position: relative;
 }
 
 .makeup_item_0_img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@keyframes makeupTitleAnimation {
+  from {
+    opacity: 0.5;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(200%);
+  }
+}
+
+.makeup_title_typo {
+  top: 5%;
+  left: 10%;
+  position: absolute;
+  width: 80%;
+  animation-timeline: --image;
+  animation-name: makeupTitleAnimation;
+  animation-fill-mode: both;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-range: entry 1% cover 100%;
+}
+
+.makeup_title_typo img {
+  width: 100%;
+  height: 100%;
 }
 
 .makeup_item_img {
@@ -1473,12 +1503,32 @@ h1 {
   font-size: 20px;
   font-weight: 900;
 }
+
 /* skincare */
+.skincare_item_0 {
+  grid-column: 1;
+  grid-row: span 2;
+  border-radius: 4px;
+  position: relative;
+}
+@keyframes filterSkinCare {
+  0% {
+    filter: grayscale(100%);
+  }
+  100% {
+    filter: grayscale(0%);
+  }
+}
 .skincare_item_0_img {
-  margin-top: 80px;
   max-width: 1400px;
-  height: 800px;
   overflow: hidden;
+  height: 100%;
+  animation-timeline: --image;
+  animation-name: filterSkinCare;
+  animation-fill-mode: both;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-range: entry 1% cover 100%;
 }
 
 .skincare_item_0_img img {
@@ -1487,11 +1537,20 @@ h1 {
   object-fit: cover;
 }
 
+.skincare_title_typo {
+  bottom: 1%;
+  left: 10%;
+  width: 80%;
+
+  position: absolute;
+}
+
 .careContainer {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 50px 20px;
   justify-items: center;
+  margin-top: 100px;
 }
 
 .skincare_item {
@@ -1591,6 +1650,7 @@ h1 {
 
 .tvMovies_card {
   display: flex;
+  height: 600px;
   flex-direction: column;
   overflow: hidden;
   border-radius: 5px;
@@ -1623,12 +1683,13 @@ h1 {
 }
 
 .tvMovies_card_content {
-  padding: 20px 25px;
+  top: 0;
+  padding: 20px 30px;
   background-color: white;
   flex: 1;
-  display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: auto;
 }
 .dark .tvMovies_card_content {
   background-color: var(--background);
@@ -1644,7 +1705,6 @@ h1 {
 }
 
 .art_card {
-  height: 630px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -1654,6 +1714,18 @@ h1 {
   scroll-snap-type: y mandatory;
   border-radius: 3px;
   box-shadow: var(--lgBlackShadow);
+}
+
+#art_card_0,
+#art_card_1 {
+  height: 385px;
+}
+
+#art_card_2 {
+  height: 350px;
+}
+#art_card_3 {
+  height: 340px;
 }
 
 .dark .art_card {
@@ -1691,7 +1763,8 @@ h1 {
 }
 
 .art_card_article_content {
-  padding: 10px;
+  padding: 10px 5px;
+  overflow: auto;
 }
 
 .art_card_article_img {
@@ -1709,14 +1782,20 @@ h1 {
 }
 
 .art_card_article_content h4 {
-  font-size: 22px;
+  font-size: 15px;
   margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.art_card_article_content p {
+  font-size: 12px;
+  height: 80px;
 }
 
 .art_card_topic {
-  text-align: center;
-  font-size: 30px;
-  text-transform: uppercase;
+  padding: 0px 10px;
+  font-size: 25px;
+  font-weight: 900;
   margin-bottom: 10px;
   color: rgb(56, 56, 56);
 }
@@ -1727,7 +1806,7 @@ h1 {
 
 .art_card_arrow {
   position: absolute;
-  bottom: 5px;
+  bottom: 20px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -1966,8 +2045,8 @@ h1 {
 }
 
 .lifestyle_panel_content_img {
-  aspect-ratio: 16 / 9;
   width: 100%;
+  height: 400px;
 }
 .lifestyle_panel_content_img img {
   width: 100%;
@@ -1981,10 +2060,13 @@ h1 {
 }
 
 .lifestyle_panel_text_modal h4 {
-  font-size: 33px;
+  font-size: 25px;
+  font-weight: 900;
 }
+
 .lifestyle_panel_text_modal p {
   text-align: justify;
+  font-size: 20px;
 }
 
 .panel_close {
@@ -2257,10 +2339,30 @@ h1 {
   /* SHOWTIME TREASURES */
   .tvMovies_card {
     flex-direction: row;
+    height: 380px;
   }
 
   .tvMovies_card_img {
     width: 350px;
+  }
+
+  /* INSPIRARTION INSIGTHS */
+
+  .art_card_arrow {
+    bottom: 0;
+  }
+  .art_card_article_content h4 {
+    font-size: 20px;
+  }
+
+  #art_card_0,
+  #art_card_1 {
+    height: 450px;
+  }
+
+  #art_card_2,
+  #art_card_3 {
+    height: 400px;
   }
 
   /* Culture page SPORTSCAPE: INSIDE THE ACTION */
@@ -2330,7 +2432,7 @@ h1 {
     padding: 0px 60px;
   }
   .lifestyle_panel_content {
-    max-height: 700px;
+    max-height: 600px;
   }
 
   /* CELEBRATIONS section */
@@ -2379,19 +2481,6 @@ h1 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .makeup_item_0 {
-    grid-column: auto;
-    grid-row: span 2 / span 2;
-  }
-
-  .makeup_item_0 h4 {
-    position: absolute;
-  }
-
-  .makeup_item_0 {
-    flex-direction: row;
-  }
-
   .makeup_item {
     max-width: 500px;
   }
@@ -2405,12 +2494,20 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  #art_card_0,
+  #art_card_1,
+  #art_card_2,
+  #art_card_3 {
+    height: 630px;
+  }
+
   .art_card_article_img {
     height: 60%;
   }
 
   .art_card_article_content {
     padding: 20px 35px;
+    height: 230px;
   }
 
   /* Culture page SPORTSCAPE: INSIDE THE ACTION */
@@ -2424,12 +2521,6 @@ h1 {
   }
   .poster_home_decorating {
     width: 40%;
-  }
-  .lifestyle_panel_content {
-    flex-direction: row;
-  }
-  .lifestyle_panel_content_img {
-    width: 400px;
   }
 
   /* CELEBRATIONS section */
@@ -2500,7 +2591,7 @@ h1 {
   }
 
   .careContainer {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   /* Culture page SHOWTIME TREASURES */
