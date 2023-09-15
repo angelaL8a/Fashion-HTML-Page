@@ -139,53 +139,39 @@ travelItems.forEach((item, index) => {
 //Holidays section
 const holidaysItems = [
   {
-    title: "El look que me convenció de comprar una flor para el cuello",
-    img: "https://media.vogue.es/photos/64c37d4c4541a298defeeed2/1:1/w_640,c_limit/_14A4439.jpg",
-    content:
-      "Cuando un look se convierte en un flechazo, tienes que guardarlo inmediatamente en tu galería de imágenes y hacerte con todas las piezas que sean necesarias para replicarlo. Al menos ese es el ejercicio que hacen los editores de moda de vez en cuando para darle un soplo de aire fresco a sus armarios.",
+    title:
+      "Rentrayage’s Home Collection Is Equal Parts Sustainable and Stylish",
+    img: "/Images/lifestyle_page/home_1.jpg",
   },
   {
-    title: "El look que me convenció de comprar una flor para el cuello",
-    img: "https://media.vogue.es/photos/64c37d4c4541a298defeeed2/1:1/w_640,c_limit/_14A4439.jpg",
-    content:
-      "Cuando un look se convierte en un flechazo, tienes que guardarlo inmediatamente en tu galería de imágenes y hacerte con todas las piezas que sean necesarias para replicarlo. Al menos ese es el ejercicio que hacen los editores de moda de vez en cuando para darle un soplo de aire fresco a sus armarios.",
+    title:
+      "Gaetano Pesce on His Latest Bottega Veneta Collaboration and Remaining Curious at 83",
+    img: "/Images/lifestyle_page/home_2.jpg",
   },
   {
-    title: "El look que me convenció de comprar una flor para el cuello",
-    img: "https://media.vogue.es/photos/64c37d4c4541a298defeeed2/1:1/w_640,c_limit/_14A4439.jpg",
-    content:
-      "Cuando un look se convierte en un flechazo, tienes que guardarlo inmediatamente en tu galería de imágenes y hacerte con todas las piezas que sean necesarias para replicarlo. Al menos ese es el ejercicio que hacen los editores de moda de vez en cuando para darle un soplo de aire fresco a sus armarios.",
+    title: "Inside the New West Village Boutique Making Every Day",
+    img: "/Images/lifestyle_page/home_3.jpg",
   },
   {
-    title: "El look que me convenció de comprar una flor para el cuello",
-    img: "https://media.vogue.es/photos/64c37d4c4541a298defeeed2/1:1/w_640,c_limit/_14A4439.jpg",
-    content:
-      "Cuando un look se convierte en un flechazo, tienes que guardarlo inmediatamente en tu galería de imágenes y hacerte con todas las piezas que sean necesarias para replicarlo. Al menos ese es el ejercicio que hacen los editores de moda de vez en cuando para darle un soplo de aire fresco a sus armarios.",
+    title: "How Italian Nonna Chic Became the Biggest News in Interiors",
+    img: "/Images/lifestyle_page/home_4.jpg",
   },
   {
-    title: "El look que me convenció de comprar una flor para el cuello",
-    img: "https://media.vogue.es/photos/64c37d4c4541a298defeeed2/1:1/w_640,c_limit/_14A4439.jpg",
-    content:
-      "Cuando un look se convierte en un flechazo, tienes que guardarlo inmediatamente en tu galería de imágenes y hacerte con todas las piezas que sean necesarias para replicarlo. Al menos ese es el ejercicio que hacen los editores de moda de vez en cuando para darle un soplo de aire fresco a sus armarios.",
+    title: "Independence Day Chic! A Guide to the Best Decoration Ideas",
+    img: "/Images/lifestyle_page/home_5.jpg",
   },
 
   {
-    title: "El look que me convenció de comprar una flor para el cuello",
-    img: "https://media.vogue.es/photos/64c37d4c4541a298defeeed2/1:1/w_640,c_limit/_14A4439.jpg",
-    content:
-      "Cuando un look se convierte en un flechazo, tienes que guardarlo inmediatamente en tu galería de imágenes y hacerte con todas las piezas que sean necesarias para replicarlo. Al menos ese es el ejercicio que hacen los editores de moda de vez en cuando para darle un soplo de aire fresco a sus armarios.",
+    title: "Admiring Cartier’s New High Jewelry in the Hills Outside Florence",
+    img: "/Images/lifestyle_page/home_6.jpg",
   },
   {
-    title: "El look que me convenció de comprar una flor para el cuello",
-    img: "https://media.vogue.es/photos/64c37d4c4541a298defeeed2/1:1/w_640,c_limit/_14A4439.jpg",
-    content:
-      "Cuando un look se convierte en un flechazo, tienes que guardarlo inmediatamente en tu galería de imágenes y hacerte con todas las piezas que sean necesarias para replicarlo. Al menos ese es el ejercicio que hacen los editores de moda de vez en cuando para darle un soplo de aire fresco a sus armarios.",
+    title: "Why Olive Oil-Infused Coffee Is Your New Morning Ritual",
+    img: "/Images/lifestyle_page/home_7.jpg",
   },
   {
-    title: "El look que me convenció de comprar una flor para el cuello",
-    img: "https://media.vogue.es/photos/64c37d4c4541a298defeeed2/1:1/w_640,c_limit/_14A4439.jpg",
-    content:
-      "Cuando un look se convierte en un flechazo, tienes que guardarlo inmediatamente en tu galería de imágenes y hacerte con todas las piezas que sean necesarias para replicarlo. Al menos ese es el ejercicio que hacen los editores de moda de vez en cuando para darle un soplo de aire fresco a sus armarios.",
+    title: "These Flower Subscription Services Will Keep Your Rooms in Bloom",
+    img: "/Images/lifestyle_page/home_8.jpg",
   },
 ];
 
@@ -196,7 +182,7 @@ holidaysItems.forEach((item, index) => {
   holidayDiv.classList.add("holiday_card");
   holidayDiv.classList.add(`holiday_card_${index}`);
   holidayDiv.innerHTML = `
-  <div>
+  <div class="holiday_card_image">
     <img
       src="${item.img}"
       alt="${item.title}"

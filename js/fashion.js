@@ -1,4 +1,4 @@
-// Grid section (index.html)
+// Grid section
 const elements = [
   {
     title: "The Most Anticipated Winter Outfit: A Fashion Extravaganza",
@@ -6,7 +6,7 @@ const elements = [
     src: "Images/fashion_page/main.jpg",
   },
   {
-    title: "Fenty x Puma Is Back! Rihanna Dishes on Her New Sneaker Design",
+    title: "Fenty x Puma Is Back! Rihanna Dishes on Her New Designs",
     index: "article_img_1",
     src: "/Images/fashion_page/main_1.jpg",
   },
@@ -22,7 +22,8 @@ const elements = [
     src: "/Images/fashion_page/main_3.jpg",
   },
   {
-    title: "At Valentino, Extreme Black Eyeliner Is the Ultimate Power Move",
+    title:
+      "At Valentino, Extreme Black Eyeliner Is the Ultimate Fashion Powerhouse",
     index: "article_img_5",
     src: "/Images/fashion_page/main_4.jpg",
   },
@@ -40,7 +41,7 @@ elements.forEach((element) => {
             <img src=${element.src} alt="${element.title}" />
           </div>
           <div class="article_content">
-            <h4 class="uppercase font-bold text-[18px]">
+            <h4 class="uppercase font-bold text-[12px]">
               ${element.title}
             </h4>
           </div>
@@ -49,7 +50,8 @@ elements.forEach((element) => {
   articlesContainer.appendChild(articleElement);
 });
 
-// Models Section
+//////////////////////////////////////////////////////////////////////////////
+// Latest in Models Section
 const models = [
   {
     title:
@@ -101,6 +103,7 @@ models.forEach((model) => {
   modelsSection.appendChild(modelElement);
 });
 
+//////////////////////////////////////////////////////////////////////////////
 // Trending Models section
 const trending = [
   {
@@ -264,7 +267,83 @@ tabButtons.forEach((button) => {
 // Mostrar el contenido del primer tab al cargar la página
 tabButtons[0].click();
 
-//MEET THE 10 STANDOUT MODELS OF FALL 2023
+//////////////////////////////////////////////////////////////////////////////
+//H&M Studio section
+const carousel = document.querySelector(".carouselFashionPage"),
+  firstImg = carousel.querySelectorAll("img")[0],
+  arrowIcons = document.querySelectorAll(".wrapperFashionPage i");
+let isDragStart = false;
+let isDragging = false;
+let prevPageX;
+let prevScrollLeft;
+let positionDiff;
+const showHideIcons = () => {
+  // showing and hiding prev/next icon according to carousel scroll left value
+  let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
+  arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+  arrowIcons[1].style.display =
+    carousel.scrollLeft == scrollWidth ? "none" : "block";
+};
+arrowIcons.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    let firstImgWidth = firstImg.clientWidth + 14; // getting first img width & adding 14 margin value
+    // if clicked icon is left, reduce width value from the carousel scroll left else add to it
+    carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+    setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
+  });
+});
+const autoSlide = () => {
+  // if there is no image left to scroll then return from here
+  if (
+    carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 ||
+    carousel.scrollLeft <= 0
+  )
+    return;
+  positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
+  let firstImgWidth = firstImg.clientWidth + 14;
+  // getting difference value that needs to add or reduce from carousel left to take middle img center
+  let valDifference = firstImgWidth - positionDiff;
+  if (carousel.scrollLeft > prevScrollLeft) {
+    // if user is scrolling to the right
+    return (carousel.scrollLeft +=
+      positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff);
+  }
+  // if user is scrolling to the left
+  carousel.scrollLeft -=
+    positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+};
+const dragStart = (e) => {
+  // updatating global variables value on mouse down event
+  isDragStart = true;
+  prevPageX = e.pageX || e.touches[0].pageX;
+  prevScrollLeft = carousel.scrollLeft;
+};
+const dragging = (e) => {
+  // scrolling images/carousel to left according to mouse pointer
+  if (!isDragStart) return;
+  e.preventDefault();
+  isDragging = true;
+  carousel.classList.add("dragging");
+  positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+  carousel.scrollLeft = prevScrollLeft - positionDiff;
+  showHideIcons();
+};
+const dragStop = () => {
+  isDragStart = false;
+  carousel.classList.remove("dragging");
+  if (!isDragging) return;
+  isDragging = false;
+  autoSlide();
+};
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("touchstart", dragStart);
+document.addEventListener("mousemove", dragging);
+carousel.addEventListener("touchmove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("touchend", dragStop);
+
+//////////////////////////////////////////////////////////////////////////////
+//DISCOVER MODELS section
 const modelsDiscover = [
   {
     name: "Gigi Hadid",
@@ -369,6 +448,7 @@ modelsDiscover.forEach((mod, index) => {
   });
 });
 
+//////////////////////////////////////////////////////////////////////////////
 //Explore by topic section
 const topics = [
   {

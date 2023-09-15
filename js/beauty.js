@@ -26,7 +26,7 @@ const videos = [
 //call the container for the carousel
 const videosContainer = document.getElementById("carouselBeautyPage");
 
-/* The YouTube API was utilized to embed the videos within the carousel and to leverage functions such as stopVideo() for stop the when clicking outside the modal. REFERENCE for YOUTUBE API: https://developers.google.com/youtube/iframe_api_reference */
+/* The YouTube Player API was utilized to embed the videos within the carousel and to leverage functions such as stopVideo() for stop the when clicking outside the modal. REFERENCE for YouTube Player API: https://developers.google.com/youtube/iframe_api_reference */
 //YouTube Player API Reference for iframe Embeds
 function onYouTubeIframeAPIReady() {
   // iterate over each element in "videos" array
@@ -137,23 +137,23 @@ function onYouTubeIframeAPIReady() {
 // STYLE SPOTLIGHT: THE LATEST IN FASHION - Beauty page
 const magazines = [
   {
-    name: "Lila Moss on Her Personal Style, Perfecting Her Runway Walk, and the One Thing She Can’t Steal from Her Mother’s Close",
+    name: "New year, new you",
     image: "/Images/beauty_page/magazine_1.jpg",
   },
   {
-    name: "Lila Moss on Her Personal Style, Perfecting Her Runway Walk",
+    name: "Power Player",
     image: "/Images/beauty_page/magazine_2.jpg",
   },
   {
-    name: "Hello world",
+    name: "Natural Beauty",
     image: "/Images/beauty_page/magazine_3.jpg",
   },
   {
-    name: "Hello world",
+    name: "Dreamstate",
     image: "/Images/beauty_page/magazine_4.jpg",
   },
   {
-    name: "Hello world",
+    name: "Sophisticated",
     image: "/Images/beauty_page/magazine_5.jpg",
   },
 ];

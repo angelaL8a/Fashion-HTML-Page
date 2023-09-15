@@ -16,7 +16,7 @@
     0 8px 10px -6px rgb(0 0 0 / 0.1);
   --mdBlackShadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
     0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --pinkBg: #f42e91;
+  --pinkBg: #f1427f;
 }
 /* scroll bar*/
 ::-webkit-scrollbar {
@@ -692,7 +692,7 @@ h1 {
   display: flex;
   flex-direction: column;
   padding: 30px;
-  gap: 30px;
+  gap: 10px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -726,6 +726,8 @@ h1 {
 
 .footer_text {
   text-align: justify;
+  font-size: 15px;
+  text-align: center;
 }
 
 .footer_link:hover {
@@ -1358,7 +1360,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 25px;
+  gap: 50px;
 }
 
 .magazine-image {
@@ -1366,6 +1368,7 @@ h1 {
   position: relative;
   overflow: hidden;
   border-radius: 2px;
+  height: 100%;
 }
 
 .magazine-image img:hover {
@@ -1376,14 +1379,18 @@ h1 {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .magazine-content {
-  padding: 10px;
+  padding: 5px 10px;
+  font-style: italic;
 }
 
 .magazine-content h4 {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .magazine-button {
@@ -2212,7 +2219,7 @@ h1 {
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.7)
+    rgba(0, 0, 0, 0.4)
   );
 }
 
@@ -2223,10 +2230,22 @@ h1 {
   position: relative;
   aspect-ratio: 12/9;
 }
+
+.holiday_card_image {
+  height: 100%;
+}
+
+.holiday_card_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .holiday_card_content {
   position: absolute;
   bottom: 0px;
   color: white;
+  background-color: rgba(255, 162, 162, 0.5);
   backdrop-filter: blur(4px);
   text-align: center;
   padding: 10px;
@@ -2437,10 +2456,11 @@ h1 {
 
   /* CELEBRATIONS section */
   .holidays_poster h4 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .holiday_card_content h4 {
-    font-size: inherit;
+    font-size: 15px;
+    padding: 0px 20px;
   }
   .holidays_main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2452,6 +2472,11 @@ h1 {
   /* FOOTER */
   .footer_subcribe_div {
     flex-direction: row;
+  }
+
+  .footer_text {
+    font-size: 18px;
+    text-align: justify;
   }
 }
 
