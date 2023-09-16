@@ -100,6 +100,7 @@ footerElement.innerHTML = `
         <a href="#" class="footer_link">Contact Us</a>
         <a href="#" class="footer_link">About</a>
         <a href="#" class="footer_link">Terms and Conditions</a>
+        <a href="report.html" class="footer_link">Report</a>
       </div>
 
       <div class="flex flex-col">

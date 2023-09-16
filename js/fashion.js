@@ -1,4 +1,4 @@
-// Grid section
+// Grid section data - an array of objects representing articles
 const elements = [
   {
     title: "The Most Anticipated Winter Outfit: A Fashion Extravaganza",
@@ -30,12 +30,12 @@ const elements = [
 ];
 
 const articlesContainer = document.getElementById("articles");
-
+// Loop through each element in the 'elements' array
 elements.forEach((element) => {
   const articleElement = document.createElement("div");
   articleElement.classList.add("article");
   articleElement.classList.add(`${element.index}`);
-
+  // Set the HTML content of the 'articleElement' using a template literal
   articleElement.innerHTML = `
           <div class="article_img">
             <img src=${element.src} alt="${element.title}" />
@@ -46,12 +46,13 @@ elements.forEach((element) => {
             </h4>
           </div>
   `;
-
+  // Append the 'articleElement' to the 'articlesContainer'
   articlesContainer.appendChild(articleElement);
 });
 
 //////////////////////////////////////////////////////////////////////////////
-// Latest in Models Section
+// LATEST IN MODELS Section
+//Data representing fashion models and their details
 const models = [
   {
     title:
@@ -76,9 +77,9 @@ const models = [
     size: "tiny",
   },
 ];
-
+// Get the container element where fashion model cards will be displayed
 const modelsSection = document.getElementById("sizesCards_container");
-
+// Iterate through each model and create corresponding HTML elements
 models.forEach((model) => {
   const modelElement = document.createElement("div");
   modelElement.classList.add("sizesCard");
@@ -88,7 +89,7 @@ models.forEach((model) => {
     <div class="sizesCard_img">
       <img
         src="${model.image}"
-        alt=""
+        alt="${model.title}"
       />
     </div>
 
@@ -99,12 +100,13 @@ models.forEach((model) => {
       </p>
     </div>
   `;
-
+  // Append the 'modelElement' to the 'modelsSection'
   modelsSection.appendChild(modelElement);
 });
 
 //////////////////////////////////////////////////////////////////////////////
-// Trending Models section
+// TRENDING MODELS section
+// Data representing trending fashion models and their associated content
 const trending = [
   {
     name: "Hailey Bieber",
@@ -203,10 +205,11 @@ const trending = [
     ],
   },
 ];
-
+// Get the container element for model tabs
 const modelTabs = document.getElementById("tabs");
-
+// Iterate through each trending fashion model
 trending.forEach((item, index) => {
+  // Create a new 'div' element to represent the model's tab content
   const itemDiv = document.createElement("div");
   itemDiv.classList.add("tab-content");
   itemDiv.id = item.dataTab;
@@ -217,10 +220,11 @@ trending.forEach((item, index) => {
   `;
 
   modelTabs.appendChild(itemDiv);
-
+  // Get the container element for model cards
   const itemContainer = document.getElementById(`tab-content-cards-${index}`);
 
   item.cards.forEach((card) => {
+    // Create a new 'div' element to represent a model card
     const itemChild = document.createElement("div");
     itemChild.classList.add("tab-card");
 
@@ -228,7 +232,7 @@ trending.forEach((item, index) => {
       <div class="tab_content_image">
         <img
           src="${card.image}"
-          alt=""
+          alt="${card.title}"
         />
       </div>
 
@@ -243,19 +247,18 @@ trending.forEach((item, index) => {
   });
 });
 
-// Models section - TABS
-// Obtener los elementos de los tabs y su contenido
+// Get the elements of the tabs and their content
 const tabButtons = document.querySelectorAll(".tab-button");
 const tabContents = document.querySelectorAll(".tab-content");
 
-// Asignar el evento click a los botones de tabs
+// Assign the click event to the tab buttons
 tabButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Desactivar la clase 'active' en todos los botones y ocultar los contenidos de tabs
+    // Deactivate the 'active' class on all buttons and hide tab contents
     tabButtons.forEach((btn) => btn.classList.remove("active"));
     tabContents.forEach((content) => (content.style.display = "none"));
 
-    // Obtener el ID del tab activo y mostrar su contenido correspondiente
+    // Get the ID of the active tab and display its corresponding content
     const tabId = button.dataset.tab;
     const tabContent = document.getElementById(tabId);
 
@@ -264,14 +267,17 @@ tabButtons.forEach((button) => {
   });
 });
 
-// Mostrar el contenido del primer tab al cargar la página
+// Display the content of the first tab when the page loads
 tabButtons[0].click();
 
 //////////////////////////////////////////////////////////////////////////////
-//H&M Studio section
+//H&M STUDIO section
+//It allows users to drag and scroll through a series of images smoothly. The carousel also automatically slides to reveal more content if the user doesn't interact actively.
+// Select the carousel element, the first image inside it, and arrow icons
 const carousel = document.querySelector(".carouselFashionPage"),
   firstImg = carousel.querySelectorAll("img")[0],
   arrowIcons = document.querySelectorAll(".wrapperFashionPage i");
+// Initialize variables to track drag and scroll interactions
 let isDragStart = false;
 let isDragging = false;
 let prevPageX;
@@ -370,54 +376,59 @@ const modelsDiscover = [
       "Cara Delevingne is a British actress, model, and singer who rose to prominence in the fashion world before transitioning to a successful career in acting and music. Born on August 12, 1992, in London, England. She began her modeling career at a young age and walked the runways for numerous high-fashion brands, including Chanel, Burberry, and Dolce & Gabbana. Cara's career reached its peak during the early 2010s when she was one of the most sought-after models in the world. In addition to her modeling success, Cara Delevingne has pursued acting, appearing in films such as Paper Towns, Suicide Squad, and Valerian and the City of a Thousand Planets. She has received acclaim for her performances and has become a respected figure in the entertainment industry. Cara has also ventured into music and released her own songs.",
   },
 ];
-
+// Loop through each item in the 'modelsDiscover' array
 const modelsDiscoverContainer = document.getElementById(
   "models_discover_container"
 );
 
+// Loop through each item in the 'modelsDiscover' array
 modelsDiscover.forEach((mod, index) => {
+  // Create a new 'div' element to represent a model card
   const modelDiscoverDiv = document.createElement("div");
   modelDiscoverDiv.classList.add("models_discover_card");
 
+  // Populate the 'div' with HTML content using template literals
   modelDiscoverDiv.innerHTML = `
-  <div class="models_discover_card_image" id="models_discover_card_image_${index}">
-    <img
-      src="${mod.img}"
-      alt="${mod.name}"
-    />
+    <div class="models_discover_card_image" id="models_discover_card_image_${index}">
+      <img
+        src="${mod.img}"
+        alt="${mod.name}"
+      />
 
-    <div class="models_discover_card_panel">
-    </div>
-  </div>
-
-  <h4 class="models_discover_card_content font-medium">
-    ${mod.name}
-  </h4>
-
-  <div id="models_modal_${index}" class="modal modal_close">
-    <div id="models_modal_${index}_content" class="modal_content">
-      <div class="sticky top-0 bg-white/80 backdrop-blur p-5 border-b dark:bg-background dark:border-border">
-        <h1>${mod.name}</h1>
+      <div class="models_discover_card_panel">
       </div>
-      
-     <div class="p-5">
-      <div class="my-4">
-        <img src="${mod.img}">
-      </div>
-
-      <p class="text-justify" >${mod.content}</p>
-     </div>
     </div>
-  </div>
+
+    <h4 class="models_discover_card_content font-medium">
+      ${mod.name}
+    </h4>
+
+    <div id="models_modal_${index}" class="modal modal_close">
+      <div id="models_modal_${index}_content" class="modal_content">
+        <div class="sticky top-0 bg-white/80 backdrop-blur p-5 border-b dark:bg-background dark:border-border">
+          <h1>${mod.name}</h1>
+        </div>
+        
+        <div class="p-5">
+          <div class="my-4">
+            <img src="${mod.img}">
+          </div>
+
+          <p class="text-justify">${mod.content}</p>
+        </div>
+      </div>
+    </div>
   `;
 
   modelsDiscoverContainer.appendChild(modelDiscoverDiv);
 
+  // Add a click event listener to the model card image
   const modalButton = document.getElementById(
     `models_discover_card_image_${index}`
   );
 
   modalButton.addEventListener("click", () => {
+    // Toggle the visibility of the model modal when the image is clicked
     const modalContent = document.getElementById(
       `models_modal_${index}_content`
     );
@@ -434,14 +445,16 @@ modelsDiscover.forEach((mod, index) => {
     }
   });
 
+  // Add a click event listener to the 'modelsDiscoverContainer' to close the modal
   modelsDiscoverContainer.addEventListener("click", function (event) {
     let modal = document.querySelector(`#models_modal_${index}_content`);
     let button = document.querySelector(`#models_discover_card_image_${index}`);
 
-    // Check if the click is not inside the div
+    // Check if the click is outside the modal and the image
     if (!modal.contains(event.target) && !button.contains(event.target)) {
       const modal = document.getElementById(`models_modal_${index}`);
 
+      // Close the modal by adding the 'modal_close' class
       modal.classList.remove("modal_open");
       modal.classList.add("modal_close");
     }
@@ -449,7 +462,7 @@ modelsDiscover.forEach((mod, index) => {
 });
 
 //////////////////////////////////////////////////////////////////////////////
-//Explore by topic section
+//EXPLORE BY TOPIC
 const topics = [
   {
     name: "Kim Jone",
@@ -544,7 +557,7 @@ const topics = [
 ];
 
 const clothingTabs = document.getElementById("clothing_tabs");
-
+// Loop through each item in the 'topics' array
 topics.forEach((item, index) => {
   const itemDiv = document.createElement("div");
   itemDiv.classList.add("clothing-tab-content");
@@ -556,12 +569,14 @@ topics.forEach((item, index) => {
   `;
 
   clothingTabs.appendChild(itemDiv);
-
+  // Get the container for tab content cards based on its generated ID
   const itemContainer = document.getElementById(
     `clothing-tab-content-cards-${index}`
   );
-
+  // Loop through each card in the 'item.cards' array
   item.cards.forEach((card) => {
+    // Create a new 'div' element to represent a tab card
+
     const itemChild = document.createElement("div");
     itemChild.classList.add("tab-card");
 
@@ -569,7 +584,7 @@ topics.forEach((item, index) => {
       <div>
         <img
           src="${card.image}"
-          alt=""
+          alt="${card.title}"
         />
       </div>
 
@@ -579,24 +594,23 @@ topics.forEach((item, index) => {
         </h4>
       </div>
     `;
-
+    // Append the tab card 'div' to the tab content cards container
     itemContainer.appendChild(itemChild);
   });
 });
 
-//TABS
-// Obtener los elementos de los tabs y su contenido
+// Get the elements of the tabs and their content
 const clothingTabButtons = document.querySelectorAll(".clothing-tab-button");
 const clothingTabContents = document.querySelectorAll(".clothing-tab-content");
 
-// Asignar el evento click a los botones de tabs
+// Assign the click event to the tab buttons
 clothingTabButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Desactivar la clase 'active' en todos los botones y ocultar los contenidos de tabs
+    // Deactivate the 'active' class on all buttons and hide tab contents
     clothingTabButtons.forEach((btn) => btn.classList.remove("active"));
     clothingTabContents.forEach((content) => (content.style.display = "none"));
 
-    // Obtener el ID del tab activo y mostrar su contenido correspondiente
+    // Get the ID of the active tab and display its corresponding content
     const tabId = button.dataset.tab;
     const tabContent = document.getElementById(tabId);
 
@@ -605,10 +619,11 @@ clothingTabButtons.forEach((button) => {
   });
 });
 
-// Mostrar el contenido del primer tab al cargar la página
+// Show the content of the first tab when the page loads
 clothingTabButtons[0].click();
 
-// LATEST IN DESIGNERS
+///////////////////////////////////////////////////////////////////////////////////////
+// LATEST IN DESIGNERS section
 const designers = [
   {
     title: "Chanel",
@@ -642,9 +657,13 @@ const designers = [
 
 const latestContainer = document.getElementById("moreInModels_container");
 
+// Loop through each item in the 'designers' array
 designers.forEach((item, index) => {
+  // Create a new 'div' element to represent a card
   const itemDiv = document.createElement("div");
   itemDiv.classList.add("moreInModels_card");
+
+  // Populate the card with HTML content using template literals
   itemDiv.innerHTML = `
     <div class="face front">
       <div class="moreInModels_image">
@@ -672,9 +691,9 @@ designers.forEach((item, index) => {
         />
         <p>${item.content}</p>
       </div>
-      
     </div>
   `;
 
+  // Append the card 'div' to the 'latestContainer'
   latestContainer.appendChild(itemDiv);
 });

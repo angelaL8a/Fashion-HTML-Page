@@ -1,4 +1,5 @@
-// Grid section (index.html)
+//index.html
+//TODAY'S STORIES section - Grid
 const elements = [
   {
     title:
@@ -29,28 +30,36 @@ const elements = [
   },
 ];
 
+// Get the DOM element with the id "articles" and store it in a variable.
 const articlesContainer = document.getElementById("articles");
 
+// Iterate through each element in the 'elements' array.
 elements.forEach((element) => {
+  // New 'div' element to represent an article.
   const articleElement = document.createElement("div");
+
   articleElement.classList.add("article");
   articleElement.classList.add(`${element.index}`);
 
+  // Set the HTML content of the 'articleElement'.
   articleElement.innerHTML = `
           <div class="article_img">
+            <!-- Create an image element with the 'src' and 'alt' attributes from 'element'. -->
             <img src=${element.src} alt="${element.title}" />
           </div>
           <div class="article_content">
+            <!-- Create an 'h4' element with the 'title' property from 'element'. -->
             <h4>
               ${element.title}
             </h4>
           </div>
   `;
 
+  // Append the 'articleElement' to the 'articlesContainer'.
   articlesContainer.appendChild(articleElement);
 });
 
-// Must read section (index.html)
+// MUST READ section
 const mustReadElements = [
   {
     category: "Culture",
@@ -69,7 +78,8 @@ const mustReadElements = [
     src: "/Images/index_page/must_read_3.jpg",
   },
 ];
-
+// Iterate through each element in the 'mustReadElements' array
+//Dynamically add articles from the array "mustReadElements" to the container with ID "must_read_articles".
 const mustReadContainer = document.getElementById("must_read_articles");
 mustReadElements.forEach((i, index) => {
   const item = document.createElement("div");
@@ -88,10 +98,11 @@ mustReadElements.forEach((i, index) => {
       <p class="text-[20px]" >${i.title}</p>
     </div>
   `;
+  // Append the 'item' to 'mustReadContainer'.
   mustReadContainer.appendChild(item);
 });
 
-// Celebrity Style section (index.html)
+// CELEBRITY STYLE section (index.html)
 const celebrityItems = [
   {
     category: "Beauty",
@@ -121,7 +132,8 @@ const celebrityItems = [
 const celebrityContainer = document.getElementById(
   "celebrity_section_container"
 );
-
+// Iterate through each element in the 'celebrityItems' array
+//Dynamically add articles from the array "celebrityItems" to the container with ID "celebrity_section_container".
 celebrityItems.forEach((c, index) => {
   const item = document.createElement("div");
   item.classList.add("celebrity_section_art");
@@ -130,7 +142,7 @@ celebrityItems.forEach((c, index) => {
     <div class="celebrity_section_art_img">
       <img 
         src="${c.src}"
-        alt="labillie"
+        alt="${c.title}"
       />
     </div>
     <div class="celebrity_section_art_content">
@@ -138,10 +150,12 @@ celebrityItems.forEach((c, index) => {
       <p class="text-[20px] ">${c.title}</p>
     </div>
   `;
-
+  // Append the 'item' to 'celebrityContainer'.
   celebrityContainer.appendChild(item);
 });
 
+//GLAMOUR & GLOW section - carousel
+//Carousel that enables features such as infinite scrolling and automatic playback. It calculates the number of cards visible in the carousel, creates duplicates for seamless scrolling and implements the drag function. Arrow buttons allow manual navigation, and the carousel also scrolls automatically when the mouse is not over it.
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;

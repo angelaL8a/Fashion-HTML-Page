@@ -277,14 +277,13 @@ h1 {
   box-shadow: var(--lgBlackShadow);
 }
 
-/* Main PAGE (index.html) */
+/* MAIN PAGE (index.html) */
 .main {
   background-image: linear-gradient(to bottom, #f8f8f8, #fdf0f3);
-  /* background-color: #f3f4f6; */
   min-height: 100vh;
   padding-bottom: 150px;
 }
-
+/* darkmode */
 .dark .main {
   background-image: var(--background-gradient);
   color: white;
@@ -331,9 +330,9 @@ h1 {
 
 .main_cover_essenceTag {
   position: absolute;
-  width: 740px;
+  width: 300px;
   bottom: -80px;
-  right: -50px;
+  right: -20px;
   animation: coveressenceMainAnimation 1s ease-in-out;
 }
 
@@ -342,7 +341,7 @@ h1 {
   height: 100%;
 }
 
-/* Main (index.html) */
+/* Presentation - (index.html) */
 .main_news {
   display: flex;
   position: relative;
@@ -383,11 +382,10 @@ h1 {
 }
 
 .main_cover_sereinTag img {
-  width: 50%;
   height: 100%;
 }
 
-/* Articles (MainPage) (index.html) */
+/* TODAY'S STORIES section (index.html) */
 .articles_container {
   max-width: 1400px;
   margin: 0 auto;
@@ -429,7 +427,7 @@ h1 {
   text-align: center;
 }
 
-/* Article center (MainPage) (index.html) */
+/* TODAY'S STORIES section - Article center (index.html) */
 .article_img_3 {
   grid-column: span 3 / span 3;
   grid-row: span 2 / span 2;
@@ -451,7 +449,7 @@ h1 {
   grid-column-start: 5;
 }
 
-/* Must read section (MainPage) (index.html) */
+/* MUST READ section (index.html) */
 .must_read {
   background-color: white;
   padding: 12px;
@@ -492,7 +490,7 @@ h1 {
   height: 100%;
 }
 
-/* Celebrity Style section (MainPage) (index.html)*/
+/* CELEBRITY STYLE section  (index.html)*/
 .sizesCards_section {
   max-width: 1400px;
   margin: 0 auto;
@@ -531,7 +529,7 @@ h1 {
   margin-right: auto;
   margin-left: auto;
 }
-
+/* darkmode */
 .dark .section_title {
   border-color: var(--border);
 }
@@ -548,12 +546,12 @@ h1 {
   overflow: hidden;
   box-shadow: var(--blackShadow);
 }
-
+/* darkmode */
 .dark .celebrity_section_art {
   background-color: var(--background);
 }
 
-/* Carousel  (MainPage) (index.html)*/
+/* GLAMOUR & GLOW section - Carousel  (index.html)*/
 .section_container {
   max-width: 1400px;
   margin: 0 auto;
@@ -604,7 +602,7 @@ h1 {
   background-color: white;
   border-radius: 8px;
 }
-
+/* darkmode */
 .dark .carousel_arrow {
   background-color: var(--background);
 }
@@ -680,86 +678,6 @@ h1 {
   padding: 20px 25px;
 }
 
-/* footer */
-.footer_container {
-  background: var(--pinkBg);
-  color: white;
-  position: relative;
-  padding: 10px;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  gap: 10px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.footer_top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer_icon {
-  height: 25px;
-  width: 25px;
-}
-
-.footer_links_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 80px;
-  width: 100%;
-  flex-direction: column;
-}
-
-.footer_links {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: start;
-}
-
-.footer_text {
-  text-align: justify;
-  font-size: 15px;
-  text-align: center;
-}
-
-.footer_link:hover {
-  text-decoration: underline;
-}
-
-.footer_subcribe_container {
-  display: flex;
-  justify-content: center;
-}
-
-.footer_subcribe {
-  background-color: #ffffff;
-  box-shadow: var(--blackShadow);
-  padding: 20px;
-  top: -35px;
-  width: 600px;
-  border-radius: 5px;
-  color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-
-.footer_subcribe_div {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-direction: column;
-}
-
 /* FASHION PAGE */
 .h1_titles {
   font-size: 4.25rem;
@@ -767,7 +685,7 @@ h1 {
   padding-top: 20px;
 }
 
-/* Models section - FASHION PAGE */
+/* LATEST IN MODELS - FASHION PAGE */
 .sizesCards_container {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -781,7 +699,7 @@ h1 {
   border-radius: 5px;
   box-shadow: var(--blackShadow);
 }
-
+/* darkmode */
 .dark .sizesCard {
   background-color: var(--background);
   box-shadow: var(--pinkShadow);
@@ -805,7 +723,7 @@ h1 {
   min-height: 650px;
 }
 
-/* FASHION PAGE TABS */
+/* TRENDING MODELS - TABS - FASHION PAGE*/
 .tabs {
   max-width: 1400px;
   margin: 0 auto;
@@ -828,7 +746,7 @@ h1 {
   transition-duration: 400ms;
   box-shadow: var(--mdBlackShadow);
 }
-
+/* darkmode */
 .dark .tab-button {
   background-color: var(--background);
   box-shadow: var(--pinkShadow);
@@ -878,7 +796,7 @@ h1 {
   padding: 0px 30px;
 }
 
-/* FASHION PAGE Home: Carousel */
+/* H&M Studio - Carousel FASHION PAGE */
 .wrapperFashionPage {
   display: flex;
   max-width: 1370px;
@@ -955,7 +873,7 @@ h1 {
   display: flex;
 }
 
-/* FASHION PAGE Models Section - DISCOVER MODELS */
+/* DISCOVER MODELS - FASHION PAGE */
 .models_discover {
   padding: 100px 30px 0px 30px;
   max-width: 1400px;
@@ -995,7 +913,7 @@ h1 {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* FASHION PAGE Models Section - DISCOVER MODELS - Modals */
+/*  DISCOVER MODELS - Modals  FASHION PAGE*/
 .modal {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -1019,6 +937,7 @@ h1 {
   overflow: auto;
 }
 
+/* darkmode */
 .dark .modal_content {
   background-image: var(--background-gradient);
 }
@@ -1031,7 +950,23 @@ h1 {
   display: none;
 }
 
-/* FASHION PAGE- Clothing section - Explore by topic  */
+/* Modal (animations) */
+@keyframes modalAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animated-modal {
+  animation: modalAnimation 0.2s ease-in-out;
+}
+
+/* EXPLORE BY TOPIC -FASHION PAGE  */
 .clothing_tabs {
   max-width: 1400px;
   margin: 0 auto;
@@ -1056,6 +991,7 @@ h1 {
   font-size: 20px;
 }
 
+/* darkmode */
 .dark .clothing-tab-button {
   background-color: var(--background);
   box-shadow: var(--pinkShadow);
@@ -1078,7 +1014,7 @@ h1 {
   background-color: var(--pinkBg);
 }
 
-/* FASHION PAGE - "More in Models" */
+/* LATEST IN DESIGNERS - FASHION PAGE */
 .moreInModels {
   padding: 100px 30px 0px 30px;
   max-width: 1400px;
@@ -1121,6 +1057,7 @@ h1 {
   animation-range: entry 15% cover 40%;
 }
 
+/* darkmode */
 .dark .moreInModels_cover {
   display: none;
 }
@@ -1181,7 +1118,7 @@ h1 {
 }
 
 .moreInModels_card .back p {
-  font-size: 1px;
+  font-size: 15px;
   text-align: justify;
   margin-top: 10px;
 }
@@ -1205,22 +1142,6 @@ h1 {
   bottom: 0;
   color: white;
   background: rgba(0, 0, 0, 0.4);
-}
-
-/* Modal (animations) */
-@keyframes modalAnimation {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animated-modal {
-  animation: modalAnimation 0.2s ease-in-out;
 }
 
 /* Beauty page - main poster */
@@ -1290,7 +1211,7 @@ h1 {
   }
 }
 
-/* Carousel Videos (Bauty page) (beauty.html) */
+/* GLAMOUR & GLOW section - Carousel Videos (Bauty page) (beauty.html) */
 .carouselBeautyPage {
   position: relative;
   width: 100%;
@@ -1321,6 +1242,7 @@ h1 {
   box-shadow: var(--blackShadow);
 }
 
+/* darkmode */
 .dark .cardVideo {
   background: var(--background);
   box-shadow: var(--pinkShadow);
@@ -1350,12 +1272,12 @@ h1 {
   padding: 20px;
   border-radius: 5px;
 }
-
+/* darkmode */
 .dark .video_modal_content {
   background-image: var(--background-gradient);
 }
 
-/* Magazines Buy section - BEAUTY PAGE (beauty.html) */
+/* STYLE SPOTLIGHT: THE LATEST IN FASHION - BEAUTY PAGE (beauty.html) */
 .magazineContainer {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1404,7 +1326,7 @@ h1 {
   box-shadow: var(--blackShadow);
   backdrop-filter: blur(8px);
 }
-
+/* darkmode */
 .dark .magazine-button {
   background-color: var(--background);
   box-shadow: var(--blackShadow);
@@ -1420,7 +1342,6 @@ h1 {
 }
 
 /* BEAUTY PAGE - SKIN & BEAUTY section */
-
 .makeupContainer {
   margin-top: 50px;
   display: grid;
@@ -1495,6 +1416,7 @@ h1 {
   box-shadow: var(--blackShadow);
 }
 
+/* darkmode */
 .dark .makeup_item_content {
   background-color: var(--background);
   box-shadow: var(--lgBlackShadow);
@@ -1590,6 +1512,7 @@ h1 {
   backdrop-filter: blur(40px) brightness(1.2) saturate(1.5);
 }
 
+/* darkmode */
 .dark .skincare_item_content {
   background-color: var(--background);
   box-shadow: var(--lgBlackShadow);
@@ -1606,219 +1529,6 @@ h1 {
 }
 
 /* CULTURE PAGE (culture.html) */
-.cover_page_img {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.cover_page_img img {
-  width: 100%;
-  margin-bottom: 100px;
-}
-
-/* SHOWTIME TREASURES - Culture page (culture.html) */
-
-.tvMovies {
-  gap: 45px;
-  align-items: start;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.tvMovies_main {
-  flex: 1;
-}
-
-.tvMovies_sidebar {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.tvMovies_sidebar img {
-  width: 100%;
-  border-radius: 4px;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* SHOWTIME TREASURES cards animations */
-@keyframes show {
-  from {
-    opacity: 0;
-    transform: translateX(-7rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-.tvMovies_card {
-  display: flex;
-  height: 600px;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: 5px;
-  margin-bottom: 50px;
-  box-shadow: var(--blackShadow);
-  animation-timeline: --image;
-  animation-name: show;
-  animation-fill-mode: both;
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-  animation-range: entry 25% cover 30%;
-}
-
-.dark .tvMovies_card {
-  box-shadow: var(--pinkShadow);
-}
-
-.tvMovies_card:last-of-type {
-  margin-bottom: 0px;
-}
-
-.tvMovies_card_img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}
-.tvMovies_card_img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.tvMovies_card_content {
-  top: 0;
-  padding: 20px 30px;
-  background-color: white;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  overflow: auto;
-}
-.dark .tvMovies_card_content {
-  background-color: var(--background);
-}
-
-/* INSPIRARTION INSIGHTS section - Culture page (culture.html) */
-.art_container {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 25px;
-}
-
-.art_card {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  cursor: pointer;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  border-radius: 3px;
-  box-shadow: var(--lgBlackShadow);
-}
-
-#art_card_0,
-#art_card_1 {
-  height: 385px;
-}
-
-#art_card_2 {
-  height: 350px;
-}
-#art_card_3 {
-  height: 340px;
-}
-
-.dark .art_card {
-  box-shadow: var(--lgBlackShadow);
-}
-
-.art_card.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-
-.art_card.dragging .art_card_article {
-  cursor: grab;
-  user-select: none;
-}
-
-.art_card_article {
-  height: 630px;
-  background-color: white;
-  scroll-snap-align: start;
-  border-radius: 3px;
-  position: relative;
-}
-
-.dark .art_card_article {
-  background-color: var(--background);
-}
-
-.art_card_arrow_upside_down {
-  transform: rotate(180deg);
-}
-
-.card_topic {
-  position: relative;
-}
-
-.art_card_article_content {
-  padding: 10px 5px;
-  overflow: auto;
-}
-
-.art_card_article_img {
-  width: 100%;
-  height: 40%;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-  overflow: hidden;
-}
-
-.art_card_article_img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.art_card_article_content h4 {
-  font-size: 15px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.art_card_article_content p {
-  font-size: 12px;
-  height: 80px;
-}
-
-.art_card_topic {
-  padding: 0px 10px;
-  font-size: 25px;
-  font-weight: 900;
-  margin-bottom: 10px;
-  color: rgb(56, 56, 56);
-}
-
-.dark .art_card_topic {
-  color: white;
-}
-
-.art_card_arrow {
-  position: absolute;
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  animation: bounceArrow 1s infinite;
-}
 
 .sports_container {
   max-width: 1400px;
@@ -1840,6 +1550,7 @@ h1 {
   gap: 10px;
 }
 
+/* tabs */
 .tab-button-sport {
   padding: 10px;
   background-color: white;
@@ -1847,6 +1558,7 @@ h1 {
   font-size: 20px;
 }
 
+/* darkmode */
 .dark .tab-button-sport {
   background-color: var(--background);
   box-shadow: var(--lgBlackShadow);
@@ -1910,19 +1622,262 @@ h1 {
 .tab-sport-content h4 {
   font-size: 23px;
 }
-
+/* darkmode */
 .dark .tab-sport-content {
   color: black;
 }
 
+.cover_page_img {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cover_page_img img {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+/* SHOWTIME TREASURES - Culture page (culture.html) */
+.tvMovies {
+  gap: 45px;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tvMovies_main {
+  flex: 1;
+}
+
+.tvMovies_sidebar {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.tvMovies_sidebar img {
+  width: 100%;
+  border-radius: 4px;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SHOWTIME TREASURES cards animations */
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateX(-7rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.tvMovies_card {
+  display: flex;
+  height: 600px;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  box-shadow: var(--blackShadow);
+  animation-timeline: --image;
+  animation-name: show;
+  animation-fill-mode: both;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-range: entry 25% cover 30%;
+}
+/* darkmode */
+.dark .tvMovies_card {
+  box-shadow: var(--pinkShadow);
+}
+
+.tvMovies_card:last-of-type {
+  margin-bottom: 0px;
+}
+
+.tvMovies_card_img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.tvMovies_card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tvMovies_card_content {
+  top: 0;
+  padding: 20px 30px;
+  background-color: white;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
+}
+/* darkmode */
+.dark .tvMovies_card_content {
+  background-color: var(--background);
+}
+
+/* INSPIRARTION INSIGHTS section - Culture page (culture.html) */
+.art_container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.art_card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  border-radius: 3px;
+  box-shadow: var(--lgBlackShadow);
+}
+
+#art_card_0,
+#art_card_1 {
+  height: 385px;
+}
+
+#art_card_2 {
+  height: 350px;
+}
+#art_card_3 {
+  height: 340px;
+}
+
+/* darkmode */
+.dark .art_card {
+  box-shadow: var(--lgBlackShadow);
+}
+
+.art_card.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.art_card.dragging .art_card_article {
+  cursor: grab;
+  user-select: none;
+}
+
+.art_card_article {
+  height: 630px;
+  background-color: white;
+  scroll-snap-align: start;
+  border-radius: 3px;
+  position: relative;
+}
+
+/* darkmode */
+.dark .art_card_article {
+  background-color: var(--background);
+}
+
+/* arrows */
+.art_card_arrow_upside_down {
+  transform: rotate(180deg);
+}
+
+.card_topic {
+  position: relative;
+}
+
+/* card content */
+.art_card_article_content {
+  padding: 10px 5px;
+  overflow: auto;
+}
+
+.art_card_article_img {
+  width: 100%;
+  height: 40%;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  overflow: hidden;
+}
+
+.art_card_article_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.art_card_article_content h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.art_card_article_content p {
+  font-size: 12px;
+  height: 80px;
+}
+
+.art_card_topic {
+  padding: 0px 10px;
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: rgb(56, 56, 56);
+}
+
+/* darkmode */
+.dark .art_card_topic {
+  color: white;
+}
+
+.art_card_arrow {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  animation: bounceArrow 1s infinite;
+}
+@keyframes arrow_bounce {
+  from {
+    opacity: 0;
+    transform: translateX(7rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes bounceArrow {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
 /* LIFESTYLE SECTION - lifestyle.html */
+/* ELEGANT section */
 .home_decorating_container {
   display: flex;
   gap: 25px;
   flex-direction: column;
   position: relative;
 }
-
+/* Animation for the left poster */
 @keyframes posterHomeAnimation {
   from {
     opacity: 0;
@@ -2024,6 +1979,7 @@ h1 {
   width: 100%;
 }
 
+/* card modal */
 .lifestyle_panel {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -2084,7 +2040,7 @@ h1 {
   display: flex;
 }
 
-/* Travel section  - Lifestyle page*/
+/*BEST RESTAURANTS OF THE WEEK - Lifestyle page*/
 .travel_container {
   display: flex;
   flex-direction: column;
@@ -2166,7 +2122,7 @@ h1 {
   transform: translateX(0px);
 }
 
-/* Holiday section - Lifestyle page*/
+/* LIVING IN STYLE section - Lifestyle page*/
 .holidays_container {
   display: flex;
   flex-direction: column;
@@ -2254,28 +2210,84 @@ h1 {
   font-size: 15px;
 }
 
-@keyframes arrow_bounce {
-  from {
-    opacity: 0;
-    transform: translateX(7rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
+/* footer */
+.footer_container {
+  background: var(--pinkBg);
+  color: white;
+  position: relative;
+  padding: 10px;
 }
 
-@keyframes bounceArrow {
-  0%,
-  100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_icon {
+  height: 25px;
+  width: 25px;
+}
+
+.footer_links_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.footer_links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.footer_text {
+  text-align: justify;
+  font-size: 15px;
+  text-align: center;
+}
+
+.footer_link:hover {
+  text-decoration: underline;
+}
+
+.footer_subcribe_container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_subcribe {
+  background-color: #ffffff;
+  box-shadow: var(--blackShadow);
+  padding: 20px;
+  top: -35px;
+  width: 600px;
+  border-radius: 5px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer_subcribe_div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* RESPONSIVE */
@@ -2291,7 +2303,7 @@ h1 {
   }
 }
 
-/* MD */
+/* MD size */
 @media (min-width: 768px) {
   /* Main page - cover */
   .cover {
@@ -2307,7 +2319,7 @@ h1 {
     width: 50%;
   }
 
-  /* Main page - TODAY'S STORIES section */
+  /* MAIN PAGE - TODAY'S STORIES section */
   .main_news {
     flex-direction: row;
   }
@@ -2324,6 +2336,10 @@ h1 {
 
   .carousel .card h2 {
     font-size: 23px;
+  }
+
+  .main_cover_sereinTag img {
+    width: 50%;
   }
 
   /* FASHION PAGE */
@@ -2355,7 +2371,7 @@ h1 {
     font-size: 13px;
   }
 
-  /* SHOWTIME TREASURES */
+  /*  Beauty Page - SHOWTIME TREASURES */
   .tvMovies_card {
     flex-direction: row;
     height: 380px;
@@ -2365,7 +2381,7 @@ h1 {
     width: 350px;
   }
 
-  /* INSPIRARTION INSIGTHS */
+  /*  Beauty Page - INSPIRARTION INSIGTHS */
 
   .art_card_arrow {
     bottom: 0;
@@ -2454,7 +2470,7 @@ h1 {
     max-height: 600px;
   }
 
-  /* CELEBRATIONS section */
+  /* Lifestyle page - LIVING IN STYLE section */
   .holidays_poster h4 {
     font-size: 30px;
   }
@@ -2480,8 +2496,13 @@ h1 {
   }
 }
 
-/* LG */
+/* LG size */
 @media (min-width: 1024px) {
+  /* main page */
+  .main_cover_essenceTag {
+    width: 740px;
+  }
+
   /* FASHION PAGE */
   .sizesCards_container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2495,13 +2516,13 @@ h1 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  /* DISCOVER MODELS section */
+  /* FASHION PAGE - DISCOVER MODELS section */
   .modal_content {
     max-width: 800px;
     max-height: 700px;
   }
 
-  /* Beauty page SKIN & BEAUTY CARE TIPS */
+  /* Beauty page SKIN & BEAUTY */
   .makeupContainer {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2514,7 +2535,7 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* Culture page INSPIRARTION INSIGHTS */
+  /* Culture page - INSPIRARTION INSIGHTS */
   .art_container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2535,7 +2556,7 @@ h1 {
     height: 230px;
   }
 
-  /* Culture page SPORTSCAPE: INSIDE THE ACTION */
+  /* Culture page - SPORTSCAPE: INSIDE THE ACTION */
   .buttons_container {
     width: 250px;
   }
@@ -2548,7 +2569,7 @@ h1 {
     width: 40%;
   }
 
-  /* CELEBRATIONS section */
+  /* LIFESTYLE page - LIVING IN STYLE section */
   .holidays_container {
     flex-direction: row;
   }
@@ -2584,7 +2605,7 @@ h1 {
   }
 }
 
-/* XL */
+/* XL size */
 @media (min-width: 1280px) {
   /* Header */
   .header {
@@ -2610,7 +2631,7 @@ h1 {
     max-width: calc((100% / 3.3));
   }
 
-  /* Beauty page SKIN & BEAUTY CARE TIPS */
+  /* Beauty page SKIN & BEAUTY  */
   .makeupContainer {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2619,7 +2640,7 @@ h1 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  /* Culture page SHOWTIME TREASURES */
+  /* Culture page - SHOWTIME TREASURES */
   .tvMovies {
     display: flex;
     flex-direction: row-reverse;
@@ -2632,4 +2653,50 @@ h1 {
     top: 60px;
     margin-bottom: 0px;
   }
+}
+
+/* REPORT CSS */
+
+.report_introduction {
+  margin-bottom: 20px;
+}
+
+.report_introduction h1 {
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.report_introduction h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.main_report {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.report_title {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.report_answer {
+  text-align: justify;
+  font-size: 15px;
+}
+
+.wireframes_mockups {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.wireframe_images_container img {
+  width: 100%;
 }

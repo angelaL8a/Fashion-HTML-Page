@@ -1,3 +1,4 @@
+//BEAUTY PAGE
 //GLAMOUR & GLOW (carousel) section
 // array of videos
 const videos = [
@@ -41,7 +42,7 @@ function onYouTubeIframeAPIReady() {
 
     videoDiv.innerHTML = /**/ `
     <div class="cardVideo_img">
-        <img src="${video.thumbnail}" class="w-full h-full object-cover" alt="img" />
+        <img src="${video.thumbnail}" class="w-full h-full object-cover" alt="${video.name}" />
     </div>
     
     <h2 class="cardVideo_titleVideo">
@@ -133,7 +134,6 @@ function onYouTubeIframeAPIReady() {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 // STYLE SPOTLIGHT: THE LATEST IN FASHION - Beauty page
 const magazines = [
   {
@@ -159,7 +159,7 @@ const magazines = [
 ];
 
 const magazineContainer = document.getElementById("magazineContainer");
-
+// Loop through each 'magazine' object in the 'magazines' array
 magazines.forEach((magazine, index) => {
   const divMagazine = document.createElement("div");
   divMagazine.classList.add("magazine");
@@ -179,12 +179,11 @@ magazines.forEach((magazine, index) => {
       <h4>${magazine.name}</h4>
     </div>
   `;
-
+  // Append the magazine card 'div' to the 'magazineContainer
   magazineContainer.appendChild(divMagazine);
 });
 
-// SKIN & BEAUTY CARE TIPS - Beauty page
-// https://images.pexels.com/photos/6784716/pexels-photo-6784716.jpeg
+// SKIN & BEAUTY section
 const tipsMakeup = [
   {
     title: "Woodscape",
@@ -219,7 +218,7 @@ const tipsMakeup = [
 ];
 
 const makeupContainer = document.getElementById("makeupContainer");
-
+// Loop through each 'tip' object in the 'tipsMakeup' array
 tipsMakeup.forEach((tip, index) => {
   const tipDiv = document.createElement("div");
   tipDiv.classList.add("makeup_item");
@@ -238,7 +237,7 @@ tipsMakeup.forEach((tip, index) => {
       <p>${tip.text}</p>
     </div>
   `;
-
+  // Append the makeup tip item 'div' to the 'makeupContainer'
   makeupContainer.appendChild(tipDiv);
 });
 
@@ -266,8 +265,9 @@ const tipsSkincare = [
 ];
 
 const careContainer = document.getElementById("careContainer");
-
+// Loop through each 'tip' object in the 'tipsSkincare' array
 tipsSkincare.forEach((tip, index) => {
+  // Create a new 'div' element to represent a skincare tip item
   const tipDiv = document.createElement("div");
   tipDiv.classList.add("skincare_item");
   tipDiv.classList.add(`skincare_item_${index + 1}`);
@@ -285,6 +285,6 @@ tipsSkincare.forEach((tip, index) => {
       <p>${tip.text}</p>
     </div>
   `;
-
+  // Append the skincare tip item 'div' to the 'careContainer'
   careContainer.appendChild(tipDiv);
 });

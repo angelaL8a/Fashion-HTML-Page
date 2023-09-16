@@ -1,4 +1,4 @@
-// SPORTSCAPE: INSIDE THE ACTION
+// SPORTSCAPE: INSIDE THE ACTION section
 const sportsItems = [
   {
     nameButton: "Racing",
@@ -52,56 +52,64 @@ const sportsItems = [
     imgArticle: "Images/culture_page/sport_6.jpg",
   },
 ];
-
+// Get references to the DOM elements
 const sportTabs = document.getElementById("sports_tabs");
 const buttonsContainer = document.getElementById("buttons_container");
+
+// Loop through sportsItems array to create tab buttons
 sportsItems.forEach((tab, index) => {
   const buttonSport = document.createElement("button");
   buttonSport.classList.add("tab-button-sport");
   buttonSport.setAttribute("data-tab", tab.dataTab);
 
+  // Add 'active' class to the first button
   if (index === 0) {
     buttonSport.classList.add("active");
   }
 
+  // Set the button's inner HTML content
   buttonSport.innerHTML = `
-${tab.nameButton}
-`;
+    ${tab.nameButton}
+  `;
 
+  // Append the button to the buttonsContainer
   buttonsContainer.appendChild(buttonSport);
 });
 
 const sportsContainer = document.getElementById("sports_container");
 
+// Loop through sportsItems array to create tab content divs
 sportsItems.forEach((item, index) => {
   const itemDiv = document.createElement("div");
   itemDiv.classList.add("tab-sport");
   itemDiv.id = item.dataTab;
 
+  // Set the inner HTML content for the tab content
   itemDiv.innerHTML = `
-	    <div class="tab-sport-img">
-        <img src="${item.imgArticle}" alt="${item.titleArticle}">
-      </div>
+    <div class="tab-sport-img">
+      <img src="${item.imgArticle}" alt="${item.titleArticle}">
+    </div>
+    <div class="tab-sport-content">
+      <h4>${item.titleArticle}</h4>
+      <p>${item.textArticle}</p>
+    </div>
+  `;
 
-	    <div class="tab-sport-content">
-	        <h4>${item.titleArticle}</h4>
-	        <p>${item.textArticle}</p>
-	    </div>
-	`;
-
+  // Append the tab content div to the sportTabs container
   sportTabs.appendChild(itemDiv);
 });
 
+// tab buttons and tab content divs
 const tabButtons = document.querySelectorAll(".tab-button-sport");
 const tabContents = document.querySelectorAll(".tab-sport");
 
 tabButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Desactivar la clase 'active' en todos los botones y ocultar los contenidos de tabs
+    // Disable the 'active' class on all buttons and hide tab contents
     tabButtons.forEach((btn) => btn.classList.remove("active"));
     tabContents.forEach((content) => (content.style.display = "none"));
 
-    // Obtener el ID del tab activo y mostrar su contenido correspondiente
+    // Get the ID of the active tab and display its corresponding content
     const tabId = button.dataset.tab;
     const tabContent = document.getElementById(tabId);
 
@@ -110,10 +118,10 @@ tabButtons.forEach((button) => {
   });
 });
 
-// Mostrar el contenido del primer tab al cargar la página
+// Show the content of the first tab when the page loads
 tabButtons[0].click();
 
-//SHOWTIME TREASURES
+//SHOWTIME TREASURES section
 const movies = [
   {
     title: "Everything We Know About the 'Taylor Swift: Eras Tour' Film",
@@ -137,32 +145,35 @@ const movies = [
     text: "Megan Thee Stallion brought a little heat to the 2023 MTV VMAs, stepping out in a black custom Brandon Blackwood NYC corset gown. She accessorized the sheer dress with a statement diamond choker and bracelet, making it a truly luxe look for the singer, who’s performing at the awards show with Cardi B. They will put on the first live performance of their new single, “Bongos. <br /> Megan is a VMAs nominee, too. Her song “Her” is up for best music video direction, best art direction, and best choreography.<br /> Recently, Cardi spoke to SiriusXM’s Swaggy Sie about the inspiration for “Bongos,” explaining why the song works better as a collaboration with Megan, as opposed to just a solo track.”",
   },
 ];
-
+// Get a reference to the movies container element in the DOM
 const moviesContainer = document.getElementById("tvMovies_main");
 
+// Loop through the 'movies' array to create movie card elements
 movies.forEach((movie, index) => {
+  // Create a new 'div' element to represent a movie card
   const divMovie = document.createElement("div");
-  divMovie.classList.add("tvMovies_card");
+  divMovie.classList.add("tvMovies_card"); // Add a class for styling
 
+  // Set the inner HTML content for the movie card
   divMovie.innerHTML = `
-  <div class="tvMovies_card_img">
+    <div class="tvMovies_card_img">
       <img src="${movie.image}" alt="${movie.title}" />
-  </div>
-
-  <div class="tvMovies_card_content">
+    </div>
+    <div class="tvMovies_card_content">
       <h4 class="text-[20px] mb-1 font-extrabold">
-          ${movie.title}
+        ${movie.title}
       </h4>
       <p class="text-justify text-[12px]">
-          ${movie.text}
+        ${movie.text}
       </p>
-  </div>
-`;
+    </div>
+  `;
 
+  // Append the movie card to the movies container in the DOM
   moviesContainer.appendChild(divMovie);
 });
 
-//INSPIRARTION INSIGHTS
+//INSPIRARTION INSIGHTS section
 const artsItems = [
   {
     title: "Food",
@@ -235,57 +246,64 @@ const artsItems = [
   },
 ];
 
+// Get a reference to the art topics container element in the DOM
 const artTopicsContainer = document.getElementById("art_container");
 
+// Loop through artItems array to create topic cards
 artsItems.forEach((artItem, index) => {
+  // Create a new 'div' element for each topic card
   const divTopic = document.createElement("div");
-  divTopic.classList.add("card_topic");
+  divTopic.classList.add("card_topic"); // Add a class for styling
 
+  // Set the inner HTML content for the topic card
   divTopic.innerHTML = `
-<h3 class="art_card_topic">${artItem.title}</h3>
+    <h3 class="art_card_topic">${artItem.title}</h3>
+    <div id="art_card_${index}" class="art_card"></div>
+  `;
 
-<div id="art_card_${index}" class="art_card"></div>
-`;
-
+  // Append the topic card to the art topics container in the DOM
   artTopicsContainer.appendChild(divTopic);
 
+  // Get a reference to the art card for this topic
   const artCard = document.getElementById(`art_card_${index}`);
 
+  // Loop through items within the topic and create article cards
   artItem.items.forEach((card, index_card) => {
+    // Create a new 'div' element for each article card
     const divCard = document.createElement("div");
     divCard.classList.add("art_card_article");
 
+    // Set the inner HTML content for the article card
     divCard.innerHTML = `
-<div class="art_card_article_img">
-    <img src="${card.img}" alt="${card.title}" draggable="false" />
-</div>
-
-<div class="art_card_article_content">
-    <h4>
-        ${card.title}
-    </h4>
-    <p>
-        ${card.text}
-    </p>
-</div>
-
-<div
-id="arrow_${artItem.cardID}_${index}_${
+      <div class="art_card_article_img">
+          <img src="${card.img}" alt="${card.title}" draggable="false" />
+      </div>
+      <div class="art_card_article_content">
+          <h4>
+              ${card.title}
+          </h4>
+          <p>
+              ${card.text}
+          </p>
+      </div>
+      <div
+        id="arrow_${artItem.cardID}_${index}_${
       artItem.items[artItem.items.length - 1].title === card.title
         ? "top"
         : "bottom"
     }"
-class="art_card_arrow art_card_arrow_${
-      artItem.cardID
-    }"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-[#f3b7c1] ${
+        class="art_card_arrow art_card_arrow_${
+          artItem.cardID
+        }"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-[#f3b7c1] ${
       artItem.items[artItem.items.length - 1].title === card.title
         ? " art_card_arrow_upside_down"
         : ""
     }">
-        <path d="m6 9 6 6 6-6" />
-    </svg></div>
-`;
+            <path d="m6 9 6 6 6-6" />
+        </svg></div>
+    `;
 
+    // Append the article card to the art card for this topic
     artCard.appendChild(divCard);
   });
 
@@ -294,6 +312,7 @@ class="art_card_arrow art_card_arrow_${
     startScrollTop,
     timeoutId;
 
+  // Function to handle the start of dragging
   const dragStart = (e) => {
     isDragging = true;
     artCard.classList.add("dragging");
@@ -302,13 +321,14 @@ class="art_card_arrow art_card_arrow_${
     startScrollTop = artCard.scrollTop;
   };
 
+  // Function to handle dragging
   const dragging = (e) => {
     if (!isDragging) return; // if isDragging is false return from here
-
     // Updates the scroll position of the carousel based on the cursor movement
     artCard.scrollTop = startScrollTop - (e.pageY - startY);
   };
 
+  // Function to handle the end of dragging
   const dragStop = () => {
     isDragging = false;
     artCard.classList.remove("dragging");
@@ -328,7 +348,9 @@ class="art_card_arrow art_card_arrow_${
     });
   });
 
+  // Clear the timeout when the mouse enters the art card
   artCard.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+  // Add event listeners for drag and drop functionality
   artCard.addEventListener("mousedown", dragStart);
   artCard.addEventListener("mousemove", dragging);
   document.addEventListener("mouseup", dragStop);

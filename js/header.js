@@ -56,47 +56,55 @@ const categories = [
     href: "lifestyle.html",
     sub_cat: [
       { name: "Home & Decorating", href: "lifestyle.html#home_decorating" },
-      { name: "Travel", href: "lifestyle.html#travel" },
+      { name: "Restaurants", href: "lifestyle.html#restaurants" },
       { name: "living", href: "lifestyle.html#living" },
     ],
   },
 ];
 
+// Get a reference to the header links container element in the DOM
 const categoriesContainer = document.getElementById("header_links");
 
+// Loop through the 'categories' array to create header links for each category
 categories.forEach((item, index) => {
+  // Create a new 'div' element for each header link
   const itemElement = document.createElement("div");
   itemElement.classList.add("header_link");
   itemElement.classList.add("group");
   itemElement.classList.add(`link_${index}`);
 
+  // Set the inner HTML content for the header link, including sub-categories if available
   itemElement.innerHTML = `
     <a href="${item.href}">${item.name}</a>
-
     <div id="link_card_${index}" class="link_card group-hover:flex hidden">
       <div class="arrow_container">
         <div class="arrow"></div>
       </div>
     </div>`;
 
+  // Append the header link to the header links container in the DOM
   categoriesContainer.appendChild(itemElement);
 
+  // Get a reference to the sub-container for this header link
   const subContainer = document.getElementById(`link_card_${index}`);
 
+  // Loop through sub-categories (if available) and create sub-links
   item.sub_cat?.forEach((sub, sub_index) => {
     const sub_item = document.createElement("a");
     sub_item.href = sub.href;
     sub_item.classList.add("sub_link");
 
+    // Set the inner HTML content for each sub-link
     sub_item.innerHTML = `
       <span>${sub.name}</span>
     `;
+
+    // Append the sub-link to the sub-container
     subContainer.appendChild(sub_item);
   });
 });
 
 //CREATE A MENU FOR MOBILE DEVICES
-
 const button = document.getElementById("burger_button");
 
 const modal = document.createElement("div");

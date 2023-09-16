@@ -1,5 +1,5 @@
 //LIFESTYLE PAGE - lifestyle.html
-//Home & Decorating section
+//ELEGANT section
 const cards = [
   {
     title: "PINKCOCO ULUWATU",
@@ -41,44 +41,48 @@ const cards = [
   },
 ];
 
+// Get a reference to the cards container in the DOM
 const cardsContainer = document.getElementById(
   "cards_homedecorating_container"
 );
 
+// Loop through 'cards' array to create lifestyle cards and their corresponding modals
 cards.forEach((card, index) => {
+  // Create a new 'div' element for each lifestyle card
   const cardDiv = document.createElement("div");
   cardDiv.classList.add("lifestyle_card");
   cardDiv.classList.add(`lifestyle_card_${index}`);
   cardDiv.id = `lifestyle_card_${index}`;
 
+  // Set the inner HTML content for the lifestyle card
   cardDiv.innerHTML = `
-    <div class="lifestyle_card_img cursor-pointer"><img src="${card.image}" alt=""></div>
-
+    <div class="lifestyle_card_img cursor-pointer"><img src="${card.image}" alt="${card.title}"></div>
     <div class="lifestyle_card_panel cursor-pointer"></div>
-
     <div class="lifestyle_card_content cursor-pointer">${card.title}</div>
   `;
 
+  // Create a modal for each lifestyle card
   const cardModal = document.createElement("div");
   cardModal.classList.add("panel_close");
   cardModal.classList.add("lifestyle_panel");
   cardModal.id = `lifestyle_modal_${index}`;
   cardModal.innerHTML = `
-  <div id="lifestyle_panel_content_${index}" class="lifestyle_panel_content">
-    <div class="lifestyle_panel_content_img">
-      <img src="${card.image}" alt="${card.title}" />
+    <div id="lifestyle_panel_content_${index}" class="lifestyle_panel_content">
+      <div class="lifestyle_panel_content_img">
+        <img src="${card.image}" alt="${card.title}" />
+      </div>
+      <div class="lifestyle_panel_text_modal">
+        <h4>${card.title}</h4>
+        <p>${card.content}</p>
+      </div>
     </div>
-
-    <div class="lifestyle_panel_text_modal">
-      <h4>${card.title}</h4>
-      <p>${card.content}</p>
-    </div>
-  </div>
   `;
 
+  // Append the lifestyle card and its corresponding modal to the container
   cardsContainer.appendChild(cardDiv);
   cardsContainer.appendChild(cardModal);
 
+  // Add a click event listener to toggle the modal's visibility
   cardDiv.addEventListener("click", () => {
     if (cardModal.className.includes("panel_open")) {
       cardModal.classList.remove("panel_open");
@@ -89,6 +93,7 @@ cards.forEach((card, index) => {
     }
   });
 
+  // Add a click event listener to close the modal when clicking outside of it
   cardsContainer.addEventListener("click", function (event) {
     let modal = document.querySelector(`#lifestyle_panel_content_${index}`);
     let button = document.querySelector(`#lifestyle_card_${index}`);
@@ -103,8 +108,8 @@ cards.forEach((card, index) => {
   });
 });
 
-// Travel section
-const travelItems = [
+// BEST RESTAURANTS OF THE WEEK section
+const restaurants = [
   {
     title: "ELAN Café",
     image: "Images/lifestyle_page/rest_1.jpg",
@@ -119,24 +124,31 @@ const travelItems = [
   },
 ];
 
-const travelContainer = document.getElementById("travel_container");
+// Get a reference to the restaurants container element in the DOM
+const restaurantsContainer = document.getElementById("restaurants_container");
 
-travelItems.forEach((item, index) => {
+// Loop through the 'restaurants' array to create travel cards for each restaurant
+restaurants.forEach((item, index) => {
+  // Create a new 'div' element for each travel card
   const itemDiv = document.createElement("div");
   itemDiv.classList.add("card_travel");
   itemDiv.classList.add(`card_travel_${index}`);
+
+  // Set the inner HTML content for the travel card
   itemDiv.innerHTML = `
-  <div class="card_travel_img">
+    <div class="card_travel_img">
       <img src="${item.image}" alt="${item.title}" />
     </div>
     <div class="card_travel_title">
       <h4>${item.title}</h4>
-  </div>
+    </div>
   `;
-  travelContainer.appendChild(itemDiv);
+
+  // Append the travel card to the restaurants container in the DOM
+  restaurantsContainer.appendChild(itemDiv);
 });
 
-//Holidays section
+//LIVING IN STYLE section
 const holidaysItems = [
   {
     title:
@@ -175,23 +187,29 @@ const holidaysItems = [
   },
 ];
 
+// Get a reference to the holidays container element in the DOM
 const holidaysContainer = document.getElementById("holidays_main");
 
+// Loop through the 'holidaysItems' array to create holiday cards for each item
 holidaysItems.forEach((item, index) => {
+  // Create a new 'div' element for each holiday card
   const holidayDiv = document.createElement("div");
   holidayDiv.classList.add("holiday_card");
   holidayDiv.classList.add(`holiday_card_${index}`);
-  holidayDiv.innerHTML = `
-  <div class="holiday_card_image">
-    <img
-      src="${item.img}"
-      alt="${item.title}"
-    />
-  </div>
 
-  <div class="holiday_card_content">
-    <h4>${item.title}</h4>
-  </div>
+  // Set the inner HTML content for the holiday card
+  holidayDiv.innerHTML = `
+    <div class="holiday_card_image">
+      <img
+        src="${item.img}"
+        alt="${item.title}"
+      />
+    </div>
+    <div class="holiday_card_content">
+      <h4>${item.title}</h4>
+    </div>
   `;
+
+  // Append the holiday card to the holidays container in the DOM
   holidaysContainer.appendChild(holidayDiv);
 });
