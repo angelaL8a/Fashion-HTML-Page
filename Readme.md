@@ -10,3 +10,5 @@ styles.css:
 This is the file that styles the webpage.
 
 https://hub.labs.coursera.org:443/connect/sharedcplkjgyv?forceRefresh=false&path=%2F&isLabVersioning=true
+
+![Tokei](/Images/tokei.png)
