@@ -500,7 +500,7 @@ h1 {
 .celebrity_section_container {
   display: grid;
   gap: 25px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .celebrity_section_art_content {
@@ -1423,7 +1423,7 @@ h1 {
 }
 
 .makeup_item_content p {
-  font-size: 5px;
+  font-size: 12px;
   text-align: justify;
   text-shadow: 4px 4px 4px #000;
 }
@@ -2324,6 +2324,7 @@ h1 {
     flex-direction: row;
   }
 
+  /* today's stories */
   .articles {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -2333,9 +2334,13 @@ h1 {
   .article_img {
     aspect-ratio: 9 / 14;
   }
+  /* celebrity style section  */
+  .celebrity_section_container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
   .carousel .card h2 {
-    font-size: 23px;
+    font-size: 18px;
   }
 
   .main_cover_sereinTag img {
@@ -2367,8 +2372,9 @@ h1 {
   .makeupContainer {
     gap: 60px 40px;
   }
+
   .makeup_item_content p {
-    font-size: 13px;
+    font-size: 20px;
   }
 
   /*  Beauty Page - SHOWTIME TREASURES */
@@ -2390,14 +2396,23 @@ h1 {
     font-size: 20px;
   }
 
-  #art_card_0,
-  #art_card_1 {
-    height: 450px;
+  .art_card_article_content p {
+    font-size: 18px;
+    height: 200px;
   }
 
-  #art_card_2,
+  #art_card_0 {
+    height: 642px;
+  }
+  #art_card_1 {
+    height: 634px;
+  }
+
+  #art_card_2 {
+    height: 625px;
+  }
   #art_card_3 {
-    height: 400px;
+    height: 636px;
   }
 
   /* Culture page SPORTSCAPE: INSIDE THE ACTION */
@@ -2535,6 +2550,10 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .makeup_item_content p {
+    font-size: 13px;
+  }
+
   /* Culture page - INSPIRARTION INSIGHTS */
   .art_container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2559,6 +2578,11 @@ h1 {
   /* Culture page - SPORTSCAPE: INSIDE THE ACTION */
   .buttons_container {
     width: 250px;
+  }
+  /* inspirartion insights section */
+  .art_card_article_content p {
+    font-size: 14px;
+    height: 100px;
   }
 
   /* LIFESTYLE page - ELEGANT section */
