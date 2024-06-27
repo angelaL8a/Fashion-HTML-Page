@@ -4,11 +4,11 @@ Serein is a meticulously crafted template designed for a fashion news page, cate
 
 ### Template images:
 
-![main](report\mockups\main_page.jpeg)
-![fashion](report\mockups\fashion_page.jpeg)
-![beauty](report\mockups\beauty_page.jpeg)
-![culture](report\mockups\culture_page.jpeg)
-![lifestyle](report\mockups\lifestyle_page.jpeg)
+![main](/report/mockups/main_page.jpeg)
+![fashion](/report/mockups/fashion_page.jpeg)
+![beauty](/report/mockups/beauty_page.jpeg)
+![culture](/report/mockups/culture_page.jpeg)
+![lifestyle](/report/mockups/lifestyle_page.jpeg)
 
 ### Folders:
 
